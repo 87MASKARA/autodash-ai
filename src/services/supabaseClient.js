@@ -31,8 +31,18 @@ export async function getAuthenticatedUserId() {
   }
 }
 
+function isMotorcycleEntryFromMotoDash(bike) {
+  if (!bike) return true;
+  const brand = String(bike?.config?.bikeIdentity?.brand || '').toLowerCase();
+  const model = String(bike?.config?.bikeIdentity?.model || '').toLowerCase();
+  return /\b(tvs|apache|rtr|yamaha|mt-09|ktm|duke|kawasaki|ninja|ducati|panigale|bajaj|pulsar|suzuki|gixxer|akt)\b/i.test(
+    `${brand} ${model}`
+  );
+}
+
 /**
  * Carga el garaje y perfil del piloto directamente desde Supabase bajo políticas RLS (auth.uid() = user_id)
+ * Filtra registros de motos de MotoDash AI para no mezclar motos con el garaje de autos de lujo.
  */
 export async function loadPilotGarage(userId) {
   const authUid = await getAuthenticatedUserId();
@@ -45,7 +55,15 @@ export async function loadPilotGarage(userId) {
     });
 
     if (!error && data && Array.isArray(data.bikes) && data.bikes.length > 0) {
-      return data;
+      const carBikes = data.bikes.filter((b) => !isMotorcycleEntryFromMotoDash(b));
+      if (carBikes.length > 0) {
+        return {
+          ...data,
+          bikes: carBikes,
+          activeBikeId: carBikes.some((b) => b.id === data.activeBikeId) ? data.activeBikeId : carBikes[0].id
+        };
+      }
+      return null;
     }
 
     // Fallback directo a la tabla user_bikes para garantizar lectura de custom_components y hoja_de_vida
@@ -59,16 +77,22 @@ export async function loadPilotGarage(userId) {
       return null;
     }
 
-    return {
-      bikes: rows.map((b) => ({
+    const mappedCars = rows
+      .map((b) => ({
         id: b.id,
         odometer: Number(b.odometer) || 0,
         ridingCondition: b.riding_condition || 'normal',
         config: b.config || {},
         hojaDeVida: b.hoja_de_vida || {},
         customComponents: b.custom_components || {}
-      })),
-      activeBikeId: rows[0]?.id || null
+      }))
+      .filter((b) => !isMotorcycleEntryFromMotoDash(b));
+
+    if (mappedCars.length === 0) return null;
+
+    return {
+      bikes: mappedCars,
+      activeBikeId: mappedCars[0]?.id || null
     };
   } catch (err) {
     console.warn('[Supabase] Error de red al cargar garaje:', err.message);

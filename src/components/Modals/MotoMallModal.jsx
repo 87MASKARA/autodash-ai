@@ -243,12 +243,21 @@ export default function MotoMallModal({
   const [riderZoneQuery, setRiderZoneQuery] = useState('');
   const [searchingRiderZone, setSearchingRiderZone] = useState(false);
 
+  const isMotorcycleLegacyRecord = (obj) => {
+    if (!obj) return true;
+    const text = JSON.stringify(obj).toLowerCase();
+    return /\b(apache|rtr|moto|motos|motero|tvs|pulsar|bajaj|auteco|dismerca|incolmotos|yamalube|akt|yamaha|ktm|arrastre|manubrio|casco)\b/i.test(text);
+  };
+
   const [products, setProducts] = useState(() => {
     try {
-      const saved = localStorage.getItem('autodash_mall_products');
+      const saved = localStorage.getItem('autodash_luxury_mall_products_v2');
       if (saved) {
         const parsed = JSON.parse(saved);
-        if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          const valid = parsed.filter((p) => !isMotorcycleLegacyRecord(p));
+          if (valid.length > 0) return valid;
+        }
       }
     } catch {}
     return INITIAL_OFFICIAL_PRODUCTS;
@@ -264,17 +273,17 @@ export default function MotoMallModal({
   const [storeLng, setStoreLng] = useState('');
   const [locatingStoreGps, setLocatingStoreGps] = useState(false);
   const [storeWhatsapp, setStoreWhatsapp] = useState('');
-  const [storeBrands, setStoreBrands] = useState('TVS, YAMAHA, KTM, BAJAJ');
+  const [storeBrands, setStoreBrands] = useState('PORSCHE, MERCEDES-AMG, BMW, AUDI, MAZDA');
   const [storeLogoUrl, setStoreLogoUrl] = useState(null);
   const [registeringStore, setRegisteringStore] = useState(false);
   const [storeRegisteredMsg, setStoreRegisteredMsg] = useState('');
   const storeLogoInputRef = useRef(null);
 
-  // Estado para Publicar un Producto / Repuesto / Moto 0 KM en el Mall
+  // Estado para Publicar un Producto / Repuesto / Auto 0 KM en el Mall
   const [prodStoreSlug, setProdStoreSlug] = useState(INITIAL_OFFICIAL_STORES[0].slug);
   const [prodTitle, setProdTitle] = useState('');
   const [prodCategory, setProdCategory] = useState('motor');
-  const [prodModels, setProdModels] = useState('TVS Porsche 911 GT3 RS / Multimarcas');
+  const [prodModels, setProdModels] = useState('Porsche 911 / Mercedes-AMG / BMW M / Multimarcas');
   const [prodOem, setProdOem] = useState('');
   const [prodPrice, setProdPrice] = useState('');
   const [prodDiscount, setProdDiscount] = useState('10');
@@ -294,7 +303,7 @@ export default function MotoMallModal({
     }
   }, [isOpen, initialComponentId, initialTab]);
 
-  // Cargar tiendas y productos reales desde Supabase al abrir
+  // Cargar tiendas y productos automotrices desde Supabase al abrir (filtrando registros de motos)
   useEffect(() => {
     if (!isOpen) return;
     let isMounted = true;
@@ -302,10 +311,10 @@ export default function MotoMallModal({
     async function loadMallFromSupabase() {
       let localUsed = [];
       try {
-        const saved = localStorage.getItem('autodash_certified_used_bikes');
+        const saved = localStorage.getItem('autodash_certified_used_cars_v2');
         if (saved) {
           const parsed = JSON.parse(saved);
-          if (Array.isArray(parsed)) localUsed = parsed;
+          if (Array.isArray(parsed)) localUsed = parsed.filter((u) => !isMotorcycleLegacyRecord(u));
         }
       } catch {}
 
@@ -316,24 +325,32 @@ export default function MotoMallModal({
           supabase.from('marketplace_listings').select('*').order('created_at', { ascending: false })
         ]);
 
-        if (isMounted && !storesRes.error && Array.isArray(storesRes.data) && storesRes.data.length > 0) {
-          const mergedStores = [...storesRes.data];
-          INITIAL_OFFICIAL_STORES.forEach((seed) => {
-            if (!mergedStores.some((s) => s.slug === seed.slug)) mergedStores.push(seed);
+        if (isMounted && !storesRes.error && Array.isArray(storesRes.data)) {
+          const cleanRemoteStores = storesRes.data.filter((s) => !isMotorcycleLegacyRecord(s));
+          const mergedStores = [...INITIAL_OFFICIAL_STORES];
+          cleanRemoteStores.forEach((st) => {
+            if (!mergedStores.some((s) => s.slug === st.slug || s.store_name === st.store_name)) {
+              mergedStores.push(st);
+            }
           });
           setStores(mergedStores);
         }
 
-        if (isMounted && !prodsRes.error && Array.isArray(prodsRes.data) && prodsRes.data.length > 0) {
-          const mergedProds = [...prodsRes.data];
-          INITIAL_OFFICIAL_PRODUCTS.forEach((seed) => {
-            if (!mergedProds.some((p) => p.title === seed.title)) mergedProds.push(seed);
+        if (isMounted && !prodsRes.error && Array.isArray(prodsRes.data)) {
+          const cleanRemoteProds = prodsRes.data.filter((p) => !isMotorcycleLegacyRecord(p));
+          const mergedProds = [...INITIAL_OFFICIAL_PRODUCTS];
+          cleanRemoteProds.forEach((pr) => {
+            if (!mergedProds.some((p) => p.title === pr.title)) {
+              mergedProds.push(pr);
+            }
           });
           setProducts(mergedProds);
         }
 
         if (isMounted) {
-          const remoteUsed = !usedRes.error && Array.isArray(usedRes.data) ? usedRes.data : [];
+          const remoteUsed = !usedRes.error && Array.isArray(usedRes.data)
+            ? usedRes.data.filter((u) => !isMotorcycleLegacyRecord(u))
+            : [];
           const mergedUsed = [...localUsed];
           remoteUsed.forEach((item) => {
             if (!mergedUsed.some((u) => u.moto_id === item.moto_id && u.brand === item.brand)) {

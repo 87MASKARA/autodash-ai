@@ -38,8 +38,8 @@ const COMMUNITY_CHANNELS = [
 
 const DEFAULT_CLANS = [
   {
-    id: 'clan_default_apache',
-    slug: 'apache-rtr-medellin',
+    id: 'clan_default_porsche',
+    slug: 'porsche-supercar-antioquia',
     name: 'Porsche & Supercar Club Antioquia',
     tag: 'GT3-MDE',
     motto: 'Track Days, Caravanas Las Palmas y Telemetría Oficial',
@@ -54,8 +54,8 @@ const DEFAULT_CLANS = [
     member_count: 18
   },
   {
-    id: 'clan_default_night',
-    slug: 'night-riders-colombia',
+    id: 'clan_default_amg',
+    slug: 'amg-m-performance-colombia',
     name: 'AMG & BMW M Performance Club',
     tag: 'AMG-MCO',
     motto: 'Caravanas Ejecutivas, Biturbo Lounge y Detailing VIP',
@@ -201,28 +201,37 @@ export default function CommunityChatModal({
     }
   };
 
+  const isMotorcycleLegacyClan = (c) => {
+    if (!c) return true;
+    const text = `${c.slug || ''} ${c.name || ''} ${c.tag || ''} ${c.motto || ''}`.toLowerCase();
+    // Si tiene palabras de motos (apache, rtr, night-riders, moto, tvs, pulsar, akt, yamaha, ktm) y no es uno de nuestros clubes de autos
+    if (c.slug === 'apache-rtr-medellin' || c.slug === 'night-riders-colombia') return true;
+    return /\b(apache|rtr|moto|motos|motero|moteros|tvs|pulsar|bajaj|auteco|akt|yamaha|ktm|dos ruedas)\b/i.test(text);
+  };
+
   const [clans, setClans] = useState(() => {
     const deletedSlugs = getDeletedClanSlugs();
     try {
-      const saved = localStorage.getItem('autodash_custom_clans');
+      const saved = localStorage.getItem('autodash_luxury_clubs_v2');
       if (saved) {
         const parsed = JSON.parse(saved);
         if (Array.isArray(parsed)) {
-          return parsed.filter((c) => !deletedSlugs.includes(c.slug));
+          const valid = parsed.filter((c) => !deletedSlugs.includes(c.slug) && !isMotorcycleLegacyClan(c));
+          if (valid.length > 0) return valid;
         }
       }
     } catch {}
     return DEFAULT_CLANS.filter((c) => !deletedSlugs.includes(c.slug));
   });
 
-  const [activeClanSlug, setActiveClanSlug] = useState('apache-rtr-medellin');
+  const [activeClanSlug, setActiveClanSlug] = useState('porsche-supercar-antioquia');
   const [activeChannel, setActiveChannel] = useState('medellin');
   const [unlockedClans, setUnlockedClans] = useState(() => {
     try {
-      const saved = localStorage.getItem('autodash_unlocked_clans');
-      return saved ? JSON.parse(saved) : ['apache-rtr-medellin'];
+      const saved = localStorage.getItem('autodash_unlocked_clubs_v2');
+      return saved ? JSON.parse(saved) : ['porsche-supercar-antioquia', 'amg-m-performance-colombia'];
     } catch {
-      return ['apache-rtr-medellin'];
+      return ['porsche-supercar-antioquia', 'amg-m-performance-colombia'];
     }
   });
   const [inviteCodeInput, setInviteCodeInput] = useState('');
@@ -265,16 +274,20 @@ export default function CommunityChatModal({
 
       if (isMounted && !error && Array.isArray(data) && data.length > 0) {
         const deletedSlugs = getDeletedClanSlugs();
-        // Garantizar siempre en UI que founder_name sea el Fundador por política y filtrar eliminados
-        const normalized = data
-          .filter((c) => !deletedSlugs.includes(c.slug))
+        // Filtrar estrictamente cualquier clan de motos (Apache, RTR, MotoDash) de la tabla compartida
+        const remoteCarClubs = data
+          .filter((c) => !deletedSlugs.includes(c.slug) && !isMotorcycleLegacyClan(c))
           .map((c) => ({
             ...c,
             founder_name: OFFICIAL_FOUNDER_NAME
           }));
-        setClans(normalized);
+        const seedClubs = DEFAULT_CLANS.filter(
+          (d) => !deletedSlugs.includes(d.slug) && !remoteCarClubs.some((r) => r.slug === d.slug)
+        );
+        const mergedClubs = [...remoteCarClubs, ...seedClubs];
+        setClans(mergedClubs);
         try {
-          localStorage.setItem('autodash_custom_clans', JSON.stringify(normalized));
+          localStorage.setItem('autodash_luxury_clubs_v2', JSON.stringify(mergedClubs));
         } catch {}
       }
     }
@@ -394,28 +407,28 @@ export default function CommunityChatModal({
   if (!isOpen) return null;
 
   const identity = bike?.config?.bikeIdentity || {};
-  const bikeLabel = `${identity.brand || 'Moto'} ${identity.model || ''}`.trim();
-  const currentClub = clans.find((c) => c.slug === activeClanSlug) || clans[0] || null;
+  const bikeLabel = `${identity.brand || 'Porsche'} ${identity.model || ''}`.trim();
+  const currentClan = clans.find((c) => c.slug === activeClanSlug) || clans[0] || null;
 
-  // Verificar si el usuario actual es el fundador del club o el Fundador VIP (ambos pueden eliminar el clan)
+  // Verificar si el usuario actual es el fundador del club o el Fundador VIP (ambos pueden eliminar el club)
   const isCurrentClanCreator = Boolean(
-    currentClub &&
+    currentClan &&
     (
       (userProfile?.id && currentClan.creator_id && String(currentClan.creator_id) === String(userProfile.id)) ||
       (userProfile?.email && currentClan.creator_email && String(currentClan.creator_email).toLowerCase() === String(userProfile.email).toLowerCase()) ||
       (userProfile?.fullName && currentClan.creator_name && String(currentClan.creator_name).trim().toLowerCase() === String(userProfile.fullName).trim().toLowerCase())
     )
   );
-  const canDeleteCurrentClub = Boolean(currentClub && (isFounderUser || isCurrentClanCreator));
+  const canDeleteCurrentClan = Boolean(currentClan && (isFounderUser || isCurrentClanCreator));
 
-  // El Fundador VIP o el creador o quien haya desbloqueado el clan tiene acceso directo al espacio privado
+  // El Fundador VIP o el creador o quien haya desbloqueado el club tiene acceso directo al espacio privado
   const hasClanAccess =
     isFounderUser ||
     isCurrentClanCreator ||
     !currentClan?.is_private ||
     unlockedClans.includes(currentClan?.slug);
 
-  const handleDeleteClub = async (clanToDelete) => {
+  const handleDeleteClan = async (clanToDelete) => {
     if (!clanToDelete) return;
     setDeletingClan(true);
     try {
@@ -464,7 +477,7 @@ export default function CommunityChatModal({
     }
   };
 
-  const handleCreateClub = async (e) => {
+  const handleCreateClan = async (e) => {
     e.preventDefault();
     const cleanName = clanName.trim();
     if (!cleanName) return;
@@ -545,7 +558,7 @@ export default function CommunityChatModal({
     }
   };
 
-  const handleUnlockClub = async (e) => {
+  const handleUnlockClan = async (e) => {
     e.preventDefault();
     if (!currentClan) return;
     const cleanCode = inviteCodeInput.trim().toUpperCase();

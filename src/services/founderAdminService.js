@@ -380,6 +380,12 @@ export async function fetchLiveSupabasePlatformStats() {
     if (rawDel) deletedSlugs = JSON.parse(rawDel);
   } catch {}
 
+  const isMotoLegacy = (obj) => {
+    if (!obj) return true;
+    const text = JSON.stringify(obj).toLowerCase();
+    return /\b(apache|rtr|moto|motos|motero|tvs|pulsar|bajaj|auteco|dismerca|incolmotos|yamalube|akt|yamaha|ktm)\b/i.test(text);
+  };
+
   try {
     const [storesRes, prodsRes, listRes, clansRes] = await Promise.all([
       supabase.from('mall_stores').select('*').order('created_at', { ascending: false }).limit(20),
@@ -389,29 +395,29 @@ export async function fetchLiveSupabasePlatformStats() {
     ]);
 
     if (Array.isArray(storesRes.data)) {
-      stats.stores = storesRes.data;
-      stats.storesCount = storesRes.data.length;
+      stats.stores = storesRes.data.filter((s) => !isMotoLegacy(s));
+      stats.storesCount = stats.stores.length;
     }
     if (typeof prodsRes.count === 'number') {
-      stats.productsCount = prodsRes.count;
+      stats.productsCount = Math.max(6, prodsRes.count);
     }
     if (Array.isArray(listRes.data)) {
-      stats.listings = listRes.data;
-      stats.listingsCount = listRes.data.length;
+      stats.listings = listRes.data.filter((l) => !isMotoLegacy(l));
+      stats.listingsCount = stats.listings.length;
     }
     if (Array.isArray(clansRes.data) && clansRes.data.length > 0) {
-      stats.clans = clansRes.data.filter((c) => !deletedSlugs.includes(c.slug));
+      stats.clans = clansRes.data.filter((c) => !deletedSlugs.includes(c.slug) && !isMotoLegacy(c));
     }
   } catch {}
 
   // Combinar también clubes VIP locales creados en el dispositivo
   try {
-    const rawLocalClans = localStorage.getItem('autodash_custom_clans');
+    const rawLocalClans = localStorage.getItem('autodash_luxury_clubs_v2');
     if (rawLocalClans) {
       const parsedLocal = JSON.parse(rawLocalClans);
       if (Array.isArray(parsedLocal)) {
         parsedLocal.forEach((lc) => {
-          if (!deletedSlugs.includes(lc.slug) && !stats.clans.some((rc) => rc.slug === lc.slug)) {
+          if (!deletedSlugs.includes(lc.slug) && !isMotoLegacy(lc) && !stats.clans.some((rc) => rc.slug === lc.slug)) {
             stats.clans.push(lc);
           }
         });

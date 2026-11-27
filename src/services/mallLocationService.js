@@ -145,7 +145,7 @@ export function sortStoresByProximity(stores = [], riderCoords = null) {
 
 export function getLoadedMallStores() {
   try {
-    const saved = localStorage.getItem('autodash_mall_stores');
+    const saved = localStorage.getItem('autodash_luxury_mall_stores_v2');
     if (saved) {
       const parsed = JSON.parse(saved);
       if (Array.isArray(parsed) && parsed.length > 0) {
