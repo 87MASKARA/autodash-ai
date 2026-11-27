@@ -19,11 +19,11 @@ export default function FuelTelemetryWidget({
   const { t, language } = useLanguage();
   const isEn = language === 'en';
 
-  // Estimación base por cilindrada o cálculo real si el usuario ha registrado tanqueos o sincronizado con TFT/OBD
+  // Estimación base por cilindrada o cálculo real si el usuario ha registrado tanqueos o sincronizado con OBD-II
   const defaultKmPerLiter = engineCc <= 250 ? 38 : engineCc <= 650 ? 26 : 19;
   const latestRefuel = Array.isArray(tanqueos) && tanqueos.length > 0 ? tanqueos[0] : null;
 
-  // Calcular combustible real respetando el porcentaje explícito del tablero TFT o foto escaneada
+  // Calcular combustible real respetando el porcentaje explícito del clúster digital o foto escaneada
   const currentOdo = Number(bike?.odometer || hardwareTelemetry?.odometerKm) || 0;
   const explicitPct =
     hardwareTelemetry && typeof hardwareTelemetry.fuelLevelPercent === 'number'

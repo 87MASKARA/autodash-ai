@@ -35,14 +35,14 @@ import {
 const OFFICIAL_FOUNDER_NAME = 'Anderson • Fundador VIP';
 
 export const MALL_CATEGORIES = [
-  { id: 'all', label: '🔥 Todo el Mall' },
-  { id: 'motor', label: '🛢️ Motor, Aceites & Filtros' },
-  { id: 'electrico', label: '⚡ Baterías AGM & Eléctrico' },
-  { id: 'frenos', label: '🛑 Pastillas & Frenos' },
-  { id: 'transmision', label: '⛓️ Kit de Arrastre & Cadena' },
-  { id: 'llantas', label: '🛞 Llantas & Neumáticos' },
-  { id: 'motos_nuevas', label: '🏍️ Concesionario (Autos 0 KM)' },
-  { id: 'accesorios', label: '📟 Pantallas CarPlay & Cascos' }
+  { id: 'all', label: '🔥 Todo el AutoMall' },
+  { id: 'motor', label: '🛢️ Motor, Aceites 0W-40 & Filtros HEPA' },
+  { id: 'electrico', label: '⚡ Baterías AGM Start-Stop & OBD-II' },
+  { id: 'frenos', label: '🛑 Pastillas Cerámicas Brembo & Frenos' },
+  { id: 'transmision', label: '⚙️ Transmisión DCT/ZF & Correas' },
+  { id: 'llantas', label: '🛞 Neumáticos Pilot Sport & Rines' },
+  { id: 'motos_nuevas', label: '🏎️ Concesionario (Autos 0 KM)' },
+  { id: 'accesorios', label: '📟 Pantallas CarPlay & Detailing 9H' }
 ];
 
 const INITIAL_OFFICIAL_STORES = DEFAULT_MALL_STORES;
@@ -51,17 +51,17 @@ const INITIAL_OFFICIAL_PRODUCTS = [
   {
     id: 'prod_1',
     store_slug: 'auteco-dismerca-oficial',
-    store_name: 'Auteco / Dismerca Concesionario & Repuestos',
-    title: 'Aceite Sintético 10W-40 JASO MA2 (Especial TVS Apache 4V / FI)',
+    store_name: 'Autoelite Porsche & Supercar Center Oficial',
+    title: 'Kit Aceite Mobil 1 ESP X3 0W-40 Full Sintético (8L + Filtro OEM Porsche C40 / MB 229.5)',
     category: 'motor',
     maintenance_comp_id: 'aceite_motor',
-    compatible_brands: ['TVS', 'YAMAHA', 'KTM', 'BAJAJ', 'SUZUKI', 'HONDA'],
-    compatible_models: 'TVS Apache RTR 160/200 4V FI NG, MT-09, Duke 390 y 4T Inyección',
-    oem_reference: 'OEM-TVS-TRU4-10W40',
-    price: 54000,
+    compatible_brands: ['PORSCHE', 'MERCEDES-AMG', 'BMW', 'AUDI', 'FERRARI', 'MAZDA', 'TOYOTA'],
+    compatible_models: 'Porsche 911 / Cayenne, Mercedes-AMG V8/I6, BMW M3/M4 S58, Audi RS3/RS6 y Motores Turbo',
+    oem_reference: 'OEM-MOBIL1-ESP-0W40',
+    price: 440000,
     currency: 'COP',
     discount_pct: 12,
-    stock: 48,
+    stock: 36,
     image_url: null,
     whatsapp_sales: '573009120000',
     delivery_available: true
@@ -69,17 +69,17 @@ const INITIAL_OFFICIAL_PRODUCTS = [
   {
     id: 'prod_2',
     store_slug: 'mundorepuestos-racing-co',
-    store_name: 'MundoRepuestos & Lubricantes Racing',
-    title: 'Batería AGM Gel Alto Arranque 12V 8Ah (Compatible Telemetría TFT)',
+    store_name: 'EuroPerformance & Lubricantes Sintéticos VIP',
+    title: 'Batería Varta Silver Dynamic AGM Start-Stop 12V 80Ah 800A (Codificable OBD-II / IBS)',
     category: 'electrico',
     maintenance_comp_id: 'bateria_sistema_carga',
-    compatible_brands: ['TVS', 'YAMAHA', 'KTM', 'BAJAJ', 'HONDA', 'SUZUKI'],
-    compatible_models: 'Apache RTR 160 4V FI, Pulsar NS200, FZ25, Gixxer 150/250',
-    oem_reference: 'AGM-YTX9-BS-PRO',
-    price: 175000,
+    compatible_brands: ['PORSCHE', 'MERCEDES-AMG', 'BMW', 'AUDI', 'MAZDA', 'TOYOTA', 'CHEVROLET'],
+    compatible_models: 'Sistemas Start-Stop, Mild-Hybrid 48V y Cabinas Digitales MBUX / iDrive / Virtual Cockpit',
+    oem_reference: 'VARTA-AGM-F21-80AH',
+    price: 890000,
     currency: 'COP',
     discount_pct: 15,
-    stock: 19,
+    stock: 18,
     image_url: null,
     whatsapp_sales: '573104500000',
     delivery_available: true
@@ -87,17 +87,17 @@ const INITIAL_OFFICIAL_PRODUCTS = [
   {
     id: 'prod_3',
     store_slug: 'auteco-dismerca-oficial',
-    store_name: 'Auteco / Dismerca Concesionario & Repuestos',
-    title: 'Juego Pastillas de Freno Sinterizadas ABS (Delanteras / Traseras)',
+    store_name: 'Autoelite Porsche & Supercar Center Oficial',
+    title: 'Juego Pastillas de Freno Cerámicas Brembo GT Delanteras + Sensor Electrónico Desgaste',
     category: 'frenos',
     maintenance_comp_id: 'pastillas_delanteras',
-    compatible_brands: ['TVS', 'KTM', 'BAJAJ', 'YAMAHA'],
-    compatible_models: 'TVS Apache RTR 160/200 4V ABS, KTM Duke 200/390',
-    oem_reference: 'N9112580-ABS-SINT',
-    price: 62000,
+    compatible_brands: ['PORSCHE', 'MERCEDES-AMG', 'BMW', 'AUDI', 'FERRARI'],
+    compatible_models: 'Cálipers Fijos Brembo 6 Pistones, M Compound, AMG High-Performance y Audi RS',
+    oem_reference: 'BREMBO-CERAMIC-GT992',
+    price: 520000,
     currency: 'COP',
     discount_pct: 10,
-    stock: 34,
+    stock: 24,
     image_url: null,
     whatsapp_sales: '573009120000',
     delivery_available: true
@@ -105,17 +105,17 @@ const INITIAL_OFFICIAL_PRODUCTS = [
   {
     id: 'prod_4',
     store_slug: 'mundorepuestos-racing-co',
-    store_name: 'MundoRepuestos & Lubricantes Racing',
-    title: 'Kit de Arrastre Reforzado Cadena O-Ring Dorada (Acero 1045)',
+    store_name: 'EuroPerformance & Lubricantes Sintéticos VIP',
+    title: 'Kit Correa de Repartición / Accesorios Continental EPDM + Tensor Hidráulico INA',
     category: 'transmision',
-    maintenance_comp_id: 'cadena_lubricacion',
-    compatible_brands: ['TVS', 'YAMAHA', 'BAJAJ', 'HONDA', 'SUZUKI'],
-    compatible_models: 'TVS Apache RTR 160 4V (428H / 520 O-Ring) y Naked 150-250cc',
-    oem_reference: 'KIT-ORING-4V-GOLD',
-    price: 168000,
+    maintenance_comp_id: 'kit_arrastre',
+    compatible_brands: ['PORSCHE', 'MERCEDES-AMG', 'BMW', 'AUDI', 'MAZDA', 'TOYOTA'],
+    compatible_models: 'Motores Turbo e Inyección Directa (Incluye poleas tensoras y correa Poly-V reforzada)',
+    oem_reference: 'CONTITECH-PRO-KIT',
+    price: 940000,
     currency: 'COP',
     discount_pct: 14,
-    stock: 22,
+    stock: 15,
     image_url: null,
     whatsapp_sales: '573104500000',
     delivery_available: true
@@ -123,17 +123,17 @@ const INITIAL_OFFICIAL_PRODUCTS = [
   {
     id: 'prod_5',
     store_slug: 'yamaha-incolmotos-boutique',
-    store_name: 'Concesionario & Boutique Racing Multimarcas',
-    title: 'Pantalla Portátil Moto 3.6" CarPlay & Android Auto IPX7 (3000mAh USB-C)',
+    store_name: 'Boutique Detailing Cerámico 9H & Pantallas CarPlay Luxury',
+    title: 'Escáner OBD-II 16 Pines Vgate vLinker MC+ BLE 4.0 + Kit Recubrimiento Cerámico Gtechniq 9H',
     category: 'accesorios',
     maintenance_comp_id: null,
-    compatible_brands: ['TVS', 'YAMAHA', 'KTM', 'BMW', 'DUCATI', 'HONDA', 'SUZUKI', 'BAJAJ'],
-    compatible_models: 'Universal Manubrio (640×1080 HD Solar • Procesador V851S)',
-    oem_reference: 'HUD-36-V851S-IP66',
-    price: 349000,
+    compatible_brands: ['PORSCHE', 'MERCEDES-AMG', 'BMW', 'FERRARI', 'AUDI', 'TESLA', 'TOYOTA', 'MAZDA', 'CHEVROLET'],
+    compatible_models: 'Puerto Universal OBD-II 16 Pines Bajo el Volante (100% Compatible con AutoDash AI)',
+    oem_reference: 'VLINKER-OBD2-9H-VIP',
+    price: 365000,
     currency: 'COP',
     discount_pct: 18,
-    stock: 12,
+    stock: 19,
     image_url: null,
     whatsapp_sales: '573158000000',
     delivery_available: true
@@ -141,17 +141,17 @@ const INITIAL_OFFICIAL_PRODUCTS = [
   {
     id: 'prod_6',
     store_slug: 'auteco-dismerca-oficial',
-    store_name: 'Auteco / Dismerca Concesionario & Repuestos',
-    title: 'TVS Apache RTR 160 4V FI NG ABS SmartXonnect (Modelo 0 KM Concesionario)',
+    store_name: 'Autoelite Porsche & Supercar Center Oficial',
+    title: 'Porsche 911 Carrera GTS / BMW M4 Competition xDrive 0 KM (Entrega Inmediata Concesionario)',
     category: 'motos_nuevas',
     maintenance_comp_id: null,
-    compatible_brands: ['TVS'],
-    compatible_models: 'Entrega inmediata • Financiación directa y Garantía Oficial 24m/24.000km',
-    oem_reference: 'CONCESIONARIO-0KM-RTR160',
-    price: 11290000,
+    compatible_brands: ['PORSCHE', 'BMW'],
+    compatible_models: 'Modelo 2026 0 KM • Garantía Oficial de Fábrica y Mantenimiento Incluido',
+    oem_reference: 'CONCESIONARIO-0KM-GT',
+    price: 685000000,
     currency: 'COP',
-    discount_pct: 5,
-    stock: 6,
+    discount_pct: 4,
+    stock: 3,
     image_url: null,
     whatsapp_sales: '573009120000',
     delivery_available: true
@@ -274,7 +274,7 @@ export default function MotoMallModal({
   const [prodStoreSlug, setProdStoreSlug] = useState(INITIAL_OFFICIAL_STORES[0].slug);
   const [prodTitle, setProdTitle] = useState('');
   const [prodCategory, setProdCategory] = useState('motor');
-  const [prodModels, setProdModels] = useState('TVS Apache RTR 160 4V / Multimarcas');
+  const [prodModels, setProdModels] = useState('TVS Porsche 911 GT3 RS / Multimarcas');
   const [prodOem, setProdOem] = useState('');
   const [prodPrice, setProdPrice] = useState('');
   const [prodDiscount, setProdDiscount] = useState('10');
@@ -385,7 +385,7 @@ export default function MotoMallModal({
 
   const identity = bike?.config?.bikeIdentity || {};
   const activeBikeBrand = String(identity.brand || 'TVS').toUpperCase();
-  const activeBikeModel = `${identity.brand || 'TVS'} ${identity.model || 'Apache RTR 160 4V'}`;
+  const activeBikeModel = `${identity.brand || 'TVS'} ${identity.model || 'Porsche 911 GT3 RS'}`;
 
   // Filtrado inteligente de productos
   const filteredProducts = products.filter((p) => {
@@ -649,7 +649,7 @@ export default function MotoMallModal({
 
   const handleOrderViaWhatsApp = (prod) => {
     const cleanPhone = String(prod.whatsapp_sales || '573009120000').replace(/[^0-9]/g, '');
-    const msg = `🛒 *PEDIDO OFICIAL MOTOMALL — AUTODASH AI*\nHola *${prod.store_name}*, vengo desde AutoDash AI.\n\n📦 *Producto:* ${prod.title}\n🔖 *Referencia:* ${prod.oem_reference}\n💰 *Precio AutoMall:* $${Number(prod.price).toLocaleString()} ${prod.currency} (-${prod.discount_pct}% Dto. Miembro)\n🏍️ *Mi Moto:* ${activeBikeModel}\n\n¿Tienen disponibilidad para despacho inmediato?`;
+    const msg = `🛒 *PEDIDO OFICIAL MOTOMALL — AUTODASH AI*\nHola *${prod.store_name}*, vengo desde AutoDash AI.\n\n📦 *Producto:* ${prod.title}\n🔖 *Referencia:* ${prod.oem_reference}\n💰 *Precio AutoMall:* $${Number(prod.price).toLocaleString()} ${prod.currency} (-${prod.discount_pct}% Dto. Miembro)\n🏍️ *Mi Auto:* ${activeBikeModel}\n\n¿Tienen disponibilidad para despacho inmediato?`;
     window.open(`https://wa.me/${cleanPhone}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener,noreferrer');
   };
 
@@ -725,7 +725,7 @@ export default function MotoMallModal({
               }`}
             >
               <ShoppingBag className="w-4 h-4" />
-              <span>🛒 Catálogo de Repuestos & Motos ({products.length})</span>
+              <span>🛒 Catálogo de Repuestos & Autos ({products.length})</span>
             </button>
 
             <button
@@ -754,7 +754,7 @@ export default function MotoMallModal({
               }`}
             >
               <Bike className="w-4 h-4" />
-              <span>🏍️ Motos Usadas Certificadas ({certifiedUsedBikes.length})</span>
+              <span>🏍️ Autos Usadas Certificadas ({certifiedUsedBikes.length})</span>
             </button>
 
             <button
@@ -813,7 +813,7 @@ export default function MotoMallModal({
                   <span className="text-amber-400">Mantenimiento Predictivo</span> de cada Moto
                 </h3>
                 <p className="text-xs sm:text-sm text-neutral-300 leading-relaxed">
-                  Cuando a un piloto se le agota el aceite, las pastillas de freno, la batería o el kit de arrastre en <strong>AutoDash AI</strong>, el sistema le recomienda automáticamente las tiendas y concesionarios aliados de su ciudad que tienen el repuesto exacto para su moto.
+                  Cuando a un piloto se le agota el aceite, las pastillas de freno, la batería o el correa de repartición y accesorios en <strong>AutoDash AI</strong>, el sistema le recomienda automáticamente las tiendas y concesionarios aliados de su ciudad que tienen el repuesto exacto para su moto.
                 </p>
               </div>
 
@@ -1042,7 +1042,7 @@ export default function MotoMallModal({
                     <li className="text-emerald-300 font-bold">
                       ✓ Integrado al Guardián de Garantía (Agendamiento de revisiones 500km, 2.500km, 5.000km)
                     </li>
-                    <li>✓ Cotizador directo de Motos Nuevas y Financiación</li>
+                    <li>✓ Cotizador directo de Autos Nuevas y Financiación</li>
                     <li>✓ Cobertura Nacional o Múltiples Sedes por Ciudad</li>
                     <li>✓ Supervisión directa con {OFFICIAL_FOUNDER_NAME}</li>
                   </ul>
@@ -1400,7 +1400,7 @@ export default function MotoMallModal({
                   VITRINA PÚBLICA • CERO MOTOS MAQUILLADAS • MÍNIMO 3 FOTOS REALES
                 </span>
                 <h3 className="text-base sm:text-lg font-black font-racing uppercase text-white">
-                  🏍️ Motos Usadas con Sello de Mantenimiento Verificado
+                  🏍️ Autos Usadas con Sello de Mantenimiento Verificado
                 </h3>
                 <p className="text-xs text-neutral-300">
                   Cada moto publicada aquí tiene su odómetro auditado en AutoDash AI, 17 componentes de desgaste verificados y galería de fotos reales.
@@ -1412,10 +1412,10 @@ export default function MotoMallModal({
               <div className="p-8 rounded-2xl bg-neutral-900/70 border border-neutral-800 text-center space-y-2">
                 <Bike className="w-10 h-10 text-amber-400 mx-auto" />
                 <h4 className="text-sm font-black font-racing uppercase text-white">
-                  Aún no hay motos publicadas en esta vitrina
+                  Aún no hay autos publicadas en esta vitrina
                 </h4>
                 <p className="text-xs text-neutral-400 max-w-md mx-auto">
-                  Puedes publicar tu moto desde el botón «Vender con Historial Certificado» en tu Garaje o Tablero subiendo mínimo 3 fotos reales.
+                  Puedes publicar tu auto desde el botón «Vender con Historial Certificado» en tu Garaje o Tablero subiendo mínimo 3 fotos reales.
                 </p>
               </div>
             ) : (
@@ -1654,7 +1654,7 @@ export default function MotoMallModal({
                     required
                     value={storeName}
                     onChange={(e) => setStoreName(e.target.value)}
-                    placeholder="Ej: Repuestos & Motos Antioquia SAS"
+                    placeholder="Ej: Repuestos & Autos Antioquia SAS"
                     className="w-full bg-neutral-950 border border-neutral-700 rounded-xl px-3 py-2 text-white"
                   />
                 </div>
@@ -1816,7 +1816,7 @@ export default function MotoMallModal({
                     required
                     value={prodTitle}
                     onChange={(e) => setProdTitle(e.target.value)}
-                    placeholder="Ej: Filtro de Aceite Original TVS Apache 160/200 4V"
+                    placeholder="Ej: Filtro de Aceite Original Porsche 911 160/200 4V"
                     className="w-full bg-neutral-950 border border-neutral-700 rounded-xl px-3 py-2 text-white"
                   />
                 </div>
@@ -1892,13 +1892,13 @@ export default function MotoMallModal({
 
                 <div className="sm:col-span-2">
                   <label className="text-[10px] text-neutral-400 uppercase block mb-1">
-                    Motos Compatibles
+                    Autos Compatibles
                   </label>
                   <input
                     type="text"
                     value={prodModels}
                     onChange={(e) => setProdModels(e.target.value)}
-                    placeholder="Ej: TVS Apache RTR 160 4V, 200 4V, Yamaha MT-09"
+                    placeholder="Ej: TVS Porsche 911 GT3 RS, 200 4V, Yamaha MT-09"
                     className="w-full bg-neutral-950 border border-neutral-700 rounded-xl px-3 py-2 text-white"
                   />
                 </div>

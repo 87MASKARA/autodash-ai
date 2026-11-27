@@ -59,9 +59,9 @@ export const COUNTRY_LEGAL_FRAMEWORKS = {
     authority: 'Policía de Tránsito / Agentes de Movilidad / SIMIT / RUNT',
     keyRulesSummary: `
 - Documentos Digitales (SOAT, Tecno, Licencia, Tarjeta): Según Circular del Ministerio de Transporte 202210100006011 y RUNT, es 100% VÁLIDO presentarlos desde el celular consultando en línea o desde billetera digital. PROHIBIDO inmovilizar o multar por no llevar el papel impreso si están vigentes en el RUNT.
-- Regla de Subsanación en 60 Minutos (Art. 125 Ley 769 de 2002): Si la falta es subsanable en el lugar (ej. casco, chaleco reflectivo después de las 18:00, bombillo fundido, olvido físico de documento vigente), tienes derecho a 60 MINUTOS para subsanarla en el sitio. Si la subsanas en esos 60 min, se impone el comparendo pero NO SE PUEDEN LLEVAR LA MOTO EN GRÚA A PATIOS.
+- Regla de Subsanación en 60 Minutos (Art. 125 Ley 769 de 2002): Si la falta es subsanable en el lugar (ej. casco, película de seguridad / polarizado después de las 18:00, bombillo fundido, olvido físico de documento vigente), tienes derecho a 60 MINUTOS para subsanarla en el sitio. Si la subsanas en esos 60 min, se impone el comparendo pero NO SE PUEDEN LLEVAR LA MOTO EN GRÚA A PATIOS.
 - Escape / Exosto / Ruido (Infracción C28 / D17): Un agente de tránsito NO puede inmovilizar ni multar "a oído". Se requiere obligatoriamente medición técnica con sonómetro calibrado por la autoridad ambiental competente.
-- Fotomultas (Sentencia C-038 de 2020 Corte Constitucional): No existe solidaridad automática con el propietario si la cámara no identifica plenamente quién conducía la moto.
+- Fotomultas (Sentencia C-038 de 2020 Corte Constitucional): No existe solidaridad automática con el propietario si la cámara no identifica plenamente quién conducía el auto.
 - Grabar el Procedimiento (Art. 21 Ley 1801 de 2016 - Código de Policía): Todo ciudadano tiene derecho legal a grabar en video y audio cualquier procedimiento policial en vía pública.
 - Casos donde SÍ da Inmovilización inmediata: SOAT vencido (D02), Tecnomecánica vencida (C35), conducir sin licencia (D01), estado de embriaguez (Art. 152), pico y placa (C14) o transitar por andenes/ciclorrutas (D05).`,
     quickQuestions: [
@@ -72,7 +72,7 @@ export const COUNTRY_LEGAL_FRAMEWORKS = {
         instantVerdict: 'NO ES LEGAL INMOVILIZAR NI MULTAR',
         canImpound: 'NO SE PUEDEN LLEVAR LA MOTO EN GRÚA',
         lawCitation: 'Circular Ministerio de Transporte 202210100006011 & Art. 131 Ley 769 de 2002 (RUNT en línea)',
-        explanation: 'Tanto el SOAT como la Revisión Técnico-Mecánica y la Licencia son verificables electrónicamente en el RUNT. La autoridad de tránsito tiene la obligación legal de aceptar la exhibición digital en la pantalla de tu celular. Ningún agente puede exigirte papel impreso ni subir tu moto a la grúa si están vigentes.',
+        explanation: 'Tanto el SOAT como la Revisión Técnico-Mecánica y la Licencia son verificables electrónicamente en el RUNT. La autoridad de tránsito tiene la obligación legal de aceptar la exhibición digital en la pantalla de tu celular. Ningún agente puede exigirte papel impreso ni subir tu auto a la grúa si están vigentes.',
         actionSteps: [
           'Abre "Mis Documentos (Modo Retén)" en AutoDash AI y muéstrale los 4 documentos en pantalla.',
           'Indícale con respeto: "Agente, conforme a la Circular del Ministerio de Transporte, mis documentos están vigentes en el RUNT y tienen plena validez digital".',
@@ -96,11 +96,11 @@ export const COUNTRY_LEGAL_FRAMEWORKS = {
       {
         id: 'subsanar_60min',
         badge: '⏱️ Regla de los 60 Minutos',
-        question: '¿En qué casos tengo derecho a 60 minutos para subsanar la falta en el sitio sin que se lleven mi moto a los patios?',
+        question: '¿En qué casos tengo derecho a 60 minutos para subsanar la falta en el sitio sin que se lleven mi auto a los patios?',
         instantVerdict: 'DERECHO LEGAL A 60 MINUTOS EN EL SITIO',
         canImpound: 'NO SE LLEVAN LA MOTO SI SUBSANAS EN 60 MIN',
         lawCitation: 'Artículo 125 del Código Nacional de Tránsito (Ley 769 de 2002)',
-        explanation: 'La inmovilización se suspende si la causa que la origina puede ser subsanada en el sitio del procedimiento dentro de los 60 minutos siguientes. Por ejemplo: que alguien te lleve el casco reglamentario, el chaleco reflectivo (después de las 6:00 PM), cambiar un bombillo en el sitio o que otro conductor con licencia vigente se lleve el vehículo.',
+        explanation: 'La inmovilización se suspende si la causa que la origina puede ser subsanada en el sitio del procedimiento dentro de los 60 minutos siguientes. Por ejemplo: que alguien te lleve el kit de carretera reglamentario, el película de seguridad / polarizado (después de las 6:00 PM), cambiar un bombillo en el sitio o que otro conductor con licencia vigente se lleve el vehículo.',
         actionSteps: [
           'Solicita inmediatamente al agente que marque la hora de inicio de tus 60 minutos del Artículo 125 de la Ley 769.',
           'Nota importante: Si el SOAT (D02) o la Tecnomecánica (C35) están VENCIDOS antes del retén, NO son subsanables comprándolos en el sitio porque el SOAT entra en vigencia a las 24 horas.'
@@ -109,7 +109,7 @@ export const COUNTRY_LEGAL_FRAMEWORKS = {
       {
         id: 'fotomultas_c038',
         badge: '📸 Fotomultas (Sentencia C-038)',
-        question: 'Me llegó una fotomulta por cámara automática pero en la foto solo se ve la placa de mi moto y no quién iba manejando. ¿Es legal?',
+        question: 'Me llegó una fotomulta por cámara automática pero en la foto solo se ve la placa de mi auto y no quién iba manejando. ¿Es legal?',
         instantVerdict: 'IMPUGNABLE — DEBEN IDENTIFICAR AL CONDUCTOR',
         canImpound: 'NO DA INMOVILIZACIÓN (MULTA ADMINISTRATIVA)',
         lawCitation: 'Sentencia C-038 de 2020 de la Corte Constitucional de Colombia',
@@ -126,7 +126,7 @@ export const COUNTRY_LEGAL_FRAMEWORKS = {
         instantVerdict: 'TIENES DERECHO TOTAL A GRABAR • PROHIBIDO QUITAR LLAVES',
         canImpound: 'ABUSO DE AUTORIDAD SI TE IMPIDEN GRABAR',
         lawCitation: 'Artículo 21 de la Ley 1801 de 2016 (Código Nacional de Seguridad y Convivencia)',
-        explanation: 'Todo procedimiento de policía o tránsito es público y los ciudadanos tienen derecho expreso por ley a grabarlo en audio y video. El funcionario que impida la grabación incurre en causal de mala conducta disciplinaria. Además, ningún agente puede arrebatar las llaves del switch de tu autocicleta.',
+        explanation: 'Todo procedimiento de policía o tránsito es público y los ciudadanos tienen derecho expreso por ley a grabarlo en audio y video. El funcionario que impida la grabación incurre en causal de mala conducta disciplinaria. Además, ningún agente puede arrebatar las llaves del switch de tu automóvil.',
         actionSteps: [
           'Mantén el celular grabando a una distancia prudente sin obstruir físicamente al agente.',
           'Menciona con calma: "Agente, estoy ejerciendo mi derecho del Artículo 21 de la Ley 1801 de 2016".',
@@ -143,7 +143,7 @@ export const COUNTRY_LEGAL_FRAMEWORKS = {
         explanation: 'Solo pueden llevarse el auto cuando la ley lo ordena expresamente y no es subsanable: 1) SOAT vencido (D02), 2) Tecnomecánica vencida (C35), 3) Conducir sin licencia o vencida (D01/B02), 4) Pico y Placa (C14), 5) Transitar por andenes o ciclorrutas (D05), 6) Embriaguez (Art. 152).',
         actionSteps: [
           'Aun si procede la grúa, tienes derecho a que hagan el inventario detallado del estado del vehículo antes de subirla.',
-          'Exige que sellen el tanque, sillín y accesorios en el acta de inventario y tómale fotos y video a toda el auto sobre la grúa.'
+          'Exige que sellen el tanque, maletero / guantera y accesorios en el acta de inventario y tómale fotos y video a toda el auto sobre la grúa.'
         ]
       }
     ]
@@ -159,7 +159,7 @@ export const COUNTRY_LEGAL_FRAMEWORKS = {
 - Electronic Proof of Insurance & Registration: In 49 U.S. states and D.C., riders are legally permitted by statute to display proof of motorcycle liability insurance on a smartphone screen. Police cannot search other apps on your phone without a warrant (Riley v. California, U.S. Supreme Court).
 - Aftermarket Exhaust / Muffler Noise: Officers cannot tow or impound a motorcycle for loud exhaust on the roadside. Exhaust violations (e.g., CA Vehicle Code § 27150 / SAE J2825 92-96 dB limit) are issued as "Fix-It Tickets" (Correctable Violations).
 - Right to Record Traffic Stops: Protected nationwide under the First Amendment of the U.S. Constitution (Glik v. Cunniffe). Officers cannot seize your phone or take your motorcycle ignition keys without probable cause for arrest (Fourth Amendment).
-- Camera Tickets (Red Light / Speed): When a rider wears a full-face helmet and cannot be identified on camera, tickets can be dismissed via Trial by Written Declaration in states requiring driver identification.
+- Camera Tickets (Red Light / Speed): When a rider wears a tinted windshield and cannot be identified on camera, tickets can be dismissed via Trial by Written Declaration in states requiring driver identification.
 - Legal Towing / Impound Causes: Police may only tow/impound if the rider lacks a valid Driver License / Class M endorsement (and no licensed rider can pick it up), registration is expired over 6 months (e.g., CVC § 22651(o)), DUI arrest, reckless street racing/sideshow, or stolen vehicle report.`,
     quickQuestions: [
       {
@@ -206,7 +206,7 @@ export const COUNTRY_LEGAL_FRAMEWORKS = {
       {
         id: 'fotomultas_c038',
         badge: '📸 Red-Light Camera (Helmet On)',
-        question: 'I received a red-light or speed camera ticket in the mail, but the photo only shows my license plate and a full-face helmet. Is it enforceable?',
+        question: 'I received a red-light or speed camera ticket in the mail, but the photo only shows my license plate and a tinted windshield. Is it enforceable?',
         instantVerdict: 'DISPUTABLE — PROSECUTION MUST IDENTIFY THE RIDER',
         canImpound: 'NO TOWING (MAIL CITATION ONLY)',
         lawCitation: 'Sixth Amendment Confrontation Clause & State Photo Enforcement Laws (e.g., CVC § 21455.5)',
@@ -219,7 +219,7 @@ export const COUNTRY_LEGAL_FRAMEWORKS = {
       {
         id: 'record_police',
         badge: '🎥 Recording Police & Bike Keys',
-        question: 'Is it legal to record the police officer with my Helmet Cam / GoPro / Phone, and can an officer pull the keys out of my motorcycle ignition?',
+        question: 'Is it legal to record the police officer with my 4K Dashcam / GoPro / Phone, and can an officer pull the keys out of my motorcycle ignition?',
         instantVerdict: 'PROTECTED BY 1ST & 4TH AMENDMENTS',
         canImpound: 'UNLAWFUL SEIZURE IF KEYS TAKEN WITHOUT ARREST',
         lawCitation: 'First Amendment (Glik v. Cunniffe, 655 F.3d 78) & Fourth Amendment of the U.S. Constitution',
@@ -254,7 +254,7 @@ export const COUNTRY_LEGAL_FRAMEWORKS = {
     keyRulesSummary: `
 - Documentos en el móvil (miDGT): La app oficial miDGT tiene plena validez legal en toda España para el Carnet de Conducir (A1/A2/A), Permiso de Circulación y Ficha Técnica. El Seguro a Terceros y la ITV se comprueban telemáticamente por matrícula en el fichero FIVA/DGT.
 - Escape / DB-Killer y Ruido: La Guardia Civil no puede inmovilizar "a oído". Para sancionar por exceso de decibelios se exige medición con sonómetro homologado (salvo escape libre sin silenciador).
-- Inmovilización (Art. 104 LSV): Solo procede por carecer de seguro obligatorio, no usar casco homologado, alcoholemia/drogas positivas o deficiencias técnicas muy graves.
+- Inmovilización (Art. 104 LSV): Solo procede por carecer de seguro obligatorio, no usar cinturón de seguridad y kit de carretera, alcoholemia/drogas positivas o deficiencias técnicas muy graves.
 - Descuento por pronto pago (Art. 94 LSV): 50% de reducción dentro de los 20 días naturales siguientes a la notificación.`,
     quickQuestions: [
       {
@@ -290,7 +290,7 @@ export const COUNTRY_LEGAL_FRAMEWORKS = {
         instantVerdict: 'SE LEVANTA AL CESAR LA CAUSA EN EL ACTO',
         canImpound: 'NO HAY GRÚA SI SE SUBSANA EN EL CONTROL',
         lawCitation: 'Artículo 104.3 de la Ley sobre Tráfico y Seguridad Vial (RDL 6/2015)',
-        explanation: 'El Artículo 104.3 establece expresamente que la inmovilización se levantará en el momento en que cese la causa que la motivó (por ejemplo, si otro conductor habilitado se hace cargo del vehículocicleta, si te traen un casco homologado o si acreditas telemáticamente el seguro en vigor).',
+        explanation: 'El Artículo 104.3 establece expresamente que la inmovilización se levantará en el momento en que cese la causa que la motivó (por ejemplo, si otro conductor habilitado se hace cargo del automóvil, si te traen un cinturón de seguridad y kit de carretera o si acreditas telemáticamente el seguro en vigor).',
         actionSteps: [
           'Invoca el Art. 104.3 de la Ley de Seguridad Vial para subsanar la incidencia antes de que soliciten depósito municipal.'
         ]
@@ -323,11 +323,11 @@ export const COUNTRY_LEGAL_FRAMEWORKS = {
       {
         id: 'when_impound',
         badge: '🚛 ¿Cuándo SÍ Inmoviliza la DGT?',
-        question: '¿En qué casos SÍ puede la Guardia Civil o Policía Municipal inmovilizar mi moto y llevarla al depósito?',
+        question: '¿En qué casos SÍ puede la Guardia Civil o Policía Municipal inmovilizar mi auto y llevarla al depósito?',
         instantVerdict: 'CAUSALES TASADAS DEL ARTÍCULO 104 LSV',
         canImpound: 'SÍ PROCEDE INMOVILIZACIÓN EN ESTOS CASOS',
         lawCitation: 'Artículo 104 del Real Decreto Legislativo 6/2015 (Ley de Seguridad Vial)',
-        explanation: 'Solo procede inmovilizar la automóvil cuando: 1) Carece de Seguro Obligatorio en vigor, 2) El conductor o pasajero no lleva casco homologado, 3) Positivo en control de alcoholemia o drogas, 4) ITV desfavorable o negativa con riesgo muy grave, 5) Carecer de permiso de conducción válido.',
+        explanation: 'Solo procede inmovilizar la automóvil cuando: 1) Carece de Seguro Obligatorio en vigor, 2) El conductor o pasajero no lleva cinturón de seguridad y kit de carretera, 3) Positivo en control de alcoholemia o drogas, 4) ITV desfavorable o negativa con riesgo muy grave, 5) Carecer de permiso de conducción válido.',
         actionSteps: [
           'Exige el acta de inmovilización oficial detallando el estado estético del vehículo antes de su traslado al depósito.'
         ]
@@ -344,7 +344,7 @@ export const COUNTRY_LEGAL_FRAMEWORKS = {
     keyRulesSummary: `
 - Licencia y Tarjeta Digital (App CDMX / SEMOVI): Tienen exactamente la misma validez jurídica que el plástico físico. Ningún policía puede remitir al corralón por mostrar documentos digitales vigentes.
 - Agentes Autorizados para Infraccionar: Solo policías de Tránsito con banda en el brazo y código QR "Autorizado para Infraccionar" pueden levantar boletas. La policía preventiva o auxiliar NO puede multar por tránsito.
-- Corralón (Remisión al Depósito Vehicular): Solo aplica en causales taxativas (circular sin casco, invadir carril exclusivo de Metrobús/ciclovía, alcoholímetro, falta total de placas o tarjeta de circulación).`,
+- Corralón (Remisión al Depósito Vehicular): Solo aplica en causales taxativas (circular sin cinturón de seguridad, invadir carril exclusivo de Metrobús/ciclovía, alcoholímetro, falta total de placas o tarjeta de circulación).`,
     quickQuestions: [
       {
         id: 'digital_docs',
@@ -403,22 +403,22 @@ export const COUNTRY_LEGAL_FRAMEWORKS = {
         instantVerdict: 'DERECHO CONSTITUCIONAL A GRABAR • PROHIBIDO QUITAR LLAVES',
         canImpound: 'DELITO DE ABUSO DE AUTORIDAD SI TE QUITAN LLAVES',
         lawCitation: 'Artículos 6, 7 y 16 de la Constitución Mexicana + Protocolo de Actuación Policial',
-        explanation: 'Grabar a un servidor público en funciones en la vía pública es un derecho constitucional de libertad de expresión y acceso a la información. Quitar las llaves de tu autocicleta sin orden judicial constituye despojo y abuso de autoridad.',
+        explanation: 'Grabar a un servidor público en funciones en la vía pública es un derecho constitucional de libertad de expresión y acceso a la información. Quitar las llaves de tu automóvil sin orden judicial constituye despojo y abuso de autoridad.',
         actionSteps: [
-          'Apaga tú mismo la moto, guarda la llave en tu bolsillo y mantén el teléfono grabando.',
+          'Apaga tú mismo el auto, guarda la llave en tu bolsillo y mantén el teléfono grabando.',
           'Si intentan intimidarte, reporta de inmediato a Asuntos Internos (911 / Locatel).'
         ]
       },
       {
         id: 'when_impound',
         badge: '🚛 ¿Cuándo SÍ amerita Corralón?',
-        question: '¿En qué casos SÍ es legal que la grúa de Tránsito se lleve mi moto al depósito vehicular (Corralón)?',
+        question: '¿En qué casos SÍ es legal que la grúa de Tránsito se lleve mi auto al depósito vehicular (Corralón)?',
         instantVerdict: 'SOLO EN ESTAS CAUSALES EXPRESAS DEL REGLAMENTO',
         canImpound: 'SÍ PROCEDE CORRALÓN EN ESTOS CASOS',
         lawCitation: 'Art. 6, 37, 43 y 45 del Reglamento de Tránsito de la CDMX',
-        explanation: 'La remisión al corralón solo procede si: 1) Conductor o acompañante no porta casco de seguridad, 2) Invades carriles confinados de Metrobús o ciclovías, 3) No cuentas con placa de matrícula ni permiso vigente, 4) No portas Licencia A1/A2 vigente, o 5) No apruebas el Alcoholímetro.',
+        explanation: 'La remisión al corralón solo procede si: 1) Conductor o acompañante no usa cinturón de seguridad de seguridad, 2) Invades carriles confinados de Metrobús o ciclovías, 3) No cuentas con placa de matrícula ni permiso vigente, 4) No portas Licencia A1/A2 vigente, o 5) No apruebas el Alcoholímetro.',
         actionSteps: [
-          'Si procede remisión, exige el inventario sellado de tu autocicleta antes de que la suban a la plataforma.'
+          'Si procede remisión, exige el inventario sellado de tu automóvil antes de que la suban a la plataforma.'
         ]
       }
     ]
@@ -461,7 +461,7 @@ export const COUNTRY_LEGAL_FRAMEWORKS = {
       {
         id: 'subsanar_60min',
         badge: '⏱️ Boleta de Citación vs Retiro',
-        question: '¿Cuándo corresponde solo una boleta de citación al Juzgado de Policía Local sin que me quiten la moto?',
+        question: '¿Cuándo corresponde solo una boleta de citación al Juzgado de Policía Local sin que me quiten el auto?',
         instantVerdict: 'LAS FALTAS LEVES Y MENOS GRAVES NO DAN CORRALES',
         canImpound: 'NO SE LLEVAN LA MOTO SI TIENES PAPELES AL DÍA',
         lawCitation: 'Artículos 199 al 202 de la Ley de Tránsito N° 18.290',
@@ -485,11 +485,11 @@ export const COUNTRY_LEGAL_FRAMEWORKS = {
       {
         id: 'record_police',
         badge: '🎥 Grabar Control de Carabineros',
-        question: '¿Es legal grabar con mi cámara de casco o celular una fiscalización de Carabineros en la vía pública?',
+        question: '¿Es legal grabar con mi Dashcam de parabrisas o celular una fiscalización de Carabineros en la vía pública?',
         instantVerdict: '100% LEGAL EN VÍA PÚBLICA (ART. 161-A CÓDIGO PENAL)',
         canImpound: 'DERECHO CIUDADANO A REGISTRAR PROCEDIMIENTO PÚBLICO',
         lawCitation: 'Contraloría General de la República y Art. 19 N° 12 de la Constitución',
-        explanation: 'Las actuaciones de Carabineros e Inspectores Municipales en la vía pública no tienen carácter de vida privada, por lo que cualquier motociclista puede grabarlas con su GoPro o teléfono celular.',
+        explanation: 'Las actuaciones de Carabineros e Inspectores Municipales en la vía pública no tienen carácter de vida privada, por lo que cualquier conductor puede grabarlas con su GoPro o teléfono celular.',
         actionSteps: [
           'Graba sin interferir físicamente en el control vehicular y guarda tus llaves en el bolsillo.'
         ]
@@ -522,7 +522,7 @@ export const COUNTRY_LEGAL_FRAMEWORKS = {
       {
         id: 'digital_docs',
         badge: '📱 SOAT Electrónico y TIVe en Celular',
-        question: '¿El policía de tránsito me puede poner papeleta o llevar mi moto al depósito si tengo SOAT Electrónico y TIVe en el celular?',
+        question: '¿El policía de tránsito me puede poner papeleta o llevar mi auto al depósito si tengo SOAT Electrónico y TIVe en el celular?',
         instantVerdict: '100% VÁLIDO EN CELULAR • PROHIBIDO EXIGIR PAPEL IMPRESO',
         canImpound: 'NO PUEDEN LLEVAR LA MOTO AL DEPÓSITO',
         lawCitation: 'Decreto Supremo N° 015-2016-MTC (SOAT Electrónico) y TIVe SUNARP',
@@ -535,7 +535,7 @@ export const COUNTRY_LEGAL_FRAMEWORKS = {
       {
         id: 'exhaust_noise',
         badge: '🔊 Escape / Roncador (Falta G10)',
-        question: 'El efectivo policial quiere ponerme papeleta o llevarse mi moto porque dice que mi tubo de escape suena fuerte. ¿Es legal?',
+        question: 'El efectivo policial quiere ponerme papeleta o llevarse mi auto porque dice que mi tubo de escape suena fuerte. ¿Es legal?',
         instantVerdict: 'PROHIBIDO SANCIONAR SIN SONÓMETRO HOMOLOGADO',
         canImpound: 'NO AMERITA INTERNAMIENTO EN DEPÓSITO',
         lawCitation: 'Tabla de Infracciones DS 016-2009-MTC (G10 / L07) + Calibración INACAL',
@@ -572,11 +572,11 @@ export const COUNTRY_LEGAL_FRAMEWORKS = {
       {
         id: 'record_police',
         badge: '🎥 Grabar Intervención Policial',
-        question: '¿El policía me puede prohibir grabar la intervención con mi celular o quitarme la llave de contacto de mi moto?',
+        question: '¿El policía me puede prohibir grabar la intervención con mi celular o quitarme la llave de contacto de mi auto?',
         instantVerdict: 'DERECHO CONSTITUCIONAL A GRABAR • PROHIBIDO QUITAR LLAVES',
         canImpound: 'ABUSO DE AUTORIDAD SI TE ARREBATAN LA LLAVE',
         lawCitation: 'Art. 2 inc. 4 de la Constitución del Perú y Directiva PNP de Intervenciones',
-        explanation: 'En el Perú es un derecho constitucional grabar cualquier intervención policial en la vía pública para garantizar la transparencia y el debido proceso. Ningún efectivo policial está facultado para retirar la llave de contacto de tu autocicleta.',
+        explanation: 'En el Perú es un derecho constitucional grabar cualquier intervención policial en la vía pública para garantizar la transparencia y el debido proceso. Ningún efectivo policial está facultado para retirar la llave de contacto de tu automóvil.',
         actionSteps: [
           'Apaga el motor tú mismo, guarda la llave en tu bolsillo y graba el CIP y apellido del efectivo interviniente.'
         ]
@@ -588,9 +588,9 @@ export const COUNTRY_LEGAL_FRAMEWORKS = {
         instantVerdict: 'SOLO EN INFRACCIONES MUY GRAVES CON INTERNAMIENTO',
         canImpound: 'SÍ PROCEDE DEPÓSITO EN ESTAS FALTAS "M"',
         lawCitation: 'Artículo 299 y Anexo I del Reglamento Nacional de Tránsito (DS 016-2009-MTC)',
-        explanation: 'Solo pueden llevar tu moto en grúa al depósito cuando la Tabla de Infracciones contempla expresamente "Internamiento del Vehículo": 1) Conducir sin SOAT vigente (M28), 2) Conducir sin tener Licencia / Brevete B-II (M03), 3) Ebriedad o drogas (M01/M02), o 4) Circular sin placas de rodaje (M24).',
+        explanation: 'Solo pueden llevar tu auto en grúa al depósito cuando la Tabla de Infracciones contempla expresamente "Internamiento del Vehículo": 1) Conducir sin SOAT vigente (M28), 2) Conducir sin tener Licencia / Brevete B-II (M03), 3) Ebriedad o drogas (M01/M02), o 4) Circular sin placas de rodaje (M24).',
         actionSteps: [
-          'Exige el Acta de Internamiento Vehicular detallando cada pieza y accesorio de tu autocicleta antes de que suba a la grúa.'
+          'Exige el Acta de Internamiento Vehicular detallando cada pieza y accesorio de tu automóvil antes de que suba a la grúa.'
         ]
       }
     ]
@@ -689,7 +689,7 @@ export const COUNTRY_LEGAL_FRAMEWORKS = {
     codeName: 'Code de la route français (Légifrance & Décrets 2RM 2024)',
     authority: 'Police Nationale / Gendarmerie Nationale / ANTAI',
     keyRulesSummary: `
-- Suppression de la vignette verte (Décret n° 2023-1152 depuis le 1er avril 2024) : Il n'est plus obligatoire d'apposer le papillon vert sur la moto. Les forces de l'ordre vérifient l'assurance directement dans le FVA (Fichier des Véhicules Assurés).
+- Suppression de la vignette verte (Décret n° 2023-1152 depuis le 1er avril 2024) : Il n'est plus obligatoire d'apposer le papillon vert sur el auto. Les forces de l'ordre vérifient l'assurance directement dans le FVA (Fichier des Véhicules Assurés).
 - Permis de conduire numérique (Application France Identité) : Pleinement valable lors d'un contrôle routier en France.
 - Échappement et Db-Killer (Art. R318-3 du Code de la route) : Un contrôle sonore officiel nécessite un sonomètre homologué (ou le constat de l'absence de chicane amovible sur un pot homologué CE).
 - Immobilisation et Mise en Fourrière (Art. L325-1 et R325-1) : La fourrière n'est légale que pour les infractions graves limitativement prévues (grand excès de vitesse ≥ 50 km/h, défaut d'assurance/permis, alcool/stupéfiants, rodéo urbain).`,
@@ -701,7 +701,7 @@ export const COUNTRY_LEGAL_FRAMEWORKS = {
         instantVerdict: 'VIGNETTE VERTE SUPPRIMÉE DEPUIS AVRIL 2024',
         canImpound: 'AUCUNE MISE EN FOURRIÈRE SI ASSURÉ AU FVA',
         lawCitation: 'Décret n° 2023-1152 du 8 décembre 2023 & Art. R211-21-1 du Code des assurances',
-        explanation: "Depuis le 1er avril 2024, l'attestation papier et le certificat vert d'assurance sont supprimés pour les motos immatriculées. Le contrôle s'effectue via le Fichier des Véhicules Assurés (FVA).",
+        explanation: "Depuis le 1er avril 2024, l'attestation papier et le certificat vert d'assurance sont supprimés pour les autos immatriculées. Le contrôle s'effectue via le Fichier des Véhicules Assurés (FVA).",
         actionSteps: [
           'Présentez votre mémo véhicule assuré ou votre certificat numérique dans la Boîte à Gants AutoDash AI.',
           'Invitez courtoisement les forces de l’ordre à consulter le Fichier des Véhicules Assurés (FVA) avec votre plaque.'
@@ -812,7 +812,7 @@ export const COUNTRY_LEGAL_FRAMEWORKS = {
         explanation: 'Il fermo amministrativo di 60 giorni scatta per guida senza casco (Art. 171), impennata o guida senza mani (Art. 170), o targa inclinata oltre i 30° / illeggibile. Il sequestro scatta per mancanza di assicurazione RC (Art. 193).',
         actionSteps: [
           'Verifica sempre che casco omologato ECE e inclinazione targa (max 30°) siano a norma.',
-          'Per semplici dimenticanze documentali (Art. 180) non è mai previsto il fermo della moto.'
+          'Per semplici dimenticanze documentali (Art. 180) non è mai previsto il fermo delel auto.'
         ]
       },
       {
@@ -1035,7 +1035,7 @@ export function getLawyerModalUiLabels(country = 'Colombia') {
     title: 'Asesor Jurídico de Tránsito & Anti-Inmovilización IA',
     subtitleSuffix: 'Consulta al instante si un comparendo o grúa es legal o ilegal',
     inputLabel: '¿Qué te está diciendo el agente de tránsito o qué duda tienes del comparendo?',
-    inputPlaceholder: 'Ej: El agente dice que se va a llevar mi moto en grúa porque no tengo el SOAT impreso en papel...',
+    inputPlaceholder: 'Ej: El agente dice que se va a llevar mi auto en grúa porque no tengo el SOAT impreso en papel...',
     askBtn: 'Consultar Ley',
     askingBtn: 'Analizando Ley...',
     quickSectionTitle: 'Situaciones Frecuentes en Retenes (Toca una para ver el Artículo Exacto):',
@@ -1063,7 +1063,7 @@ export async function askTrafficLawyerAI({
   question,
   country = 'Colombia',
   bikeBrand = 'TVS',
-  bikeModel = 'Apache RTR 160 4V'
+  bikeModel = 'Porsche 911 GT3 RS'
 }) {
   const apiKey = import.meta.env.DEV
     ? (import.meta.env.VITE_GEMINI_API_KEY || import.meta.env.NEXT_PUBLIC_GEMINI_API_KEY)

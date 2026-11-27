@@ -31,7 +31,7 @@ export default function DoctorMotorModal({
   if (!isOpen) return null;
 
   const identity = bike?.config?.bikeIdentity || {};
-  const bikeName = `${identity.brand || 'TVS'} ${identity.model || 'Apache RTR 160 4V'}`;
+  const bikeName = `${identity.brand || 'TVS'} ${identity.model || 'Porsche 911 GT3 RS'}`;
 
   const handleAskDoctor = async (e) => {
     e.preventDefault();
@@ -43,7 +43,7 @@ export default function DoctorMotorModal({
       const result = await diagnoseMechanicalSymptomAI({
         symptom: clean,
         bikeBrand: identity.brand || 'TVS',
-        bikeModel: identity.model || 'Apache RTR 160 4V FI NG',
+        bikeModel: identity.model || 'Porsche 911 GT3 RS FI NG',
         odometer,
         lang
       });

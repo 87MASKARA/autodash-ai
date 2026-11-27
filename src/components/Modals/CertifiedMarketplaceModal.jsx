@@ -50,7 +50,7 @@ const SALE_PHOTO_SLOTS = [
   {
     id: 'engine_extras',
     step: 'FOTO 4 • MOTOR / EXTRAS (OPCIONAL)',
-    title: 'Motor, Kit de Arrastre o Accesorios',
+    title: 'Motor, Correa de Repartición & Accesorios o Accesorios',
     hint: 'Sliders, alforjas, llanta trasera o detalles extras',
     required: false
   }
@@ -740,7 +740,7 @@ export default function CertifiedMarketplaceModal({
             </span>
           </div>
           <p className="text-[11px] text-neutral-400 mb-3">
-            Para garantizar liquidez inmediata, la vitrina pública de cada ciudad se desbloquea al alcanzar 1.000 conductors activos usando telemetría, alertas y chat. Pre-registrar tu moto hoy congela tu antigüedad de mantenimiento verificado:
+            Para garantizar liquidez inmediata, la vitrina pública de cada ciudad se desbloquea al alcanzar 1.000 conductors activos usando telemetría, alertas y chat. Pre-registrar tu auto hoy congela tu antigüedad de mantenimiento verificado:
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">

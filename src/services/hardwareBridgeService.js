@@ -1,7 +1,7 @@
 /**
  * Servicio de Telemetría por Hardware en Tiempo Real:
- * 1. Clúster Digital TFT / BLE (TVS SmartXonnect, Yamaha Y-Connect, BLE GATT) - Gratis para todos los usuarios.
- * 2. Escáner Óptico IA de Tablero TFT (Gemini Vision / OCR para tableros que cifran el byte de odómetro/gasolina por BLE).
+ * 1. Clúster Digital TFT / BLE (TVS CarPlay / MBUX / iDrive, Yamaha Y-Connect, BLE GATT) - Gratis para todos los usuarios.
+ * 2. Escáner Óptico IA de Clúster Digital (Gemini Vision / OCR para tableros que cifran el byte de odómetro/gasolina por BLE).
  * 3. Escáner / Cable OBD-II ECU (ELM327 BLE / CAN Bus Euro 5 con comandos AT y PIDs reales) - Exclusivo PRO y Fundador VIP.
  * 4. Fusión con Sensores Reales del Dispositivo (GPS Haversine, Consumo físico de combustible por KM y Giroscopio).
  */
@@ -67,7 +67,7 @@ export function computeDynamicFuelFromOdometer(bike, targetOdometerKm, explicitF
     const remainingLiters = Math.max(0.6, Number((startLiters - litersBurned).toFixed(1)));
     const rawPct = Math.min(100, Math.max(5, Math.round((remainingLiters / tankCap) * 100)));
     const bars = Math.min(6, Math.max(1, Math.round((rawPct / 100) * 6)));
-    // Alinear con las 6 barras del tablero TFT (cada barra = 16.67%, 3 barras = 50%)
+    // Alinear con las 6 barras del clúster digital (cada barra = 16.67%, 3 barras = 50%)
     const alignedPct = Math.round((bars / 6) * 100);
     const alignedLiters = Number(((tankCap * alignedPct) / 100).toFixed(1));
 
@@ -119,7 +119,7 @@ export function computeDynamicFuelFromOdometer(bike, targetOdometerKm, explicitF
 }
 
 /**
- * Decodifica tramas binarias o ASCII provenientes de características GATT del tablero TFT o adaptador BLE
+ * Decodifica tramas binarias o ASCII provenientes de características GATT del clúster digital o adaptador BLE
  * Escanea todos los offsets posibles para enteros uint16 / uint32 en 0.1 km (ej. 54277 -> 5427.7 km)
  */
 function parseTelemetryFromGattBytes(dataView, charUuid = '', currentBikeKm = 0) {
@@ -366,7 +366,7 @@ async function interrogateObd2Elm327(server, currentBikeKm = 0) {
 }
 
 /**
- * Interroga todos los servicios y características GATT expuestos por el tablero TFT o módulo BLE conectado
+ * Interroga todos los servicios y características GATT expuestos por el clúster digital o módulo BLE conectado
  */
 export async function interrogateGattServer(server, currentBikeKm = 0) {
   const discovered = {
@@ -484,7 +484,7 @@ export async function interrogateGattServer(server, currentBikeKm = 0) {
 }
 
 /**
- * Escáner Óptico IA de Tablero TFT (Gemini 2.0 Flash Vision + Fallback Inteligente):
+ * Escáner Óptico IA de Clúster Digital (Gemini 2.0 Flash Vision + Fallback Inteligente):
  * Permite tomar o subir una foto del tablero físico del vehículo y extraer automáticamente:
  * Odómetro exacto (ej. 5427.7 km), Barras de gasolina (1-6), Barras de temperatura (1-6),
  * Modo de manejo (SPORT/URBAN/RAIN), Top Speed, Avg Speed y RPM de ralentí.
@@ -657,7 +657,7 @@ Devuelve ÚNICAMENTE un objeto JSON válido con estas claves exactas (usa null e
     previewDataUrl: base64DataUrl,
     summary:
       'Foto cargada en el lector de tacómetro. Si algún dígito tenía reflejo, puedes verificar o escribir el valor en los cuadros de abajo y pulsar Guardar.',
-    source: 'Lectura Óptica de Tablero TFT',
+    source: 'Lectura Óptica de Clúster Digital',
     odometerKm: fileHintKm ?? currentOdo,
     speedKmh: existingHw.speedKmh ?? 0,
     gear: existingHw.gear || 'N',
@@ -683,7 +683,7 @@ Devuelve ÚNICAMENTE un objeto JSON válido con estas claves exactas (usa null e
 export function buildLiveClusterTelemetry(bike, gattOrObd = {}, liveGpsTelemetry = null) {
   const existingHw = bike?.hojaDeVida?.hardwareTelemetry || {};
   const rawBikeOdo = Number(bike?.odometer) || Number(existingHw.odometerKm) || 5427.7;
-  // Si el auto tenía el valor viejo de 5212 km antes de la rodada actual a 5427.7 km, usar el valor más reciente
+  // Si el auto tenía el valor viejo de 5212 km antes de la caravana actual a 5427.7 km, usar el valor más reciente
   const bikeOdo = rawBikeOdo === 5212 ? 5427.7 : rawBikeOdo;
   const gpsTripDelta =
     liveGpsTelemetry && !liveGpsTelemetry.isSimulating ? Number(liveGpsTelemetry.sessionDeltaKm) || 0 : 0;
@@ -730,7 +730,7 @@ export function buildLiveClusterTelemetry(bike, gattOrObd = {}, liveGpsTelemetry
     lastGattLiveValues.engineTempC ??
     savedTemp;
 
-  // Top Speed real del tablero TFT (112 km/h en vez del valor demo antiguo 134 km/h)
+  // Top Speed real del clúster digital (112 km/h en vez del valor demo antiguo 134 km/h)
   const cleanExistingTop =
     existingHw.topSpeedRecorded && existingHw.topSpeedRecorded !== 134 && existingHw.topSpeedRecorded !== 121
       ? Number(existingHw.topSpeedRecorded)
@@ -740,7 +740,7 @@ export function buildLiveClusterTelemetry(bike, gattOrObd = {}, liveGpsTelemetry
     Math.max(cleanExistingTop, liveSpeed) ||
     112;
 
-  // Velocidad promedio del tablero TFT (33 km/h)
+  // Velocidad promedio del clúster digital (33 km/h)
   const cleanExistingAvg =
     existingHw.avgSpeed && existingHw.avgSpeed !== 44
       ? Number(existingHw.avgSpeed)
@@ -769,7 +769,7 @@ export function buildLiveClusterTelemetry(bike, gattOrObd = {}, liveGpsTelemetry
     sourceLabel:
       gattOrObd.mode === HARDWARE_MODES.OBD2_ECU
         ? 'Escáner Cable OBD-II ECU (Euro 5 CAN)'
-        : 'Tablero Digital TFT (SmartXonnect BLE)',
+        : 'Tablero Digital TFT (CarPlay / MBUX / iDrive BLE)',
     deviceName:
       gattOrObd.deviceName ||
       activeBleDevice?.name ||

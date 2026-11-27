@@ -11,7 +11,7 @@ const STORAGE_KEYS = {
 
 export const PLAN_PRICES_USD = {
   solo: { name: 'Driver Executive (1 Auto)', monthly: 1.99, annual: 14.99 },
-  pro_monthly: { name: 'Rider PRO (3 Motos + OBD-II + IA)', monthly: 4.99, annual: 39.99 },
+  pro_monthly: { name: 'Rider PRO (3 Autos + OBD-II + IA)', monthly: 4.99, annual: 39.99 },
   garage: { name: 'Garaje / Taller (15 Motos)', monthly: 9.99, annual: 79.99 },
   b2b_mall: { name: 'Tienda Oficial MotoMall B2B', monthly: 14.99, annual: 149.0 }
 };
@@ -116,7 +116,7 @@ export const DEFAULT_INFLUENCERS = [
   },
   {
     id: 'inf_mx_1',
-    name: 'Velocidad Total / Motos MX',
+    name: 'Velocidad Total / Autos MX',
     handle: '@velocidadtotal',
     platform: 'YouTube / TikTok',
     country: 'México',
@@ -135,7 +135,7 @@ export const DEFAULT_INFLUENCERS = [
   },
   {
     id: 'inf_br_1',
-    name: 'Chico Sepúlveda / Motos BR',
+    name: 'Chico Sepúlveda / Autos BR',
     handle: '@chicosepulveda',
     platform: 'YouTube / Instagram',
     country: 'Brasil',
@@ -404,7 +404,7 @@ export async function fetchLiveSupabasePlatformStats() {
     }
   } catch {}
 
-  // Combinar también clanes locales creados en el dispositivo
+  // Combinar también clubes VIP locales creados en el dispositivo
   try {
     const rawLocalClans = localStorage.getItem('autodash_custom_clans');
     if (rawLocalClans) {

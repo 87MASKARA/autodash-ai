@@ -19,7 +19,7 @@ export const TRAFFIC_PORTALS = {
     porcentajeDescuento: 50,
     reglasImpugnacion: [
       "Notificación Indebida: La fotomulta debe notificarse por correo certificado dentro de los 3 días hábiles siguientes a la validación del comparendo (Sentencia C-038/20).",
-      "Identificación del Conductor: La Corte Constitucional (Sentencia C-321/22) prohíbe sancionar automáticamente al propietario sin demostrar quién iba conduciendo la moto.",
+      "Identificación del Conductor: La Corte Constitucional (Sentencia C-321/22) prohíbe sancionar automáticamente al propietario sin demostrar quién iba conduciendo el auto.",
       "Caducidad y Prescripción: Los comparendos caducan al año si no hay resolución sancionatoria, y prescriben a los 3 años de no iniciarse cobro coactivo.",
       "Calibración de la Cámara: La cámara salvavidas debe tener permiso vigente del Ministerio de Transporte y calibración metrológica al día."
     ],
@@ -52,7 +52,7 @@ export const TRAFFIC_PORTALS = {
     infraccionesComunes: [
       { codigo: "VEL-1", nombre: "Exceso de velocidad en autopista", baseCOP: 100 },
       { codigo: "ITV-1", nombre: "ITV caducada o desfavorable", baseCOP: 200 },
-      { codigo: "CAS-1", nombre: "No uso de casco homologado", baseCOP: 200 }
+      { codigo: "CAS-1", nombre: "No uso de cinturón de seguridad y kit de carretera", baseCOP: 200 }
     ]
   },
 
@@ -75,7 +75,7 @@ export const TRAFFIC_PORTALS = {
     ],
     infraccionesComunes: [
       { codigo: "FOT-01", nombre: "Exceso de velocidad en vías primarias", baseCOP: 1200 },
-      { codigo: "CAS-02", nombre: "Circular sin casco protector certificado", baseCOP: 1500 },
+      { codigo: "CAS-02", nombre: "Circular sin cinturón de seguridad protector certificado", baseCOP: 1500 },
       { codigo: "VER-03", nombre: "Falta de verificación vehicular", baseCOP: 2000 }
     ]
   },

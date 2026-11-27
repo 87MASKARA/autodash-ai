@@ -41,7 +41,7 @@ export default function ProfileModal({
   );
 
   const planName = isVip
-    ? '👑 Fundador VIP Vitalicio (Motos Ilimitadas)'
+    ? '👑 Fundador VIP Vitalicio (Autos Ilimitadas)'
     : userProfile?.plan === 'garage' 
     ? 'Garaje / Taller Pro ($9.99 USD • Hasta 15 Motos)' 
     : userProfile?.plan === 'pro_monthly' || userProfile?.isPro 
@@ -122,8 +122,8 @@ export default function ProfileModal({
             </div>
 
             <div className="p-3 bg-neutral-950 rounded-xl border border-neutral-800/80 flex justify-between items-center">
-              <span className="text-neutral-500">Motos en Garaje:</span>
-              <strong className="text-amber-400">{garageCount} Motos Registradas</strong>
+              <span className="text-neutral-500">Autos en Garaje:</span>
+              <strong className="text-amber-400">{garageCount} Autos Registradas</strong>
             </div>
 
             <div className="pt-2 flex gap-2">

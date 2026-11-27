@@ -620,7 +620,7 @@ export async function triggerBrowserPushAlert(title, body) {
   return false;
 }
 
-export function buildWhatsAppAlertUrl(phone = '', bikeName = 'mi moto', plate = '', alerts = []) {
+export function buildWhatsAppAlertUrl(phone = '', bikeName = 'mi auto', plate = '', alerts = []) {
   const cleanPhone = String(phone).replace(/[^0-9]/g, '');
   const lines = [
     `🏍️ *ALERTA AUTOMÁTICA AUTODASH AI*`,

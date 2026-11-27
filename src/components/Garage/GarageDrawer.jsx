@@ -39,24 +39,24 @@ export default function GarageDrawer({
           Alterna rápidamente entre tus autos. Cada una guarda su tacómetro, colores e historial oficial.
         </p>
 
-        {/* Botón rápido para limpiar motos demo si existen */}
+        {/* Botón rápido para limpiar autos demo si existen */}
         {hasDemoBikes && (
           <div className="mb-3">
             <button
               type="button"
               onClick={() => {
-                if (window.confirm("¿Deseas remover todas las motos demo de prueba y dejar únicamente tus autos registradas?")) {
+                if (window.confirm("¿Deseas remover todas los autos demo de prueba y dejar únicamente tus autos registradas?")) {
                   if (onCleanDemoBikes) onCleanDemoBikes();
                 }
               }}
               className="w-full py-2 px-3 rounded-xl text-xs font-mono font-bold text-amber-400 bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 flex items-center justify-center gap-1.5 transition active:scale-95"
             >
-              <span>🧹 Remover motos demo de prueba</span>
+              <span>🧹 Remover autos demo de prueba</span>
             </button>
           </div>
         )}
 
-        {/* Lista de Motos en el Garaje */}
+        {/* Lista de Autos en el Garaje */}
         <div className="flex-1 overflow-y-auto space-y-3 pr-1">
           {garage.map((item) => {
             const isActive = item.id === activeBikeId;

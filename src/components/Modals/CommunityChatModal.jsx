@@ -28,27 +28,27 @@ const OFFICIAL_FOUNDER_NAME = 'Anderson • Fundador VIP';
 const OFFICIAL_FOUNDER_ROLE_LABEL = 'Fundador AutoDash AI (Miembro Permanente por Política)';
 
 const COMMUNITY_CHANNELS = [
-  { id: 'medellin', label: '🇨🇴 Medellín & Valle de Aburrá', type: 'city', city: 'Medellín' },
-  { id: 'bogota', label: '🇨🇴 Bogotá & Sabana', type: 'city', city: 'Bogotá' },
-  { id: 'cdmx', label: '🇲🇽 CDMX & Ruta Sur', type: 'city', city: 'CDMX' },
-  { id: 'madrid', label: '🇪🇸 Madrid & Sierra', type: 'city', city: 'Madrid' },
-  { id: 'apache_rtr', label: '🏍️ Club TVS Apache RTR / Street', type: 'bike', city: 'Global' },
-  { id: 'sport_racing', label: '🏁 Alto Cilindrada & Racing', type: 'bike', city: 'Global' }
+  { id: 'medellin', label: '🇨🇴 Medellín & Palmas Supercar Meet', type: 'city', city: 'Medellín' },
+  { id: 'bogota', label: '🇨🇴 Bogotá & Autódromo Tocancipá', type: 'city', city: 'Bogotá' },
+  { id: 'cdmx', label: '🇲🇽 CDMX & Santa Fe Exotic Club', type: 'city', city: 'CDMX' },
+  { id: 'madrid', label: '🇪🇸 Madrid & Jarama Track Day', type: 'city', city: 'Madrid' },
+  { id: 'apache_rtr', label: '🏎️ Porsche & European GT Club', type: 'bike', city: 'Global' },
+  { id: 'sport_racing', label: '🏁 AMG, BMW M & Supercar Track Days', type: 'bike', city: 'Global' }
 ];
 
 const DEFAULT_CLANS = [
   {
     id: 'clan_default_apache',
     slug: 'apache-rtr-medellin',
-    name: 'Clan Apache RTR Antioquia',
-    tag: 'RTR-MDE',
-    motto: 'Potencia 4V, rutas de montaña y hermandad en Antioquia',
+    name: 'Porsche & Supercar Club Antioquia',
+    tag: 'GT3-MDE',
+    motto: 'Track Days, Caravanas Las Palmas y Telemetría Oficial',
     city: 'Medellín',
     country: 'Colombia',
     logo_url: null,
-    accent_color: '#EF4444',
+    accent_color: '#00D4FF',
     is_private: true,
-    invite_code: 'RTR4V1',
+    invite_code: 'GT3RS9',
     creator_name: 'Anderson • Fundador VIP',
     founder_name: OFFICIAL_FOUNDER_NAME,
     member_count: 18
@@ -56,34 +56,34 @@ const DEFAULT_CLANS = [
   {
     id: 'clan_default_night',
     slug: 'night-riders-colombia',
-    name: 'Night Riders Street Club',
-    tag: 'NIGHT-CO',
-    motto: 'Rodadas nocturnas seguras y telemetría oficial',
+    name: 'AMG & BMW M Performance Club',
+    tag: 'AMG-MCO',
+    motto: 'Caravanas Ejecutivas, Biturbo Lounge y Detailing VIP',
     city: 'Medellín / Bogotá',
     country: 'Colombia',
     logo_url: null,
-    accent_color: '#6366F1',
+    accent_color: '#F59E0B',
     is_private: true,
-    invite_code: 'NIGHT9',
-    creator_name: 'Capitán Ruta Nocturna',
+    invite_code: 'AMGM25',
+    creator_name: 'Director Grand Tourer',
     founder_name: OFFICIAL_FOUNDER_NAME,
     member_count: 24
   }
 ];
 
 const CLAN_COLOR_PRESETS = [
-  { hex: '#EF4444', name: 'Racing Red' },
-  { hex: '#F59E0B', name: 'Amber Gold' },
-  { hex: '#10B981', name: 'Emerald Nitro' },
-  { hex: '#6366F1', name: 'Indigo Cyber' },
-  { hex: '#06B6D4', name: 'Cyan Apex' },
-  { hex: '#EC4899', name: 'Neon Corsa' }
+  { hex: '#00D4FF', name: 'Sapphire Cyan' },
+  { hex: '#F59E0B', name: 'Champagne Gold' },
+  { hex: '#10B981', name: 'Emerald GT' },
+  { hex: '#3B82F6', name: 'Marina Bay Blue' },
+  { hex: '#EF4444', name: 'Rosso Corsa' },
+  { hex: '#EC4899', name: 'Neon Track' }
 ];
 
 const MESSAGE_CATEGORIES = [
-  { id: 'rodada', label: '🏍️ Convocar Rodada / Ruta', color: 'bg-amber-500/20 text-amber-300 border-amber-500/40', icon: Compass },
-  { id: 'taller', label: '🔧 Taller & Mecánica', color: 'bg-cyan-500/20 text-cyan-300 border-cyan-500/40', icon: Wrench },
-  { id: 'general', label: '💬 Charla Motera', color: 'bg-neutral-800 text-neutral-300 border-neutral-700', icon: MessageSquare }
+  { id: 'caravana', label: '🏎️ Convocar Caravana / Track Day', color: 'bg-cyan-500/20 text-cyan-300 border-cyan-500/40', icon: Compass },
+  { id: 'taller', label: '🔧 Centro Servicio, Detailing & ECU', color: 'bg-amber-500/20 text-amber-300 border-amber-500/40', icon: Wrench },
+  { id: 'general', label: '💬 Lounge Automotriz VIP', color: 'bg-neutral-800 text-neutral-300 border-neutral-700', icon: MessageSquare }
 ];
 
 const FALLBACK_MESSAGES = {
@@ -91,11 +91,11 @@ const FALLBACK_MESSAGES = {
     {
       id: 'seed_1',
       channel_id: 'medellin',
-      category: 'rodada',
-      author_name: 'Club Rutas Antioquia',
-      author_bike: 'TVS Apache RTR 4V',
+      category: 'caravana',
+      author_name: 'Porsche & Exotic GT Club',
+      author_bike: 'Porsche 911 GT3 RS (992)',
       author_verified: true,
-      content: '¡Bienvenidos al canal de Comunidad y Rodadas de Medellín! Este domingo salimos a las 7:00 AM hacia Santa Fe de Antioquia.',
+      content: '¡Bienvenidos al canal de Clubes y Caravanas de Medellín! Este domingo salimos a las 7:00 AM en caravana por Las Palmas hacia Llanogrande.',
       created_at: new Date(Date.now() - 1800000).toISOString()
     }
   ],
@@ -104,10 +104,10 @@ const FALLBACK_MESSAGES = {
       id: 'seed_3',
       channel_id: 'apache_rtr',
       category: 'taller',
-      author_name: 'Comunidad Apache RTR Oficial',
-      author_bike: 'TVS Apache RTR 160 4V FI NG',
+      author_name: 'European GT Performance Lounge',
+      author_bike: 'Mercedes-AMG GT 63 S',
       author_verified: true,
-      content: 'Tip para las Apache 160 4V FI NG: usar aceite 10W-40 Sintético y sellar las garantías de 500 km y 2.500 km en Auteco.',
+      content: 'Tip para motores Biturbo y cajas PDK/DCT: usar aceite sintético 0W-40 certificado (Porsche C40 / MB 229.5) y calibrar presión TPMS en frío (36/38 PSI).',
       created_at: new Date(Date.now() - 900000).toISOString()
     }
   ],
@@ -115,11 +115,11 @@ const FALLBACK_MESSAGES = {
     {
       id: 'seed_clan_1',
       channel_id: 'clan_apache-rtr-medellin',
-      category: 'rodada',
+      category: 'caravana',
       author_name: OFFICIAL_FOUNDER_NAME,
-      author_bike: 'TVS Apache RTR 160 4V FI NG',
+      author_bike: 'Porsche 911 GT3 RS (992)',
       author_verified: true,
-      content: '👑 ¡Bienvenidos al espacio privado del Clan Apache RTR Antioquia! Por política oficial de AutoDash AI, cada clan cuenta con sala exclusiva, logo propio y respaldo directo del Fundador.',
+      content: '👑 ¡Bienvenidos al salón privado del Porsche & Supercar Club Antioquia! Por política oficial de AutoDash AI, cada Club Automotriz cuenta con sala exclusiva, emblema propio y respaldo directo del Fundador.',
       created_at: new Date(Date.now() - 1200000).toISOString()
     }
   ],
@@ -127,18 +127,18 @@ const FALLBACK_MESSAGES = {
     {
       id: 'seed_clan_2',
       channel_id: 'clan_night-riders-colombia',
-      category: 'rodada',
+      category: 'caravana',
       author_name: OFFICIAL_FOUNDER_NAME,
-      author_bike: 'TVS Apache RTR 160 4V FI NG',
+      author_bike: 'Mercedes-AMG GT 63 S',
       author_verified: true,
-      content: '👑 Sala privada verificada para Night Riders Street Club. Punto de encuentro de esta noche: Palmas Mirador 8:30 PM.',
+      content: '👑 Sala privada verificada para AMG & BMW M Performance Club. Punto de encuentro de esta noche: Mall Indiana Vía Las Palmas 8:30 PM.',
       created_at: new Date(Date.now() - 950000).toISOString()
     }
   ]
 };
 
 /**
- * Comprime el logo del clan en el navegador (<canvas> 220x220 WebP/JPEG)
+ * Comprime el logo del club VIP en el navegador (<canvas> 220x220 WebP/JPEG)
  * para que cargue al instante sin saturar la base de datos.
  */
 async function compressClanLogo(file) {
@@ -187,7 +187,7 @@ export default function CommunityChatModal({
     isFounderVipEmail(userProfile?.email)
   );
 
-  // Modo de vista: 'clans' (Clanes con logo propio y sala privada) | 'channels' (Canales abiertos por ciudad/moto)
+  // Modo de vista: 'clans' (Clubes VIP con logo propio y sala privada) | 'channels' (Canales abiertos por ciudad/moto)
   const [viewMode, setViewMode] = useState('clans');
   const [confirmDeleteSlug, setConfirmDeleteSlug] = useState(null);
   const [deletingClan, setDeletingClan] = useState(false);
@@ -242,7 +242,7 @@ export default function CommunityChatModal({
   const [creatingClan, setCreatingClan] = useState(false);
   const logoInputRef = useRef(null);
 
-  const [selectedCategory, setSelectedCategory] = useState('rodada');
+  const [selectedCategory, setSelectedCategory] = useState('caravana');
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState('');
   const [sending, setSending] = useState(false);
@@ -252,7 +252,7 @@ export default function CommunityChatModal({
   const effectiveChannelId =
     viewMode === 'clans' ? `clan_${activeClanSlug}` : activeChannel;
 
-  // Cargar clanes desde Supabase al abrir
+  // Cargar clubes VIP desde Supabase al abrir
   useEffect(() => {
     if (!isOpen) return;
     let isMounted = true;
@@ -312,12 +312,12 @@ export default function CommunityChatModal({
         {
           id: `welcome_${effectiveChannelId}`,
           channel_id: effectiveChannelId,
-          category: 'rodada',
+          category: 'caravana',
           author_name: OFFICIAL_FOUNDER_NAME,
-          author_bike: 'TVS Apache RTR 160 4V FI NG',
+          author_bike: 'Porsche 911 GT3 RS (992)',
           author_verified: true,
           is_founder: true,
-          content: `👑 Sala privada del clan activada. Por política oficial de AutoDash AI, ${OFFICIAL_FOUNDER_NAME} hace parte de este grupo como miembro fundador garante.`,
+          content: `👑 Sala privada del club VIP activada. Por política oficial de AutoDash AI, ${OFFICIAL_FOUNDER_NAME} hace parte de este grupo como miembro fundador garante.`,
           created_at: new Date(Date.now() - 600000).toISOString()
         }
       ];
@@ -395,18 +395,18 @@ export default function CommunityChatModal({
 
   const identity = bike?.config?.bikeIdentity || {};
   const bikeLabel = `${identity.brand || 'Moto'} ${identity.model || ''}`.trim();
-  const currentClan = clans.find((c) => c.slug === activeClanSlug) || clans[0] || null;
+  const currentClub = clans.find((c) => c.slug === activeClanSlug) || clans[0] || null;
 
-  // Verificar si el usuario actual es el creador del clan o el Fundador VIP (ambos pueden eliminar el clan)
+  // Verificar si el usuario actual es el fundador del club o el Fundador VIP (ambos pueden eliminar el clan)
   const isCurrentClanCreator = Boolean(
-    currentClan &&
+    currentClub &&
     (
       (userProfile?.id && currentClan.creator_id && String(currentClan.creator_id) === String(userProfile.id)) ||
       (userProfile?.email && currentClan.creator_email && String(currentClan.creator_email).toLowerCase() === String(userProfile.email).toLowerCase()) ||
       (userProfile?.fullName && currentClan.creator_name && String(currentClan.creator_name).trim().toLowerCase() === String(userProfile.fullName).trim().toLowerCase())
     )
   );
-  const canDeleteCurrentClan = Boolean(currentClan && (isFounderUser || isCurrentClanCreator));
+  const canDeleteCurrentClub = Boolean(currentClub && (isFounderUser || isCurrentClanCreator));
 
   // El Fundador VIP o el creador o quien haya desbloqueado el clan tiene acceso directo al espacio privado
   const hasClanAccess =
@@ -415,11 +415,11 @@ export default function CommunityChatModal({
     !currentClan?.is_private ||
     unlockedClans.includes(currentClan?.slug);
 
-  const handleDeleteClan = async (clanToDelete) => {
+  const handleDeleteClub = async (clanToDelete) => {
     if (!clanToDelete) return;
     setDeletingClan(true);
     try {
-      // 1. Registrar slug eliminado localmente para que no reaparezca si era un clan semilla
+      // 1. Registrar slug eliminado localmente para que no reaparezca si era un club VIP semilla
       const prevDeleted = getDeletedClanSlugs();
       const nextDeleted = Array.from(new Set([...prevDeleted, clanToDelete.slug]));
       localStorage.setItem('autodash_deleted_clan_slugs', JSON.stringify(nextDeleted));
@@ -437,7 +437,7 @@ export default function CommunityChatModal({
         }
       } catch {}
 
-      // 3. Actualizar lista local de clanes y seleccionar el siguiente disponible
+      // 3. Actualizar lista local de clubes VIP y seleccionar el siguiente disponible
       const remaining = clans.filter((c) => c.slug !== clanToDelete.slug);
       setClans(remaining);
       localStorage.setItem('autodash_custom_clans', JSON.stringify(remaining));
@@ -460,11 +460,11 @@ export default function CommunityChatModal({
       const dataUrl = await compressClanLogo(file);
       setClanLogoDataUrl(dataUrl);
     } catch (err) {
-      console.warn('Error procesando logo del clan:', err);
+      console.warn('Error procesando logo del club VIP:', err);
     }
   };
 
-  const handleCreateClan = async (e) => {
+  const handleCreateClub = async (e) => {
     e.preventDefault();
     const cleanName = clanName.trim();
     if (!cleanName) return;
@@ -545,7 +545,7 @@ export default function CommunityChatModal({
     }
   };
 
-  const handleUnlockClan = async (e) => {
+  const handleUnlockClub = async (e) => {
     e.preventDefault();
     if (!currentClan) return;
     const cleanCode = inviteCodeInput.trim().toUpperCase();
@@ -582,7 +582,7 @@ export default function CommunityChatModal({
       setInviteError(
         isEn
           ? 'Invalid clan invite code. Ask the clan leader or Founder VIP.'
-          : 'Código de invitación incorrecto. Solicítalo al líder del clan.'
+          : 'Código de invitación incorrecto. Solicítalo al líder del club VIP.'
       );
     }
   };
@@ -598,7 +598,7 @@ export default function CommunityChatModal({
       : userProfile?.fullName || 'Piloto MotoDash';
     const currentChannelObj = COMMUNITY_CHANNELS.find((c) => c.id === activeChannel);
 
-    // 1. Mostrar inmediatamente el mensaje en la sala del clan y guardarlo en caché local
+    // 1. Mostrar inmediatamente el mensaje en la sala del club VIP y guardarlo en caché local
     const optimisticMsg = {
       id: `local_${Date.now()}`,
       channel_id: effectiveChannelId,
@@ -647,7 +647,7 @@ export default function CommunityChatModal({
         }
       }
     } catch {
-      // Queda persistido localmente en la sala del clan
+      // Queda persistido localmente en la sala del club VIP
     } finally {
       setSending(false);
     }
@@ -670,7 +670,7 @@ export default function CommunityChatModal({
                 </span>
                 <span className="text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/40 flex items-center gap-1">
                   <Crown className="w-3 h-3 text-amber-400" />
-                  <span>Fundador en todos los Clanes: {OFFICIAL_FOUNDER_NAME}</span>
+                  <span>Fundador en todos los Clubes VIP: {OFFICIAL_FOUNDER_NAME}</span>
                 </span>
               </div>
               <h2 className="text-base sm:text-xl font-black font-racing uppercase tracking-wider text-white mt-0.5">
@@ -713,7 +713,7 @@ export default function CommunityChatModal({
               }`}
             >
               <Shield className="w-3.5 h-3.5" />
-              <span>🛡️ {isEn ? `Luxury Car Clubs (${clans.length})` : `Clanes & Grupos Conductors (${clans.length})`}</span>
+              <span>🛡️ {isEn ? `Luxury Car Clubs (${clans.length})` : `Clubes VIP & Grupos Conductors (${clans.length})`}</span>
             </button>
 
             <button
@@ -747,7 +747,7 @@ export default function CommunityChatModal({
               <div className="flex items-center gap-2">
                 <Sparkles className="w-4 h-4 text-amber-400" />
                 <h3 className="text-sm font-black font-racing uppercase tracking-wider text-amber-300">
-                  {isEn ? 'Create Official Luxury Car Club & Upload Club Logo' : 'Crear Nuevo Clan / Club Conductor con Logo Propio'}
+                  {isEn ? 'Create Official Luxury Car Club & Upload Club Logo' : 'Crear Nuevo Club / Club Conductor con Logo Propio'}
                 </h3>
               </div>
               <button
@@ -794,7 +794,7 @@ export default function CommunityChatModal({
                   className="px-2.5 py-1 rounded-lg bg-amber-500/20 text-amber-300 border border-amber-500/40 text-[10px] font-mono font-bold flex items-center gap-1"
                 >
                   <Upload className="w-3 h-3" />
-                  <span>{clanLogoDataUrl ? 'Cambiar Logo del Clan' : 'Subir Logo del Clan'}</span>
+                  <span>{clanLogoDataUrl ? 'Cambiar Emblema del Club VIP' : 'Subir Emblema del Club VIP'}</span>
                 </button>
               </div>
 
@@ -802,7 +802,7 @@ export default function CommunityChatModal({
               <div className="sm:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                 <div>
                   <label className="text-[10px] font-mono uppercase text-neutral-400 block mb-1">
-                    Nombre del Clan / Grupo Conductor *
+                    Nombre del Club Automotriz / Grupo Conductor *
                   </label>
                   <input
                     type="text"
@@ -863,7 +863,7 @@ export default function CommunityChatModal({
                     type="text"
                     value={clanMotto}
                     onChange={(e) => setClanMotto(e.target.value)}
-                    placeholder="Ej: Rodadas todos los jueves 8:00 PM • Respeto y hermandad"
+                    placeholder="Ej: Caravanas & Track Days todos los jueves 8:00 PM • Respeto y hermandad"
                     className="w-full bg-neutral-950 border border-neutral-700 rounded-xl px-3 py-2 text-xs text-white"
                   />
                 </div>
@@ -873,7 +873,7 @@ export default function CommunityChatModal({
             {/* COLOR DE IDENTIDAD Y PRIVACIDAD */}
             <div className="flex flex-wrap items-center justify-between gap-3 pt-2 border-t border-neutral-800">
               <div className="flex items-center gap-2">
-                <span className="text-[10px] font-mono uppercase text-neutral-400">Color del Clan:</span>
+                <span className="text-[10px] font-mono uppercase text-neutral-400">Color del Club VIP:</span>
                 {CLAN_COLOR_PRESETS.map((c) => (
                   <button
                     key={c.hex}
@@ -899,16 +899,16 @@ export default function CommunityChatModal({
                   }`}
                 >
                   {clanIsPrivate ? <Lock className="w-3.5 h-3.5" /> : <Unlock className="w-3.5 h-3.5" />}
-                  <span>{clanIsPrivate ? 'Espacio Privado (Con Código)' : 'Clan Abierto'}</span>
+                  <span>{clanIsPrivate ? 'Espacio Privado (Con Código)' : 'Club Abierto'}</span>
                 </button>
 
                 <button
                   type="submit"
-                  disabled={creatingClan || !clanName.trim()}
+                  disabled={creatingClub || !clanName.trim()}
                   className="px-4 py-2 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-400 text-black font-racing font-bold text-xs uppercase tracking-wider flex items-center gap-1.5 shadow-lg shadow-emerald-500/20"
                 >
                   <CheckCircle2 className="w-4 h-4" />
-                  <span>{creatingClan ? 'Creando Clan...' : 'Fundar Club Automotriz VIP'}</span>
+                  <span>{creatingClub ? 'Creando Clan...' : 'Fundar Club Automotriz VIP'}</span>
                 </button>
               </div>
             </div>
@@ -968,7 +968,7 @@ export default function CommunityChatModal({
             </div>
 
             {/* BANNER DE IDENTIDAD DEL CLAN SELECCIONADO + GOBERNANZA FUNDADOR */}
-            {currentClan && (
+            {currentClub && (
               <div
                 style={{ borderColor: `${currentClan.accent_color || '#F59E0B'}66` }}
                 className="p-3 rounded-2xl bg-neutral-900/95 border flex flex-col md:flex-row md:items-center justify-between gap-3"
@@ -1000,7 +1000,7 @@ export default function CommunityChatModal({
                         {currentClan.name}
                       </h3>
                       <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-neutral-800 text-neutral-300">
-                        {currentClan.is_private ? '🔒 Sala Privada del Clan' : '🔓 Sala Abierta'}
+                        {currentClan.is_private ? '🔒 Sala Privada del Club VIP' : '🔓 Sala Abierta'}
                       </span>
                     </div>
                     <p className="text-xs text-neutral-300 font-mono mt-0.5">
@@ -1049,14 +1049,14 @@ export default function CommunityChatModal({
                       <CheckCircle2 className="w-3.5 h-3.5" />
                       <span>
                         {rsvpClans[currentClan.slug]
-                          ? `✅ Confirmado en Rodada (${(currentClan.member_count || 12) + 1} motos)`
-                          : `🏍️ Confirmar Rodada (${currentClan.member_count || 12} motos)`}
+                          ? `✅ Confirmado en Caravana (${(currentClan.member_count || 12) + 1} autos)`
+                          : `🏍️ Confirmar Caravana (${currentClan.member_count || 12} autos)`}
                       </span>
                     </button>
                   )}
 
                   {/* BOTÓN PARA ELIMINAR CLAN: VISIBLE SOLO PARA EL FUNDADOR VIP O EL CREADOR DEL CLAN */}
-                  {canDeleteCurrentClan && (
+                  {canDeleteCurrentClub && (
                     confirmDeleteSlug === currentClan.slug ? (
                       <div className="flex items-center gap-1 bg-red-950/90 border border-red-500 rounded-xl px-2 py-1">
                         <span className="text-red-200 font-bold">¿Eliminar clan?</span>
@@ -1066,7 +1066,7 @@ export default function CommunityChatModal({
                           onClick={() => handleDeleteClan(currentClan)}
                           className="px-2 py-0.5 rounded bg-red-600 hover:bg-red-500 text-white font-bold"
                         >
-                          {deletingClan ? 'Borrando...' : 'Sí, Eliminar'}
+                          {deletingClub ? 'Borrando...' : 'Sí, Eliminar'}
                         </button>
                         <button
                           type="button"
@@ -1084,11 +1084,11 @@ export default function CommunityChatModal({
                         title={
                           isFounderUser
                             ? 'Eliminar este clan (Permiso Fundador VIP)'
-                            : 'Eliminar tu clan creado'
+                            : 'Eliminar tu club VIP creado'
                         }
                       >
                         <Trash2 className="w-3.5 h-3.5 text-red-400" />
-                        <span>Eliminar Clan</span>
+                        <span>Eliminar Club VIP</span>
                       </button>
                     )
                   )}
@@ -1266,7 +1266,7 @@ export default function CommunityChatModal({
                   placeholder={
                     viewMode === 'clans'
                       ? `Escribe en la sala privada de ${currentClan?.name} [${currentClan?.tag}]...`
-                      : 'Escribe al canal de tu ciudad o convoca una rodada...'
+                      : 'Escribe al canal de tu ciudad o convoca una caravana...'
                   }
                   maxLength={500}
                   className="flex-1 bg-neutral-900 border-2 border-amber-500/40 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-white placeholder-neutral-400 focus:outline-none focus:border-amber-400"

@@ -76,7 +76,7 @@ export default function WarrantyGuardianWidget({
           </h4>
         </div>
         <p className="text-xs font-mono text-neutral-300 max-w-lg mx-auto">
-          Has completado las {totalRevisiones} revisiones oficiales con respaldo de {distribuidorCorto}. Tu moto conserva su máximo valor de reventa con su Hoja de Vida oficial.
+          Has completado las {totalRevisiones} revisiones oficiales con respaldo de {distribuidorCorto}. Tu auto conserva su máximo valor de reventa con su Hoja de Vida oficial.
         </p>
         <button
           onClick={() => onOpenRulesModal()}

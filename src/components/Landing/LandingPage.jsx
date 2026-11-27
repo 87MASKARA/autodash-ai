@@ -116,7 +116,7 @@ export default function LandingPage({ onStartOnboarding, onEnterDemo, onOpenLogi
         <p className="text-sm sm:text-base text-neutral-300 max-w-3xl mx-auto mt-5 font-sans leading-relaxed">
           {isEn
             ? 'Link your TFT cluster or OBD-II cable, protect yourself at checkpoints with 2-sided PIN-locked Docs and AI Traffic Lawyer, diagnose issues with Doctor Auto AI, mount your phone in CarPlay / Android Auto HUD mode, and shop verified spare parts or find the nearest workshop via GPS inside MotoMall.'
-            : 'Enlaza tu tablero TFT o cable OBD-II, protégete en retenes con la Guantera PIN de 2 lados y el Abogado Vial IA, diagnostica fallas con Doctor Auto IA, usa el modo CarPlay / Android Auto HUD y compra repuestos, autos 0 KM o ubica el taller aliado más cercano por GPS en MotoMall.'}
+            : 'Enlaza tu clúster digital o cable OBD-II, protégete en retenes con la Guantera PIN de 2 lados y el Abogado Vial IA, diagnostica fallas con Doctor Auto IA, usa el modo CarPlay / Android Auto HUD y compra repuestos, autos 0 KM o ubica el taller aliado más cercano por GPS en MotoMall.'}
         </p>
 
         {/* Botones de Conversión Hero */}
@@ -203,7 +203,7 @@ export default function LandingPage({ onStartOnboarding, onEnterDemo, onOpenLogi
           </div>
         </div>
 
-        {/* Selector Directo de Motos Demo en 1 Clic */}
+        {/* Selector Directo de Autos Demo en 1 Clic */}
         <div className="mt-8 max-w-4xl mx-auto p-4 sm:p-5 rounded-3xl bg-neutral-900/50 border border-neutral-800/90 backdrop-blur-md">
           <div className="flex items-center justify-center gap-2 text-[11px] font-mono text-amber-400 uppercase tracking-widest mb-3">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
@@ -237,7 +237,7 @@ export default function LandingPage({ onStartOnboarding, onEnterDemo, onOpenLogi
         <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-8 text-xs font-mono text-neutral-300">
           <span className="flex items-center gap-1.5 bg-cyan-950/50 border border-cyan-500/40 text-cyan-300 px-3 py-1.5 rounded-xl font-bold">
             <Bluetooth className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-            {isEn ? 'TFT 12-Param Sync + Battery Health' : 'Enlace TFT 12 Parámetros + Batería en Vivo'}
+            {isEn ? 'OBD-II 12-Param Sync + Battery Health' : 'Telemetría OBD-II 12 Parámetros + Batería en Vivo'}
           </span>
           <span className="flex items-center gap-1.5 bg-emerald-950/50 border border-emerald-500/40 text-emerald-300 px-3 py-1.5 rounded-xl font-bold">
             <Lock className="w-4 h-4 text-emerald-400 flex-shrink-0" />
@@ -317,7 +317,7 @@ export default function LandingPage({ onStartOnboarding, onEnterDemo, onOpenLogi
 
         {/* Fila 1: Las 3 Joyas Nuevas (TFT 12 Parámetros + Batería, Guantera Modo Retén 2 Lados + PIN, Abogado Vial IA) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-          {/* Card Nueva 1: Enlace TFT SmartXonnect & Cable OBD-II + Batería en Mantenimiento Predictivo */}
+          {/* Card Nueva 1: Enlace TFT CarPlay / MBUX / iDrive & Cable OBD-II + Batería en Mantenimiento Predictivo */}
           <div className="p-6 rounded-3xl bg-gradient-to-br from-neutral-900 via-neutral-900/95 to-cyan-950/30 border-2 border-cyan-500/40 hover:border-cyan-400 transition relative overflow-hidden">
             <div className="flex items-center justify-between mb-4">
               <div className="w-12 h-12 rounded-2xl bg-cyan-500/15 text-cyan-400 flex items-center justify-center border border-cyan-500/30">
@@ -329,18 +329,18 @@ export default function LandingPage({ onStartOnboarding, onEnterDemo, onOpenLogi
             </div>
             <h3 className="text-lg font-bold font-racing uppercase text-white mb-2">
               {isEn
-                ? 'TFT Cluster & OBD-II Sync + Predictive Battery'
-                : 'Enlace Tablero TFT & Cable OBD-II + Batería Predictiva'}
+                ? 'Digital Cockpit & 16-Pin OBD-II Sync + Predictive Battery'
+                : 'Enlace Clúster Digital & Cable OBD-II + Batería Predictiva'}
             </h3>
             <p className="text-xs text-neutral-300 leading-relaxed font-sans mb-3">
               {isEn
-                ? 'Link your Apache SmartXonnect TFT or OBD-II scanner. With one tap on "Update Parameters", sync Odometer, Fuel %, Range, Ride Mode, Lean Angle, Top Speed, and live Battery Voltage (V) & Health (%) directly into Predictive Maintenance.'
-                : 'Enlaza el tablero TFT de tu Apache o cable OBD-II. Con el botón «⚡ Actualizar Parámetros» sincronizas Odómetro, % de Gasolina, Autonomía, Modo Sport/Urban/Rain, Inclinación y el Voltaje (V) + Salud (%) de la Batería directamente en el Mantenimiento Predictivo.'}
+                ? 'Link your Apache CarPlay / MBUX / iDrive TFT or OBD-II scanner. With one tap on "Update Parameters", sync Odometer, Fuel %, Range, Ride Mode, Lean Angle, Top Speed, and live Battery Voltage (V) & Health (%) directly into Predictive Maintenance.'
+                : 'Enlaza el clúster digital de tu auto o cable OBD-II. Con el botón «⚡ Actualizar Parámetros» sincronizas Odómetro, % de Gasolina, Autonomía, Modo Sport/Urban/Rain, Inclinación y el Voltaje (V) + Salud (%) de la Batería directamente en el Mantenimiento Predictivo.'}
             </p>
             <div className="flex flex-wrap gap-1.5 text-[10px] font-mono text-cyan-300">
               <span className="px-2 py-0.5 rounded bg-neutral-950 border border-neutral-800">⚡ 12.8V / 14.1V Live</span>
-              <span className="px-2 py-0.5 rounded bg-neutral-950 border border-neutral-800">⛽ Nivel Tanque TFT</span>
-              <span className="px-2 py-0.5 rounded bg-neutral-950 border border-neutral-800">🏁 3 Carátulas TFT</span>
+              <span className="px-2 py-0.5 rounded bg-neutral-950 border border-neutral-800">⛽ Nivel Tanque Digital</span>
+              <span className="px-2 py-0.5 rounded bg-neutral-950 border border-neutral-800">🏁 3 Modos Cabina GT/Sport+</span>
             </div>
           </div>
 
@@ -389,7 +389,7 @@ export default function LandingPage({ onStartOnboarding, onEnterDemo, onOpenLogi
             <p className="text-xs text-neutral-300 leading-relaxed font-sans mb-3">
               {isEn
                 ? 'Ask in real time if a ticket or tow-truck impound is legal in Colombia (Law 769), USA, Brazil (CTB), France (Code de la route), Italy (CdS), Germany (StVO), Spain, Mexico, Chile, or Peru in their native language.'
-                : 'Pregunta en pleno retén si un comparendo o llevarse tu moto en grúa es legal según el código de Colombia (Ley 769), EE. UU., Brasil (CTB en portugués), Francia (Code de la route), Italia (Codice della Strada), Alemania (StVO), España, México, Chile o Perú.'}
+                : 'Pregunta en pleno retén si un comparendo o llevarse tu auto en grúa es legal según el código de Colombia (Ley 769), EE. UU., Brasil (CTB en portugués), Francia (Code de la route), Italia (Codice della Strada), Alemania (StVO), España, México, Chile o Perú.'}
             </p>
             <div className="flex flex-wrap gap-1.5 text-[10px] font-mono text-indigo-300">
               <span className="px-2 py-0.5 rounded bg-neutral-950 border border-neutral-800">⚖️ ¿Es Legal la Grúa?</span>
@@ -431,7 +431,7 @@ export default function LandingPage({ onStartOnboarding, onEnterDemo, onOpenLogi
             <p className="text-xs text-neutral-400 leading-relaxed font-sans">
               {isEn
                 ? 'Create your own Luxury Car Club with a custom emblem or uploaded photo, secret invite code, private realtime chat, route planner, and live Waze-style checkpoint alerts — backed by official Founder VIP governance.'
-                : 'Crea tu propio Club Automotriz VIP subiendo el escudo o logo de tu grupo, con código de invitación privado, chat en tiempo real exclusivo del clan, convocatorias de rodadas y alertas Radar Vial VIP.'}
+                : 'Crea tu propio Club Automotriz VIP subiendo el escudo o logo de tu grupo, con código de invitación privado, chat en tiempo real exclusivo del club VIP, convocatorias de caravanas y Track Days y alertas Radar Vial VIP.'}
             </p>
           </div>
 
@@ -448,7 +448,7 @@ export default function LandingPage({ onStartOnboarding, onEnterDemo, onOpenLogi
             <p className="text-xs text-neutral-400 leading-relaxed font-sans">
               {isEn
                 ? 'High-contrast emergency medical card (Blood Type RH, allergies, EPS/insurance, emergency contact) plus 1-tap GPS coordinates for tow trucks and instant SOS broadcast to the automotive club community.'
-                : 'Ficha médica de alto contraste para paramédicos (Tipo de Sangre Factor RH, alergias, EPS/ARL y contacto de emergencia), solicitud de grúa 24/7 con coordenadas GPS exactas y botón SOS al clan.'}
+                : 'Ficha médica de alto contraste para paramédicos (Tipo de Sangre Factor RH, alergias, EPS/ARL y contacto de emergencia), solicitud de grúa 24/7 con coordenadas GPS exactas y botón SOS al club VIP.'}
             </p>
           </div>
         </div>
@@ -512,16 +512,16 @@ export default function LandingPage({ onStartOnboarding, onEnterDemo, onOpenLogi
             </p>
             <div className="flex flex-wrap gap-2 text-[10px] font-mono text-neutral-400">
               <span className="px-2 py-0.5 rounded bg-neutral-950 border border-neutral-800 text-blue-400">
-                Auteco / TVS / KTM
+                Porsche Center / Autoelite
               </span>
               <span className="px-2 py-0.5 rounded bg-neutral-950 border border-neutral-800 text-blue-400">
-                Yamaha Incolmotos
+                Mercedes-Benz / AMG Center
               </span>
               <span className="px-2 py-0.5 rounded bg-neutral-950 border border-neutral-800 text-blue-400">
-                Bajaj / Grupo UMA
+                Autogermana BMW M
               </span>
               <span className="px-2 py-0.5 rounded bg-neutral-950 border border-neutral-800 text-blue-400">
-                Honda / Suzuki / BMW
+                Audi Sport / Ferrari / Mazda
               </span>
               <span className="px-2 py-0.5 rounded bg-neutral-950 border border-neutral-800 text-emerald-400">
                 🛡️ Roadmap 8 Revisiones
@@ -608,18 +608,18 @@ export default function LandingPage({ onStartOnboarding, onEnterDemo, onOpenLogi
                   <Monitor className="w-6 h-6" />
                 </div>
                 <span className="px-2.5 py-0.5 rounded-full bg-sky-500/20 border border-sky-500/40 text-[10px] font-mono font-bold text-sky-300">
-                  PANTALLA 5" • 6" • 7"
+                  CONSOLA 10.2" • 12.3" • 14.9"
                 </span>
               </div>
               <h3 className="text-lg font-bold font-racing uppercase text-white mb-2">
                 {isEn
-                  ? 'Moto CarPlay & Android Auto HUD Mode'
+                  ? 'Apple CarPlay & Android Auto HUD Mode'
                   : 'Modo CarPlay / Android Auto para Consola Central'}
               </h3>
               <p className="text-xs text-neutral-300 leading-relaxed font-sans mb-4">
                 {isEn
                   ? 'Mount your phone or handlebar screen horizontally with glove-friendly mega buttons, sunlight boost, live speed/RPM bar, embedded GPS navigation, and 1-tap access to Checkpoint Mode, SOS, and Doctor Auto.'
-                  : 'Diseño horizontal de alto contraste para pantallas de 5", 6" y 7" en el parabrisas / consola central con botones gigantes para conducción ejecutiva, brillo solar, mapa GPS integrado y acceso en 1 toque a Retén, Abogado IA, SOS y Doctor Auto.'}
+                  : 'Diseño horizontal de alto contraste para pantallas de 10.2", 12.3" y 14.9" en el parabrisas / consola central con botones gigantes para conducción ejecutiva, brillo solar, mapa GPS integrado y acceso en 1 toque a Retén, Abogado IA, SOS y Doctor Auto.'}
               </p>
             </div>
             <button
@@ -703,7 +703,7 @@ export default function LandingPage({ onStartOnboarding, onEnterDemo, onOpenLogi
                 <li>{t('landing.planBasicF2')}</li>
                 <li>{t('landing.planBasicF3')}</li>
                 <li>{t('landing.planBasicF4')}</li>
-                <li className="text-cyan-400 font-bold">✓ Enlace Bluetooth Tablero TFT (12 Parámetros + Batería)</li>
+                <li className="text-cyan-400 font-bold">✓ Enlace Bluetooth Clúster Digital (12 Parámetros + Batería)</li>
                 <li className="text-emerald-400 font-bold">✓ Guantera Modo Retén (2 Caras + PIN) & SOS 24/7</li>
               </ul>
             </div>
@@ -715,7 +715,7 @@ export default function LandingPage({ onStartOnboarding, onEnterDemo, onOpenLogi
             </button>
           </div>
 
-          {/* Plan 2: Rider Pro (3 Motos - Más Popular) */}
+          {/* Plan 2: Rider Pro (3 Autos - Más Popular) */}
           <div className="p-6 rounded-3xl bg-neutral-900 border-2 border-amber-500 shadow-2xl shadow-amber-950/40 flex flex-col justify-between relative">
             <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-amber-500 text-black text-[10px] font-black uppercase tracking-wider px-3 py-0.5 rounded-full">
               {t('landing.planPopularBadge')}
@@ -980,7 +980,7 @@ export default function LandingPage({ onStartOnboarding, onEnterDemo, onOpenLogi
                 className="text-neutral-400 hover:text-amber-400 underline underline-offset-4 transition flex items-center gap-1"
               >
                 <ShieldCheck className="w-3 h-3 text-cyan-400" />
-                <span>{isEn ? 'Clan & AI Governance' : 'Política de Clanes e IA'}</span>
+                <span>{isEn ? 'Club & AI Governance' : 'Política de Clubes VIP e IA'}</span>
               </button>
             </div>
           </div>

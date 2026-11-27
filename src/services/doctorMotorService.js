@@ -1,140 +1,140 @@
 /**
- * AutoDash AI — Doctor Auto IA (Diagnóstico Mecánico por Síntoma, Sonido o Sensación)
- * Ayuda al conductor a saber exactamente qué tiene su moto, si es peligroso seguir rodando
+ * AutoDash AI — Doctor Auto IA (Diagnóstico Mecánico y Electrónico Automotriz por Síntoma o Sonido)
+ * Ayuda al conductor a saber exactamente qué tiene su automóvil, si es seguro seguir conduciendo
  * y cuánto es el precio justo de reparación para evitar cobros abusivos en talleres.
  */
 
 export const QUICK_MECHANICAL_SYMPTOMS = [
   {
     id: 'valve_chain_rattle',
-    badge: '🔊 Cascabeleo / Taqueo en el Motor',
-    symptom: 'Suena un cascabeleo o tic-tic metálico en el cilindro/culata en frío o alrededor de las 3.000 a 5.000 RPM.',
-    diagnosisTitle: 'Holgura de Válvulas Descalibrada o Tensor Automático de Cadenilla de Distribución',
-    urgencyLevel: 'PRECAUCIÓN MEDIA — CALIBRAR PRONTO',
-    canRideSafely: 'PUEDES RODAR A BAJAS RPM HASTA EL TALLER',
-    estimatedCostCOP: '$65.000 – $140.000 COP (US$16 – US$35)',
-    technicalExplanation: 'En motores 4 Válvulas (como TVS Apache RTR 160/200 4V, Pulsar NS, KTMs), un "tic-tic" en la parte alta de la culata suele deberse a holgura excesiva en balancines/válvulas (admisión 0.06 mm / escape 0.08 mm) o desgaste en el tensor automático de la cadenilla de distribución.',
+    badge: '🔊 Ruido Metálico en Motor / Arranque en Frío',
+    symptom: 'Al encender el auto en frío suena un traqueteo metálico durante 3 a 5 segundos o un tic-tic en la parte alta del motor.',
+    diagnosisTitle: 'Actuador de Árbol de Levas Variable (VANOS / VVT), Tensor Hidráulico o Bomba de Alta Presión GDI',
+    urgencyLevel: 'PRECAUCIÓN MEDIA — ESCANEAR PRESIÓN DE ACEITE',
+    canRideSafely: 'PUEDES CONDUCIR A BAJAS RPM HASTA EL CENTRO DE SERVICIO',
+    estimatedCostCOP: '$280.000 – $950.000 COP (US$70 – US$240)',
+    technicalExplanation: 'En motores de inyección directa turboalimentados (Porsche, Mercedes-AMG, BMW TwinPower, Audi TFSI, Mazda Skyactiv), un tic-tic constante al ralentí suele ser normal de la bomba de alta presión GDI. Sin embargo, si suena un traqueteo fuerte en los primeros segundos en frío, indica descarga del tensor hidráulico o solenoide VANOS/VVT sucio.',
     mechanicChecklist: [
-      'Pide en el taller medir holgura de las 4 válvulas con galgas calibradas con el motor 100% frío.',
-      'Revisa el resorte y trinquete del tensor de cadenilla antes de dejar que te cambien la cadenilla completa sin necesidad.',
-      'Verifica el nivel y viscosidad del aceite (10W-40 o 10W-30 Sintético).'
+      'Pide escanear por OBD-II códigos de correlación de árbol de levas (P0011 / P0016) antes de desarmar.',
+      'Verifica que el aceite sea 100% Sintético en la viscosidad exacta (0W-40 / 5W-30) y que el filtro sea OEM con válvula anti-retorno.',
+      'Revisa la limpieza de los solenoides VVT/VANOS antes de autorizar cambio de distribución.'
     ]
   },
   {
     id: 'hard_gearbox',
-    badge: '⚙️ Caja Dura / No Entra Neutro',
-    symptom: 'La palanca de cambios se siente muy dura al pasar de 1ª a 2ª o cuesta encontrar el Neutro cuando el auto está caliente en un semáforo.',
-    diagnosisTitle: 'Tensión Incorrecta de Guaya de Clutch o Aceite Degradado por Temperatura',
-    urgencyLevel: 'RIESGO BAJO-MEDIO — AJUSTE RÁPIDO',
-    canRideSafely: 'SÍ PUEDES RODAR • AJUSTA JUEGO LIBRE DE CLUTCH',
-    estimatedCostCOP: '$15.000 – $85.000 COP (US$4 – US$22)',
-    technicalExplanation: 'El 85% de las veces NO es un daño interno de la caja ni de los discos de clutch: ocurre porque la guaya del embrague tiene demasiado juego libre (debe ser de 10 mm a 15 mm en la manigueta) y no alcanza a separar bien la prensa cuando el motor dilata por calor, o porque el aceite ya perdió propiedades.',
+    badge: '⚙️ Tirón o Golpe en Caja Automática (PDK / DSG / ZF)',
+    symptom: 'Siento un golpe o tirón brusco al pasar de P a D/R o cuando la caja automática reduce de 3ª a 2ª en tráfico lento.',
+    diagnosisTitle: 'Adaptación Mecatrónica Descalibrada, Fluido ATF/DCTF Degradado o Soporte Hidráulico de Caja',
+    urgencyLevel: 'PRECAUCIÓN MEDIA — CALIBRACIÓN O MANTENIMIENTO DE CAJA',
+    canRideSafely: 'SÍ PUEDES CONDUCIR EN MODO COMFORT • EVITA LAUNCH CONTROL',
+    estimatedCostCOP: '$450.000 – $1.350.000 COP (US$110 – US$340)',
+    technicalExplanation: 'En cajas de doble embrague (PDK, DSG, S-Tronic, AMG Speedshift) o convertidor ZF 8HP, el 80% de los tirones a baja velocidad NO significan daño interno de la caja: se corrigen realizando el cambio de fluido ATF/DCTF con filtro y ejecutando la "Adaptación Básica de Embragues" por escáner OBD-II, o reemplazando el soporte hidráulico inferior (Dogbone).',
     mechanicChecklist: [
-      'Gradúa el tensor de la manigueta de clutch dejando solo 1 cm de juego libre.',
-      'Lubrica la guaya de clutch y verifica que no esté deshilachada.',
-      'Si el aceite tiene más de 2.500 - 3.000 km, cámbialo junto con el filtro de papel.'
+      'Solicita primero una recalibración de puntos de acople (Kiss-Point Adaptation) con escáner oficial y revisa la temperatura del fluido.',
+      'Inspecciona los soportes hidráulicos de autor y caja (si están vencidos, golpean al pasar de D a R).',
+      'Si el auto superó los 50.000 km sin cambio de aceite de transmisión, programa el servicio con fluido homologado.'
     ]
   },
   {
     id: 'power_loss_jerk',
-    badge: '⚡ Jaloneo o Pérdida de Fuerza',
-    symptom: 'El auto se ahoga, tironea al acelerar fuerte o pierde fuerza en subidas y altas revoluciones.',
-    diagnosisTitle: 'Filtro de Combustible/Aire Obstruido, Bujía Desgastada o Inyector Sucio',
-    urgencyLevel: 'PRECAUCIÓN MEDIA — REVISIÓN DE INYECCIÓN FI',
-    canRideSafely: 'EVITA ADELANTAMIENTOS EXIGENTES HASTA REVISAR',
-    estimatedCostCOP: '$45.000 – $130.000 COP (US$12 – US$32)',
-    technicalExplanation: 'En motos Fuel Injection (FI), el tironeo al abrir el acelerador suele originarse por caída de presión en la bomba de gasolina, bujía con electrodo abierto (>0.9 mm), capuchón de bujía sulfatado o cuerpo de aceleración sucio.',
+    badge: '⚡ Pérdida de Turbo Boost / Testigo Check Engine',
+    symptom: 'El auto pierde empuje al pisar el acelerador a fondo, tironea bajo carga de turbo o se encendió el testigo Check Engine / Drivetrain.',
+    diagnosisTitle: 'Falla en Bobina de Encendido / Bujía Iridium (Misfire), Válvula Diverter del Turbo o Fuga en Boost Pipe',
+    urgencyLevel: 'PRECAUCIÓN ALTA — MODO PROTECCIÓN (LIMP MODE)',
+    canRideSafely: 'CONDUCE SUAVE SIN EXIGIR EL TURBO HASTA ESCANEAR OBD-II',
+    estimatedCostCOP: '$240.000 – $780.000 COP (US$60 – US$195)',
+    technicalExplanation: 'Cuando un motor turbo tironea exactamente al subir la presión de boost (2.500 – 4.500 RPM), casi siempre se trata de pérdida de chispa bajo presión en una bobina/bujía (códigos P0301–P0306) o una fuga de presión en la válvula Diverter (DV) / manguera del intercooler (código P0299 Underboost).',
     mechanicChecklist: [
-      'Revisa primero el estado y calibración de la bujía (Iridium o Bosch original) y el filtro de aire.',
-      'Solicita limpieza de cuerpo de aceleración e inyector por ultrasonido sin desprogramar el sensor TPS.',
-      'No cambies la bomba de gasolina completa sin antes medir la presión con manómetro.'
+      'Conecta tu escáner OBD-II de 16 pines en la pestaña "Enlace Tablero & OBD-II" para leer el código DTC exacto.',
+      'Si marca Misfire en un cilindro específico (ej. P0303), intercambia la bobina del cilindro 3 al 1 para confirmar si es solo la bobina antes de cambiar inyectores.',
+      'Revisa las abrazaderas de carga del intercooler (Charge Pipe) y la válvula Diverter.'
     ]
   },
   {
     id: 'brake_squeal_vibe',
-    badge: '🛑 Chillido o Vibración al Frenar',
-    symptom: 'Los frenos de disco chillan fuerte o siento una pulsación/vibración en la manigueta al frenar.',
-    diagnosisTitle: 'Pastillas Cristalizadas / Agotadas o Disco con Alabeo Térmico',
+    badge: '🛑 Vibración en el Volante al Frenar o Chillido',
+    symptom: 'Cuando freno a más de 80 km/h siento que el volante vibra, o los frenos emiten un chillido agudo al llegar a un semáforo.',
+    diagnosisTitle: 'Alabeo Térmico en Discos Delanteros o Pastillas Cerámicas / Brembo en Límite de Sensor',
     urgencyLevel: 'PRIORIDAD ALTA — SEGURIDAD ACTIVA DE FRENADO',
-    canRideSafely: 'REVISA EL GROSOR DE PASTILLAS ANTES DE SALIR A RUTA',
-    estimatedCostCOP: '$40.000 – $120.000 COP (US$10 – US$30)',
-    technicalExplanation: 'Si el chillido es agudo pero frena parejo, las pastillas están cristalizadas o sucias con polvo metálico. Si sientes que el metal roza o que la manigueta bombea/vibra, las pastillas llegaron al límite de 1.5 mm o los pasadores de la mordaza (caliper) requieren grasa siliconada.',
+    canRideSafely: 'EVITA FRENADAS BRUSCAS A ALTA VELOCIDAD HASTA REVISAR DISCOS',
+    estimatedCostCOP: '$380.000 – $1.200.000 COP (US$95 – US$300)',
+    technicalExplanation: 'En frenos de alto desempeño (Brembo / M Compound / AMG), un ligero chillido en frío es normal por el compuesto cerámico/metálico. Pero si el volante tiembla al tocar el pedal de freno, los discos delanteros sufrieron alabeo térmico (por lavar el auto con los discos calientes) o los bujes de tijera delantera tienen holgura.',
     mechanicChecklist: [
-      'Inspecciona visualmente la ranura testigo de las pastillas delanteras y traseras.',
-      'Pide limpieza de mordaza y lubricación de pines deslizantes + cambio de líquido de frenos DOT 4 si está oscuro.'
+      'Pide medir la desviación lateral del disco con comparador de carátula y el espesor mínimo en milímetros grabado en el borde del rotor.',
+      'Revisa el cable del sensor electrónico de desgaste de pastillas y purga con líquido DOT 4 LV.',
+      'Nunca permitas lavar los rines con agua fría inmediatamente después de conducción deportiva.'
     ]
   },
   {
     id: 'chain_clunk',
-    badge: '⛓️ Traqueteo en Kit de Arrastre',
-    symptom: 'Siento un golpe o traqueteo debajo de los posapiés al soltar el acelerador o pasar por baches.',
-    diagnosisTitle: 'Cadena Destemplada con Eslabones Rígidos o Cauchos de Porta-Sprocket (Camping) Gastados',
-    urgencyLevel: 'PRECAUCIÓN ALTA — RIESGO DE SALIDA DE CADENA',
-    canRideSafely: 'TENSIONA Y LUBRICA ANTES DE RODAR A ALTA VELOCIDAD',
-    estimatedCostCOP: '$20.000 – $60.000 COP (US$5 – US$15)',
-    technicalExplanation: 'Cuando la cadena supera los 30-35 mm de holgura o los cauchos amortiguadores de la campana trasera (dampers) tienen juego, se siente un golpe seco al acelerar/desacelerar.',
+    badge: '🛞 Vibración a +100 km/h o Golpe en Suspensión',
+    symptom: 'El volante vibra entre 100 y 130 km/h en autopista, el auto hala hacia un lado o suena un golpe seco al pasar por un bache.',
+    diagnosisTitle: 'Desbalanceo Dinámico de Rines / Alineación 3D, Bieleta de Barra Estabilizadora o Rin Sentido',
+    urgencyLevel: 'PRECAUCIÓN MEDIA — SERVITECA 3D & SUSPENSIÓN',
+    canRideSafely: 'VERIFICA PRESIÓN TPMS (36 PSI) Y AGENDA ALINEACIÓN Y BALANCEO',
+    estimatedCostCOP: '$140.000 – $480.000 COP (US$35 – US$120)',
+    technicalExplanation: 'En autos con rines de 18" a 21" y neumáticos de perfil bajo, una vibración que aparece exactamente entre 100 y 120 km/h es señal clásica de pérdida de una pesa de balanceo o leve deformación interna del rin. Si suena un golpe seco en baches a baja velocidad, suele ser una bieleta de barra estabilizadora o soporte superior (Strut Mount).',
     mechanicChecklist: [
-      'Ajusta la holgura de la cadena entre 20 mm y 25 mm verificando que las marcas del tijeral queden exactamente iguales a ambos lados.',
-      'Revisa los cauchos del porta-sprocket trasero (cuestan muy poco y eliminan el golpe al meter cambios).'
+      'Realiza balanceo computarizado Road-Force en las 4 ruedas y alineación láser 3D.',
+      'Pide revisar que ningún rin tenga golpe en la pestaña interna y verifica las bieletas de barra estabilizadora.'
     ]
   },
   {
     id: 'weak_battery_start',
-    badge: '🔋 Arranque Débil / Testigo Batería',
-    symptom: 'En las mañanas el arranque eléctrico gira lento, el tablero TFT parpadea al dar start o cuesta prender.',
-    diagnosisTitle: 'Batería con Voltaje en Reposo Bajo (<12.2V) o Regulador/Estator',
-    urgencyLevel: 'PRECAUCIÓN MEDIA — RIESGO DE QUEDAR VARADO',
-    canRideSafely: 'MIDE VOLTAJE CON MULTÍMETRO (13.8V A 14.4V EN MARCHA)',
-    estimatedCostCOP: '$140.000 – $260.000 COP si requiere batería nueva',
-    technicalExplanation: 'Las motos con tablero TFT, ABS e inyección electrónica requieren al menos 12.4V en reposo. Si al acelerar a 4.000 RPM el voltaje sube entre 13.8V y 14.4V, el sistema de carga (estator y regulador) está perfecto y solo es la batería agotada o bornes sulfatados.',
+    badge: '🔋 Falla Start-Stop / Alerta Batería 12V AGM',
+    symptom: 'Aparece aviso de "Batería 12V Baja — Encender Motor", el sistema Start-Stop dejó de activarse o se reinician ajustes de cabina.',
+    diagnosisTitle: 'Batería Principal AGM / Auxiliar Con Capacidad Degradada (<12.2V) o Falta de Registro IBS',
+    urgencyLevel: 'PRECAUCIÓN MEDIA — RIESGO DE DESVARE ELECTRÓNICO',
+    canRideSafely: 'MIDE VOLTAJE DE ALTERNADOR (14.2V – 14.8V EN MARCHA)',
+    estimatedCostCOP: '$750.000 – $1.250.000 COP si requiere Batería AGM nueva codificada',
+    technicalExplanation: 'Los automóviles modernos de lujo cuentan con sensor inteligente de batería (IBS) en el borne negativo. Cuando la salud de la batería AGM cae del 70%, el auto desactiva primero el Start-Stop y el modo planeo para priorizar el arranque. Al instalar una batería AGM nueva es obligatorio codificarla por OBD-II.',
     mechanicChecklist: [
-      'Antes de comprar batería nueva, pide medir con multímetro: 1) Voltaje apagada (>12.4V) y 2) Voltaje a 4.000 RPM (13.8V - 14.4V).',
-      'Aprieta y limpia los bornes de la batería y el relé de arranque (cochinito).'
+      'Mide el estado de salud (SOH %) y voltaje con probador de conductancia AGM (12.6V en reposo / 14.4V cargando).',
+      'Si cambias la batería, exige que sean especificaciones AGM (nunca plomo-ácido convencional) y que registren el cambio en la ECU por OBD-II.'
     ]
   }
 ];
 
 export async function diagnoseMechanicalSymptomAI({
   symptom,
-  bikeBrand = 'TVS',
-  bikeModel = 'Apache RTR 160 4V FI NG',
-  odometer = 5000,
+  bikeBrand = 'PORSCHE',
+  bikeModel = '911 GT3 RS (992)',
+  odometer = 10000,
   lang = 'es'
 }) {
   const isEn = lang === 'en';
   const prompt = isEn
-    ? `You are "Doctor Auto AI", the master motorcycle mechanic of AutoDash AI specialized in ${bikeBrand} ${bikeModel} (${odometer} km).
-Analyze the rider's mechanical symptom or noise: "${symptom}".
+    ? `You are "Doctor Auto AI", the master luxury automotive engineer of AutoDash AI specialized in ${bikeBrand} ${bikeModel} (${odometer} km).
+Analyze the driver's mechanical or electronic symptom: "${symptom}".
 Return STRICTLY pure JSON without markdown blocks using this schema:
 {
-  "diagnosisTitle": "Exact likely mechanical cause",
-  "urgencyLevel": "LOW RISK / MEDIUM CAUTION / CRITICAL — DO NOT RIDE",
-  "canRideSafely": "Clear instruction on whether it is safe to ride to the shop",
-  "estimatedCostCOP": "Fair repair price range in USD and COP so the rider doesn't get overcharged",
-  "technicalExplanation": "Clear mechanical explanation for ${bikeBrand} ${bikeModel}",
+  "diagnosisTitle": "Exact likely automotive cause",
+  "urgencyLevel": "LOW RISK / MEDIUM CAUTION / CRITICAL — REQUEST FLATBED TOW",
+  "canRideSafely": "Clear instruction on whether it is safe to drive to the service center",
+  "estimatedCostCOP": "Fair repair price range in USD and COP so the owner doesn't get overcharged",
+  "technicalExplanation": "Clear automotive engineering explanation for ${bikeBrand} ${bikeModel}",
   "mechanicChecklist": [
-    "Step 1 to tell the mechanic or verify first",
+    "Step 1 to tell the service advisor or check via OBD-II first",
     "Step 2 to avoid unnecessary part replacements",
     "Step 3 preventive tip"
   ]
 }`
-    : `Eres "Doctor Auto IA", el jefe de taller e ingeniero mecánico experto de AutoDash AI especializado en ${bikeBrand} ${bikeModel} (${odometer} km).
-Analiza el síntoma, ruido o falla que describe el piloto: "${symptom}".
+    : `Eres "Doctor Auto IA", el director técnico e ingeniero automotriz experto de AutoDash AI especializado en el automóvil ${bikeBrand} ${bikeModel} (${odometer} km).
+Analiza el síntoma, ruido o testigo que describe el conductor: "${symptom}".
 Responde ESTRICTAMENTE en JSON puro sin bloques markdown con esta estructura:
 {
-  "diagnosisTitle": "Causa mecánica más probable y exacta",
-  "urgencyLevel": "RIESGO BAJO / PRECAUCIÓN MEDIA / CRÍTICO — NO RODAR",
-  "canRideSafely": "Indica claramente si puede seguir rodando hasta el taller o si debe pedir grúa",
-  "estimatedCostCOP": "Rango de precio justo estimado en COP y USD para que no lo engañen en el taller",
-  "technicalExplanation": "Explicación técnica clara adaptada a la ${bikeBrand} ${bikeModel}",
+  "diagnosisTitle": "Causa mecánica o electrónica automotriz más probable",
+  "urgencyLevel": "RIESGO BAJO / PRECAUCIÓN MEDIA / CRÍTICO — SOLICITAR GRÚA CAMA BAJA",
+  "canRideSafely": "Indica claramente si puede seguir conduciendo hasta el taller o si debe pedir grúa de plataforma",
+  "estimatedCostCOP": "Rango de precio justo estimado en COP y USD para que no le cobren de más en el taller",
+  "technicalExplanation": "Explicación técnica clara adaptada al automóvil ${bikeBrand} ${bikeModel}",
   "mechanicChecklist": [
-    "Paso 1 exacto para pedirle al mecánico que revise primero",
-    "Paso 2 para evitar que le cobren repuestos innecesarios",
-    "Paso 3 de mantenimiento preventivo"
+    "Paso 1 exacto para pedir en el centro de servicio o verificar por OBD-II",
+    "Paso 2 para evitar que cambien piezas costosas sin necesidad",
+    "Paso 3 de cuidado preventivo automotriz"
   ]
 }`;
 
-  // 1. Intentar primero el AI Gateway seguro del servidor (/api/ai-gateway)
   try {
     const gatewayRes = await fetch('/api/ai-gateway', {
       method: 'POST',
@@ -146,43 +146,42 @@ Responde ESTRICTAMENTE en JSON puro sin bloques markdown con esta estructura:
       if (payload?.data?.diagnosisTitle) {
         return {
           ...payload.data,
-          source: `Doctor Auto IA • Servidor Seguro (${bikeBrand} ${bikeModel})`
+          source: `Doctor Auto IA • Diagnóstico Automotriz (${bikeBrand} ${bikeModel})`
         };
       }
     }
   } catch {}
 
-  // 2. Fallback directo si hay llave pública en entorno dev o motor mecánico determinístico
   const sLower = String(symptom).toLowerCase();
-  if (sLower.includes('cascabel') || sLower.includes('valvul') || sLower.includes('válvul') || sLower.includes('cadenilla') || sLower.includes('tic')) {
-    return { ...QUICK_MECHANICAL_SYMPTOMS[0], source: `Base Mecánica Oficial (${bikeBrand} ${bikeModel})` };
+  if (sLower.includes('frio') || sLower.includes('frío') || sLower.includes('vanos') || sLower.includes('vvt') || sLower.includes('tic')) {
+    return { ...QUICK_MECHANICAL_SYMPTOMS[0], source: `Base Ingeniería Automotriz (${bikeBrand} ${bikeModel})` };
   }
-  if (sLower.includes('caja') || sLower.includes('cambio') || sLower.includes('neutro') || sLower.includes('clutch') || sLower.includes('embrague')) {
-    return { ...QUICK_MECHANICAL_SYMPTOMS[1], source: `Base Mecánica Oficial (${bikeBrand} ${bikeModel})` };
+  if (sLower.includes('caja') || sLower.includes('pdk') || sLower.includes('dsg') || sLower.includes('cambio') || sLower.includes('tiron')) {
+    return { ...QUICK_MECHANICAL_SYMPTOMS[1], source: `Base Ingeniería Automotriz (${bikeBrand} ${bikeModel})` };
   }
-  if (sLower.includes('ahoga') || sLower.includes('jalon') || sLower.includes('fuerza') || sLower.includes('inyector') || sLower.includes('bujia')) {
-    return { ...QUICK_MECHANICAL_SYMPTOMS[2], source: `Base Mecánica Oficial (${bikeBrand} ${bikeModel})` };
+  if (sLower.includes('turbo') || sLower.includes('check') || sLower.includes('fuerza') || sLower.includes('bobina') || sLower.includes('bujia')) {
+    return { ...QUICK_MECHANICAL_SYMPTOMS[2], source: `Base Ingeniería Automotriz (${bikeBrand} ${bikeModel})` };
   }
   if (sLower.includes('freno') || sLower.includes('chilla') || sLower.includes('pastilla') || sLower.includes('disco')) {
-    return { ...QUICK_MECHANICAL_SYMPTOMS[3], source: `Base Mecánica Oficial (${bikeBrand} ${bikeModel})` };
+    return { ...QUICK_MECHANICAL_SYMPTOMS[3], source: `Base Ingeniería Automotriz (${bikeBrand} ${bikeModel})` };
   }
-  if (sLower.includes('cadena') || sLower.includes('arrastre') || sLower.includes('sprocket') || sLower.includes('traqueteo')) {
-    return { ...QUICK_MECHANICAL_SYMPTOMS[4], source: `Base Mecánica Oficial (${bikeBrand} ${bikeModel})` };
+  if (sLower.includes('volante') || sLower.includes('vibra') || sLower.includes('alinea') || sLower.includes('tpms') || sLower.includes('suspensi')) {
+    return { ...QUICK_MECHANICAL_SYMPTOMS[4], source: `Base Ingeniería Automotriz (${bikeBrand} ${bikeModel})` };
   }
-  if (sLower.includes('bateria') || sLower.includes('batería') || sLower.includes('arranque') || sLower.includes('prende')) {
-    return { ...QUICK_MECHANICAL_SYMPTOMS[5], source: `Base Mecánica Oficial (${bikeBrand} ${bikeModel})` };
+  if (sLower.includes('bateria') || sLower.includes('batería') || sLower.includes('start') || sLower.includes('agm')) {
+    return { ...QUICK_MECHANICAL_SYMPTOMS[5], source: `Base Ingeniería Automotriz (${bikeBrand} ${bikeModel})` };
   }
 
   return {
-    diagnosisTitle: `Inspección Electromecánica Sugerida para ${bikeBrand} ${bikeModel}`,
-    urgencyLevel: 'PRECAUCIÓN MEDIA — VERIFICAR ANTES DE RUTA LARGA',
-    canRideSafely: 'SI NO HAY TESTIGO ROJO DE PRESIÓN DE ACEITE NI BLOQUEO, LLEVA AL TALLER A BAJAS RPM',
-    estimatedCostCOP: '$45.000 – $150.000 COP (Diagnóstico y ajuste estándar)',
-    technicalExplanation: `Para el síntoma reportado ("${symptom}") en tu ${bikeBrand} ${bikeModel} con ${odometer.toLocaleString()} km, se recomienda revisar primero los puntos de ajuste externo (tensión, lubricación, conectores eléctricos y nivel de aceite) antes de autorizar el desarme de componentes internos.`,
+    diagnosisTitle: `Inspección OBD-II y Tren Motriz Sugerida para ${bikeBrand} ${bikeModel}`,
+    urgencyLevel: 'PRECAUCIÓN MEDIA — ESCANEAR MÓDULOS OBD-II',
+    canRideSafely: 'SI NO HAY TESTIGO ROJO DE PRESIÓN DE ACEITE NI TEMPERATURA, CONDUCE EN MODO COMFORT AL TALLER',
+    estimatedCostCOP: '$180.000 – $450.000 COP (Escaneo especializado y diagnóstico)',
+    technicalExplanation: `Para el síntoma reportado ("${symptom}") en tu ${bikeBrand} ${bikeModel} con ${odometer.toLocaleString()} km, se recomienda realizar lectura de códigos DTC en el puerto OBD-II de 16 pines y verificar presión de fluidos antes de autorizar el reemplazo de componentes mayores.`,
     mechanicChecklist: [
-      'Pide diagnóstico con escáner o revisión visual frente a ti antes de autorizar cambio de piezas.',
-      'Verifica que el nivel de aceite esté entre las marcas Mín y Máx con el auto vertical.',
-      'Exige que te entreguen los repuestos reemplazados para conservar tu historial en AutoDash AI.'
+      'Conecta el escáner OBD-II para leer códigos almacenados en motor (ECU), transmisión (TCU) y chasis (ABS/ESP).',
+      'Verifica el nivel de aceite sintético y líquido refrigerante con el motor en reposo.',
+      'Solicita presupuesto desglosado y conserva las piezas reemplazadas en tu bitácora de AutoDash AI.'
     ],
     source: `Motor Experto Doctor Auto IA (${bikeBrand})`
   };

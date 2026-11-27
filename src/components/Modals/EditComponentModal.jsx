@@ -100,7 +100,7 @@ export default function EditComponentModal({
             </div>
             <div>
               <h3 className="text-base font-bold font-racing uppercase tracking-wider text-white">
-                {component ? 'Calibrar Intervalo de la Parte' : 'Añadir Nueva Parte a Tu Moto'}
+                {component ? 'Calibrar Intervalo de la Parte' : 'Añadir Nueva Parte a Tu Auto'}
               </h3>
               <p className="text-[11px] text-neutral-400 font-mono">
                 {bikeName} • Personaliza los kilómetros según el manual de tu auto

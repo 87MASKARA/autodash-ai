@@ -943,7 +943,7 @@ export default function FounderAdminModal({ isOpen, onClose, userProfile, onGove
                   <label className="text-[10px] text-neutral-400 block mb-1">Nombre del Creador / Canal *</label>
                   <input
                     type="text"
-                    placeholder="Ej: Paisa Motos / Kaleth"
+                    placeholder="Ej: Paisa Autos / Kaleth"
                     value={newInf.name}
                     onChange={(e) => setNewInf({ ...newInf, name: e.target.value })}
                     className="w-full bg-neutral-900 border border-neutral-700 rounded-xl px-3 py-2 text-white"
@@ -1228,7 +1228,7 @@ export default function FounderAdminModal({ isOpen, onClose, userProfile, onGove
                     onChange={(e) => setNewGift({ ...newGift, planId: e.target.value })}
                     className="w-full bg-neutral-900 border border-neutral-700 rounded-xl px-2.5 py-2 text-white"
                   >
-                    <option value="pro_monthly">🔥 Rider PRO (3 Motos + OBD-II + IA)</option>
+                    <option value="pro_monthly">🔥 Rider PRO (3 Autos + OBD-II + IA)</option>
                     <option value="garage">🏭 Garaje / Taller (15 Motos)</option>
                     <option value="solo">🏍️ Driver Executive (1 Auto)</option>
                   </select>
@@ -1393,7 +1393,7 @@ export default function FounderAdminModal({ isOpen, onClose, userProfile, onGove
                   value={governance.announcementText}
                   onChange={(e) => handleUpdateGovernance('announcementText', e.target.value)}
                   className="flex-1 bg-neutral-900 border border-neutral-700 rounded-xl px-3 py-2 text-xs text-white"
-                  placeholder="Escribe aquí el mensaje que verán todos los motociclistas arriba en su tablero..."
+                  placeholder="Escribe aquí el mensaje que verán todos los conductors arriba en su tablero..."
                 />
               </div>
             </div>
@@ -1415,7 +1415,7 @@ export default function FounderAdminModal({ isOpen, onClose, userProfile, onGove
                 </label>
 
                 <label className="p-3 rounded-xl bg-neutral-900 border border-neutral-800 flex items-center justify-between cursor-pointer">
-                  <span>Permitir Venta Motos Usadas</span>
+                  <span>Permitir Venta Autos Usadas</span>
                   <input
                     type="checkbox"
                     checked={Boolean(governance.allowMarketplaceListings)}
@@ -1446,7 +1446,7 @@ export default function FounderAdminModal({ isOpen, onClose, userProfile, onGove
               </div>
             </div>
 
-            {/* 3. Auditoría en Vivo de Base de Datos Supabase (MotoMall, Motos en Venta y Clanes) */}
+            {/* 3. Auditoría en Vivo de Base de Datos Supabase (MotoMall, Autos en Venta y Clubes VIP) */}
             <div className="p-4 rounded-2xl bg-neutral-950 border border-emerald-500/30 space-y-3">
               <div className="flex items-center justify-between">
                 <h4 className="text-xs font-racing uppercase text-emerald-400 font-bold flex items-center gap-1.5">
@@ -1473,12 +1473,12 @@ export default function FounderAdminModal({ isOpen, onClose, userProfile, onGove
                   <span className="text-lg font-black text-amber-400">{liveDbStats.productsCount} productos</span>
                 </div>
                 <div className="p-3 rounded-xl bg-neutral-900 border border-neutral-800">
-                  <span className="text-[10px] text-neutral-400 block">Motos en Venta (DB)</span>
+                  <span className="text-[10px] text-neutral-400 block">Autos en Venta (DB)</span>
                   <span className="text-lg font-black text-cyan-400">{liveDbStats.listingsCount} publicadas</span>
                 </div>
                 <div className="p-3 rounded-xl bg-neutral-900 border border-neutral-800">
                   <span className="text-[10px] text-neutral-400 block">Clubes Automotrices VIP (DB)</span>
-                  <span className="text-lg font-black text-purple-400">{liveDbStats.clansCount} clanes</span>
+                  <span className="text-lg font-black text-purple-400">{liveDbStats.clansCount} clubes VIP</span>
                 </div>
               </div>
 
@@ -1486,7 +1486,7 @@ export default function FounderAdminModal({ isOpen, onClose, userProfile, onGove
               {Array.isArray(liveDbStats.clans) && liveDbStats.clans.length > 0 && (
                 <div className="pt-2 border-t border-neutral-800 space-y-2">
                   <span className="text-[10px] uppercase text-purple-300 font-bold block">
-                    🛡️ Moderación de Clubes Automotrices VIP Activos (Eliminar Clanes como Fundador VIP):
+                    🛡️ Moderación de Clubes Automotrices VIP Activos (Eliminar Club VIPes como Fundador VIP):
                   </span>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     {liveDbStats.clans.map((clan) => (
@@ -1510,12 +1510,12 @@ export default function FounderAdminModal({ isOpen, onClose, userProfile, onGove
                           onClick={async () => {
                             await deleteClanAsFounder(clan);
                             await refreshAllData();
-                            showToast(`🗑️ Clan "${clan.name}" eliminado permanentemente.`);
+                            showToast(`🗑️ Club "${clan.name}" eliminado permanentemente.`);
                           }}
                           className="px-2.5 py-1.5 rounded-lg bg-red-950/80 hover:bg-red-900 border border-red-500/50 text-red-300 text-[10px] font-bold flex items-center gap-1 transition"
                         >
                           <Trash2 className="w-3.5 h-3.5 text-red-400" />
-                          <span>Eliminar Clan</span>
+                          <span>Eliminar Club VIP</span>
                         </button>
                       </div>
                     ))}

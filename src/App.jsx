@@ -226,7 +226,7 @@ export default function App() {
     });
   };
 
-  // Garaje protegido: en modo demo carga DEMO_GARAGE neutro. Si hay perfil activo, carga sus motos guardadas y sincroniza con Supabase
+  // Garaje protegido: en modo demo carga DEMO_GARAGE neutro. Si hay perfil activo, carga sus autos guardadas y sincroniza con Supabase
   const [garage, setGarage] = useState(() => {
     const saved = localStorage.getItem("autodash_garage");
 
@@ -516,7 +516,7 @@ export default function App() {
       ? 3
       : 1;
 
-    // Solo si el usuario está registrado, NO es VIP y ya alcanzó o superó el cupo de motos de su plan
+    // Solo si el usuario está registrado, NO es VIP y ya alcanzó o superó el cupo de autos de su plan
     if (userProfile && !isVip && customBikesCount >= maxAllowed) {
       setIsPaywallOpen(true);
       return;
@@ -949,7 +949,7 @@ export default function App() {
                 <span>{telemetry.isSimulating ? t('nav.liveDemoBadge') : t('nav.pausedDemoBadge')}</span>
               </button>
 
-              {/* Selector Rápido de las 5 Motos Demo / Garaje */}
+              {/* Selector Rápido de las 5 Autos Demo / Garaje */}
               <div className="flex gap-1.5">
                 {DEMO_GARAGE.map((b) => {
                   const ownedMatch =
@@ -1016,7 +1016,7 @@ export default function App() {
               >
                 <Plus className="w-3 h-3" />
                 <span className="hidden sm:inline">{t('nav.registerBike')}</span>
-                <span className="sm:hidden">+ Mi Moto</span>
+                <span className="sm:hidden">+ Mi Auto</span>
               </button>
 
               <div className="flex items-center gap-1.5 sm:gap-2.5">
@@ -1145,7 +1145,7 @@ export default function App() {
           }}
           onAddNewBike={handleOpenAddBike}
           onDeleteBike={(id) => {
-            if (activeIsDemo) return alert("Las motos de demostración no se pueden eliminar.");
+            if (activeIsDemo) return alert("Los autos de demostración no se pueden eliminar.");
             if (garage.length <= 1) return alert("Debes tener al menos 1 moto en tu garaje.");
             const filtered = garage.filter((b) => b.id !== id);
             setGarage(filtered);

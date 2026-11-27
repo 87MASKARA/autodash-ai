@@ -514,7 +514,7 @@ export default function DynamicDashboard({
               </span>
             </button>
 
-            {/* Pill Conectar Tablero TFT (BLE) o Cable OBD-II */}
+            {/* Pill Conectar Cabina Digital / Escáner OBD-II 16 Pines */}
             <button
               type="button"
               onClick={() => setIsHardwareBridgeOpen(true)}
@@ -523,17 +523,17 @@ export default function DynamicDashboard({
                   ? 'bg-emerald-950/75 hover:bg-emerald-900/75 border-emerald-500/50 text-emerald-300'
                   : 'bg-neutral-900/90 hover:bg-neutral-800 border-neutral-700 text-neutral-300'
               }`}
-              title="Vincular Tablero TFT SmartXonnect (Gratis) o Escáner OBD-II (PRO)"
+              title="Vincular Bluetooth del Auto (CarPlay / iDrive / MBUX), Foto Tablero IA o Escáner OBD-II 16 Pines"
             >
-              <Bluetooth className={`w-3.5 h-3.5 ${hojaDeVida.hardwareTelemetry ? 'text-emerald-400' : 'text-amber-400'}`} />
-              <span className="hidden sm:inline">{hojaDeVida.hardwareTelemetry ? (isEn ? 'TFT Synced' : 'TFT Activo') : (isEn ? 'Connect' : 'Vincular')}</span>
-              <span className="sm:hidden">TFT</span>
+              <Bluetooth className={`w-3.5 h-3.5 ${hojaDeVida.hardwareTelemetry ? 'text-emerald-400' : 'text-cyan-400'}`} />
+              <span className="hidden sm:inline">{hojaDeVida.hardwareTelemetry ? (isEn ? 'OBD Synced' : 'OBD Activo') : (isEn ? 'Connect Car' : 'Vincular Auto')}</span>
+              <span className="sm:hidden">OBD</span>
               <span className={`text-[9px] px-1.5 py-0.2 rounded-full font-mono font-bold border ${
                 hojaDeVida.hardwareTelemetry
                   ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40'
-                  : 'bg-amber-500/20 text-amber-300 border-amber-500/40'
+                  : 'bg-cyan-500/20 text-cyan-300 border-cyan-500/40'
               }`}>
-                {hojaDeVida.hardwareTelemetry?.batteryVoltage ? `${hojaDeVida.hardwareTelemetry.batteryVoltage}V` : 'TFT/OBD'}
+                {hojaDeVida.hardwareTelemetry?.batteryVoltage ? `${hojaDeVida.hardwareTelemetry.batteryVoltage}V` : 'OBD-II'}
               </span>
             </button>
 
@@ -581,21 +581,21 @@ export default function DynamicDashboard({
               <span>SOS</span>
             </button>
 
-            {/* Pill Modo CarPlay / Android Auto Multi-Tamaño (3.6", 5.0", 7.0" + Alto Contraste Solar) */}
+            {/* Pill Modo Apple CarPlay / Android Auto Multi-Pantalla (10.2", 12.3", 14.9" Panorámica) */}
             <button
               type="button"
               onClick={() => setIsCarPlayHudOpen(true)}
-              className="px-2.5 py-1.5 rounded-xl text-xs font-racing font-bold flex items-center gap-1.5 transition shadow-sm border bg-amber-500/20 hover:bg-amber-500/30 border-amber-400/60 text-amber-200"
-              title="Modo CarPlay / Android Auto Multi-Tamaño (3.6″ Portátil, 5.0″ Estándar, 7.0″ Touring + Alto Contraste Solar)"
+              className="px-2.5 py-1.5 rounded-xl text-xs font-racing font-bold flex items-center gap-1.5 transition shadow-sm border bg-cyan-500/20 hover:bg-cyan-500/30 border-cyan-400/60 text-cyan-200"
+              title="Modo Apple CarPlay / Android Auto Consola Central (10.2″ PCM, 12.3″ MBUX/iDrive, 14.9″ Curva)"
             >
-              <Monitor className="w-3.5 h-3.5 text-amber-400" />
+              <Monitor className="w-3.5 h-3.5 text-cyan-400" />
               <span>CarPlay HUD</span>
-              <span className="text-[9px] px-1.5 py-0.2 rounded-full bg-amber-500 text-black font-mono font-black">
-                3.6″•5″•7″
+              <span className="text-[9px] px-1.5 py-0.2 rounded-full bg-cyan-400 text-black font-mono font-black">
+                10″•12″•15″
               </span>
             </button>
 
-            {/* Selector Rápido de Carátula TFT (Street / Track Race / Night Stealth) */}
+            {/* Selector Rápido de Modo de Cabina Digital (GT Luxury / Sport+ Track / Night Stealth) */}
             <button
               type="button"
               onClick={() =>
@@ -604,21 +604,21 @@ export default function DynamicDashboard({
                 )
               }
               className="px-2.5 py-1.5 rounded-xl text-xs font-racing font-bold flex items-center gap-1.5 transition border bg-neutral-900/90 hover:bg-neutral-800 border-neutral-700 text-neutral-300"
-              title="Cambiar Carátula del Tacómetro TFT (Street / Track MotoGP / Night Stealth)"
+              title="Cambiar Modo del Clúster Digital (GT Luxury / Sport+ Track / Night Stealth)"
             >
               {tftTheme === 'track' ? (
                 <Flame className="w-3.5 h-3.5 text-rose-500" />
               ) : tftTheme === 'stealth' ? (
                 <Moon className="w-3.5 h-3.5 text-emerald-400" />
               ) : (
-                <Gauge className="w-3.5 h-3.5 text-amber-400" />
+                <Gauge className="w-3.5 h-3.5 text-cyan-400" />
               )}
               <span className="hidden md:inline uppercase">
-                TFT: {tftTheme}
+                MODO: {tftTheme === 'street' ? 'GT LUXURY' : tftTheme === 'track' ? 'SPORT+' : 'STEALTH'}
               </span>
             </button>
 
-            {/* Pill Centro de Alertas (Separado de Comunidad: Push/WhatsApp 30-15-5d + Radar Retenes) */}
+            {/* Pill Centro de Alertas (Separado de Clubes: Push/WhatsApp 30-15-5d + Radar Retenes) */}
             <button
               type="button"
               onClick={() => setIsAlertsModalOpen(true)}
@@ -629,15 +629,15 @@ export default function DynamicDashboard({
               <span>{isEn ? 'Alerts' : 'Alertas'}</span>
             </button>
 
-            {/* Pill Comunidad & Rodadas en Tiempo Real */}
+            {/* Pill Clubes Automotrices VIP & Caravanas en Tiempo Real */}
             <button
               type="button"
               onClick={() => setIsCommunityOpen(true)}
               className="px-2.5 py-1.5 rounded-xl text-xs font-racing font-bold flex items-center gap-1.5 transition shadow-sm border bg-amber-950/60 hover:bg-amber-900/60 border-amber-500/40 text-amber-300"
-              title="Club & Comunidad Automotriz & Rodadas en Tiempo Real (Supabase Realtime)"
+              title="Clubes Automotrices VIP, Caravanas & Track Days en Tiempo Real"
             >
               <Users className="w-3.5 h-3.5 text-amber-400" />
-              <span>{isEn ? 'Community' : 'Comunidad'}</span>
+              <span>{isEn ? 'Car Clubs' : 'Clubes VIP'}</span>
             </button>
 
             {/* Pill AutoMall Luxury Boutique B2B2C (Tiendas de Repuestos & Concesionarios) */}
@@ -1066,7 +1066,7 @@ export default function DynamicDashboard({
         >
           <Users className="w-5 h-5" />
           <span className="text-[10px] font-racing font-bold uppercase mt-0.5">
-            {isEn ? 'Clans' : 'Clanes'}
+            {isEn ? 'Clans' : 'Clubes VIP'}
           </span>
         </button>
       </nav>

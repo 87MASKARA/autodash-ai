@@ -1,84 +1,84 @@
 /**
  * Servicio compartido de geolocalización y cálculo de cercanía Haversine
- * para tiendas de repuestos, talleres y concesionarios aliados en MotoMall.
+ * para centros de servicio, almacenes de repuestos, boutiques de detailing y concesionarios en AutoMall.
  */
 
 export const DEFAULT_MALL_STORES = [
   {
     id: 'store_auteco_dismerca',
     slug: 'auteco-dismerca-oficial',
-    store_name: 'Auteco / Dismerca Concesionario & Repuestos',
+    store_name: 'Autoelite Porsche & Supercar Center Oficial',
     store_type: 'concesionario',
-    tax_id_nit: 'NIT 890.900.123-4 • Verificado',
-    city: 'Medellín / Av. Las Vegas',
+    tax_id_nit: 'NIT 860.045.911-2 • Concesionario VIP',
+    city: 'Medellín / Av. El Poblado',
     country: 'Colombia',
-    address: 'Av. Las Vegas Cra 48 # 16-24, Medellín',
+    address: 'Cra 43A # 11-85 Av. El Poblado, Medellín',
     latitude: 6.21895,
     longitude: -75.57612,
     whatsapp_sales: '573009120000',
     logo_url: null,
-    accent_color: '#EF4444',
-    brands_supported: ['TVS', 'KTM', 'KAWASAKI', 'SUZUKI'],
-    is_verified: true,
-    founder_overseer_name: 'Anderson • Fundador VIP',
-    rating: 4.95
-  },
-  {
-    id: 'store_mundimotos_pro',
-    slug: 'mundorepuestos-racing-co',
-    store_name: 'MundoRepuestos & Lubricantes Racing (La Bayadera)',
-    store_type: 'repuestos',
-    tax_id_nit: 'NIT 901.442.810-1 • Verificado',
-    city: 'Medellín / La Bayadera',
-    country: 'Colombia',
-    address: 'Cra 53 # 38-28 Sector La Bayadera, Medellín',
-    latitude: 6.24035,
-    longitude: -75.57468,
-    whatsapp_sales: '573104500000',
-    logo_url: null,
-    accent_color: '#F59E0B',
-    brands_supported: ['TVS', 'YAMAHA', 'BAJAJ', 'HONDA', 'SUZUKI', 'AKT'],
-    is_verified: true,
-    founder_overseer_name: 'Anderson • Fundador VIP',
-    rating: 4.92
-  },
-  {
-    id: 'store_yamaha_incolmotos',
-    slug: 'yamaha-incolmotos-boutique',
-    store_name: 'Concesionario & Boutique Racing Multimarcas',
-    store_type: 'boutique',
-    tax_id_nit: 'NIT 890.915.440-8 • Verificado',
-    city: 'Medellín / El Poblado',
-    country: 'Colombia',
-    address: 'Cra 43A # 14-57 El Poblado, Medellín',
-    latitude: 6.21562,
-    longitude: -75.57031,
-    whatsapp_sales: '573158000000',
-    logo_url: null,
-    accent_color: '#06B6D4',
-    brands_supported: ['YAMAHA', 'BMW', 'DUCATI', 'TVS', 'KTM'],
+    accent_color: '#00D4FF',
+    brands_supported: ['PORSCHE', 'FERRARI', 'AUDI', 'BMW'],
     is_verified: true,
     founder_overseer_name: 'Anderson • Fundador VIP',
     rating: 4.98
   },
   {
+    id: 'store_mundimotos_pro',
+    slug: 'mundorepuestos-racing-co',
+    store_name: 'EuroPerformance & Lubricantes Sintéticos VIP',
+    store_type: 'repuestos',
+    tax_id_nit: 'NIT 901.442.810-1 • Importador OEM',
+    city: 'Medellín / Milla de Oro',
+    country: 'Colombia',
+    address: 'Cra 43A # 3 Sur-92 Milla de Oro, Medellín',
+    latitude: 6.20435,
+    longitude: -75.57268,
+    whatsapp_sales: '573104500000',
+    logo_url: null,
+    accent_color: '#F59E0B',
+    brands_supported: ['PORSCHE', 'MERCEDES-AMG', 'BMW', 'AUDI', 'MAZDA', 'TOYOTA'],
+    is_verified: true,
+    founder_overseer_name: 'Anderson • Fundador VIP',
+    rating: 4.95
+  },
+  {
+    id: 'store_yamaha_incolmotos',
+    slug: 'yamaha-incolmotos-boutique',
+    store_name: 'Boutique Detailing Cerámico 9H & Pantallas CarPlay Luxury',
+    store_type: 'boutique',
+    tax_id_nit: 'NIT 890.915.440-8 • Detailing & PPF',
+    city: 'Medellín / Las Palmas',
+    country: 'Colombia',
+    address: 'Km 7 Vía Las Palmas Mall Indiana, Medellín',
+    latitude: 6.21562,
+    longitude: -75.55031,
+    whatsapp_sales: '573158000000',
+    logo_url: null,
+    accent_color: '#06B6D4',
+    brands_supported: ['PORSCHE', 'MERCEDES-AMG', 'BMW', 'FERRARI', 'TESLA', 'AUDI'],
+    is_verified: true,
+    founder_overseer_name: 'Anderson • Fundador VIP',
+    rating: 4.99
+  },
+  {
     id: 'store_norte_bello',
     slug: 'taller-repuestos-norte-bello',
-    store_name: 'Serviteca & Desvare Conductor Zona Norte',
+    store_name: 'Serviteca 3D Michelin, Baterías AGM & Auxilio Cama Baja 24/7',
     store_type: 'taller',
-    tax_id_nit: 'NIT 900.781.219-5 • Verificado',
-    city: 'Bello / Norte Aburrá',
+    tax_id_nit: 'NIT 900.781.219-5 • Serviteca VIP',
+    city: 'Envigado / Sabaneta',
     country: 'Colombia',
-    address: 'Autopista Norte Diag 50 # 34-18, Bello',
-    latitude: 6.33418,
-    longitude: -75.55792,
+    address: 'Av. Las Vegas Cra 48 # 25 Sur-40, Envigado',
+    latitude: 6.17418,
+    longitude: -75.58792,
     whatsapp_sales: '573127700000',
     logo_url: null,
     accent_color: '#10B981',
-    brands_supported: ['TVS', 'BAJAJ', 'YAMAHA', 'HONDA', 'SUZUKI', 'AKT'],
+    brands_supported: ['PORSCHE', 'MERCEDES-AMG', 'BMW', 'AUDI', 'MAZDA', 'TOYOTA', 'CHEVROLET'],
     is_verified: true,
     founder_overseer_name: 'Anderson • Fundador VIP',
-    rating: 4.91
+    rating: 4.94
   }
 ];
 
@@ -115,8 +115,8 @@ export function formatDistanceLabel(km) {
     return `${meters} m de ti • ~${Math.max(1, Math.round(meters / 400))} min`;
   }
   const roundedKm = km < 10 ? km.toFixed(1) : Math.round(km);
-  const mins = Math.max(2, Math.round((km / 28) * 60));
-  return `a ${roundedKm} km de ti • ~${mins} min en moto`;
+  const mins = Math.max(2, Math.round((km / 35) * 60));
+  return `a ${roundedKm} km de ti • ~${mins} min en auto`;
 }
 
 export function sortStoresByProximity(stores = [], riderCoords = null) {
@@ -149,7 +149,6 @@ export function getLoadedMallStores() {
     if (saved) {
       const parsed = JSON.parse(saved);
       if (Array.isArray(parsed) && parsed.length > 0) {
-        // Asegurar que las tiendas antiguas en caché hereden coordenadas si no tenían
         return parsed.map((st) => {
           if (st.latitude && st.longitude) return st;
           const match = DEFAULT_MALL_STORES.find((d) => d.slug === st.slug);
@@ -164,7 +163,7 @@ export function getLoadedMallStores() {
 export function buildStoreMapsUrl(store, riderCoords = null) {
   if (store?.latitude && store?.longitude) {
     if (riderCoords?.lat && riderCoords?.lng) {
-      return `https://www.google.com/maps/dir/?api=1&origin=${riderCoords.lat},${riderCoords.lng}&destination=${store.latitude},${store.longitude}&travelmode=two-wheeler`;
+      return `https://www.google.com/maps/dir/?api=1&origin=${riderCoords.lat},${riderCoords.lng}&destination=${store.latitude},${store.longitude}&travelmode=driving`;
     }
     return `https://www.google.com/maps?q=${store.latitude},${store.longitude}`;
   }

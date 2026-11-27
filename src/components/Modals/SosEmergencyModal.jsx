@@ -65,7 +65,7 @@ const COUNTRY_EMERGENCY_NUMBERS = {
 };
 
 const DEFAULT_CLANS_FALLBACK = [
-  { slug: 'apache-rtr-medellin', name: 'Clan Apache RTR Antioquia', tag: 'RTR-MDE' },
+  { slug: 'apache-rtr-medellin', name: 'Club Apache RTR Antioquia', tag: 'RTR-MDE' },
   { slug: 'night-riders-colombia', name: 'Night Riders Street Club', tag: 'NIGHT-CO' }
 ];
 
@@ -380,7 +380,7 @@ export default function SosEmergencyModal({
     window.open(waUrl, '_blank', 'noopener,noreferrer');
   };
 
-  const handleBroadcastSosToClan = async () => {
+  const handleBroadcastSosToClub = async () => {
     if (!hasValidCoords) {
       alert('Espera un segundo a que el GPS fije tu ubicación o escribe tu calle/barrio en el buscador para no enviar coordenadas vacías.');
       return;
@@ -410,7 +410,7 @@ export default function SosEmergencyModal({
 
       const nowIso = new Date().toISOString();
 
-      // 1. Guardar inmediatamente en el historial local de cada clan para que se vea al instante
+      // 1. Guardar inmediatamente en el historial local de cada club VIP para que se vea al instante
       targetChannelIds.forEach((chId) => {
         const localSosMsg = {
           id: `sos_${Date.now()}_${chId}`,
@@ -448,7 +448,7 @@ export default function SosEmergencyModal({
 
       const targetLabel =
         targetClanSlug === 'ALL_CLANS'
-          ? `Todos tus Clanes (${availableClans.map((c) => c.name).join(' + ')})`
+          ? `Todos tus Clubes VIP (${availableClans.map((c) => c.name).join(' + ')})`
           : availableClans.find((c) => c.slug === targetClanSlug)?.name || 'Club Automotriz VIP';
 
       setSosBroadcastResult({
@@ -561,7 +561,7 @@ export default function SosEmergencyModal({
                 <MapPin className="w-4 h-4 text-red-400 animate-bounce" />
                 <span>
                   {isEn
-                    ? 'Live Accident GPS Coordinates & Clan Broadcast'
+                    ? 'Live Accident GPS Coordinates & Club Broadcast'
                     : 'Radar GPS en Vivo del Accidente & Envío al Clan'}
                 </span>
               </h3>
@@ -722,14 +722,14 @@ export default function SosEmergencyModal({
 
             <div className="p-2.5 rounded-xl bg-neutral-950 border border-amber-500/40">
               <label className="text-[10px] font-mono uppercase text-amber-300 block mb-1">
-                🛡️ Clan Destino de la Alerta
+                🛡️ Club Destino de la Alerta
               </label>
               <select
                 value={targetClanSlug}
                 onChange={(e) => setTargetClanSlug(e.target.value)}
                 className="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-2 py-1 text-xs font-mono text-white focus:outline-none focus:border-amber-400"
               >
-                <option value="ALL_CLANS">🚨 Todos mis Clanes ({availableClans.length})</option>
+                <option value="ALL_CLANS">🚨 Todos mis Clubes VIP ({availableClans.length})</option>
                 {availableClans.map((c) => (
                   <option key={c.slug} value={c.slug}>
                     [{c.tag}] {c.name}
@@ -748,7 +748,7 @@ export default function SosEmergencyModal({
               type="text"
               value={emergencyNote}
               onChange={(e) => setEmergencyNote(e.target.value)}
-              placeholder="Ej: Caída en curva / Llanta pinchada frente a estación de gasolina, necesito apoyo del clan..."
+              placeholder="Ej: Caída en curva / Llanta pinchada frente a estación de gasolina, necesito apoyo del club VIP..."
               className="w-full bg-neutral-950 border border-neutral-700 rounded-xl px-3.5 py-2 text-xs sm:text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-red-500"
             />
           </div>
@@ -820,7 +820,7 @@ export default function SosEmergencyModal({
                     className="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-black font-racing font-black uppercase text-xs flex items-center gap-1.5 shadow-lg transition"
                   >
                     <Users className="w-4 h-4" />
-                    <span>Ver Alerta en el Chat del Clan →</span>
+                    <span>Ver Alerta en el Chat del Club VIP →</span>
                   </button>
                 )}
               </div>

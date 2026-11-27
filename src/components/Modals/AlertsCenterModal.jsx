@@ -23,7 +23,7 @@ const DEFAULT_ROAD_ALERTS = [
   {
     id: 'alert_1',
     author_name: 'Red Vial Antioquia',
-    author_bike: 'TVS Apache RTR 160 4V',
+    author_bike: 'TVS Porsche 911 GT3 RS',
     city: 'Medellín',
     content: '⚠️ Control de documentos (SOAT y Tecno) en Autopista Sur altura Itagüí sentido Norte-Sur.',
     created_at: new Date(Date.now() - 900000).toISOString()

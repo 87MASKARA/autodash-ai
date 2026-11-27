@@ -465,7 +465,7 @@ export default function WarrantyRulesModal({
               <div className="p-3 rounded-xl bg-slate-950 border border-slate-800 flex items-center justify-between">
                 <div>
                   <span className="text-white font-bold block">Modo Garantía Activo</span>
-                  <span className="text-[10px] text-slate-400">Desactívalo si tu moto ya superó la garantía oficial</span>
+                  <span className="text-[10px] text-slate-400">Desactívalo si tu auto ya superó la garantía oficial</span>
                 </div>
                 <input
                   type="checkbox"

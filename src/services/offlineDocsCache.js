@@ -53,7 +53,7 @@ export async function saveOfflineCheckpointPhoto(bikeId, slot, dataUrl, metadata
 }
 
 /**
- * Carga todas las fotos guardadas en la bóveda offline para una moto
+ * Carga todas las fotos guardadas en la bóveda offline para un auto
  */
 export async function loadOfflineCheckpointPhotos(bikeId) {
   try {

@@ -79,7 +79,7 @@ export default function MaintenanceWidget({
     let vidaPorcentaje = Math.max(0, Math.min(100, Math.round((kmRestantes / effectiveIntervalo) * 100)));
     const alertaMargin = custom.alertaPreventivaKm || comp.alertaPreventivaKm || 300;
 
-    // Sincronización Especial en Vivo para Batería y Check Engine / Service desde Tablero TFT / Cable OBD-II
+    // Sincronización Especial en Vivo para Batería y Check Engine / Service desde Clúster Digital / Cable OBD-II
     const isBatteryComp = comp.id === 'bateria_sistema_carga';
     const isCheckEngineComp = comp.id === 'check_engine_service_ecu';
     const syncedBatteryLevel = isBatteryComp
@@ -344,7 +344,7 @@ export default function MaintenanceWidget({
                       {comp.isBatteryComp && comp.syncedBatteryVoltage && (
                         <span className="text-[9px] bg-emerald-950/80 text-emerald-300 border border-emerald-500/40 px-1.5 py-0.5 rounded font-mono font-bold flex items-center gap-1">
                           <Zap className="w-2.5 h-2.5 text-emerald-400" />
-                          {comp.syncedBatteryVoltage}V • {comp.vidaPorcentaje}% TFT/OBD
+                          {comp.syncedBatteryVoltage}V • {comp.vidaPorcentaje}% OBD-II
                         </span>
                       )}
                       {comp.isCheckEngineComp && comp.syncedCheckStatus && (
@@ -421,10 +421,10 @@ export default function MaintenanceWidget({
                         onOpenHardwareBridgeModal();
                       }}
                       className="flex items-center gap-1 text-cyan-300 hover:text-white bg-cyan-950/60 hover:bg-cyan-900/70 px-2 py-0.5 rounded-lg border border-cyan-500/40 transition font-bold"
-                      title="Actualizar desde el Tablero TFT o Cable OBD-II"
+                      title="Actualizar desde el Clúster Digital o Cable OBD-II"
                     >
                       <Bluetooth className="w-3 h-3 text-cyan-400" />
-                      <span>TFT/OBD</span>
+                      <span>OBD-II</span>
                     </button>
                   )}
 

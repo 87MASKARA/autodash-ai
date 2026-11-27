@@ -97,7 +97,7 @@ export default function LegalTermsModal({
             }`}
           >
             <Users className="w-3.5 h-3.5" />
-            <span>{isEn ? '3. Clans, AI & Safety Disclaimers' : '3. Reglas de Clanes, IA y Seguridad Vial'}</span>
+            <span>{isEn ? '3. Clans, AI & Safety Disclaimers' : '3. Reglas de Clubes VIP, IA y Seguridad Vial'}</span>
           </button>
         </div>
 
@@ -141,15 +141,15 @@ export default function LegalTermsModal({
                         : 'Las fotografías por ambos lados (Frente y Reverso) de tu Licencia de Conducción, Tarjeta de Propiedad, SOAT y Revisión Técnico-Mecánica se almacenan de forma privada y en la bóveda Offline local (IndexedDB) de tu dispositivo, protegidas con tu PIN policial de 4 dígitos.'}
                     </li>
                     <li>
-                      <strong>{isEn ? 'TFT Bluetooth & OBD-II Telemetry:' : 'Telemetría Bluetooth TFT SmartXonnect y Cable OBD-II:'}</strong>{' '}
+                      <strong>{isEn ? 'TFT Bluetooth & OBD-II Telemetry:' : 'Telemetría Bluetooth TFT CarPlay / MBUX / iDrive y Cable OBD-II:'}</strong>{' '}
                       {isEn
                         ? 'Odometer, battery voltage/health, fuel level, ride mode, and engine parameters read via Web Bluetooth or OBD-II are used solely to update your motorcycle dashboard and predictive maintenance.'
-                        : 'El kilometraje, voltaje/salud de batería, nivel de gasolina, modo de manejo y parámetros leídos desde el tablero TFT o cable OBD-II se utilizan únicamente para actualizar tu Cockpit y el Mantenimiento Predictivo de tu auto.'}
+                        : 'El kilometraje, voltaje/salud de batería, nivel de gasolina, modo de manejo y parámetros leídos desde el clúster digital o cable OBD-II se utilizan únicamente para actualizar tu Cockpit y el Mantenimiento Predictivo de tu auto.'}
                     </li>
                     <li>
                       <strong>{isEn ? 'Emergency Medical Card (SOS) & GPS:' : 'Ficha Médica de Emergencia (SOS) y Ubicación GPS:'}</strong>{' '}
                       {isEn
-                        ? 'Blood type (RH), allergies, EPS/insurance, and GPS coordinates are processed only on your screen or when you explicitly press the SOS Tow / Clan Alert button.'
+                        ? 'Blood type (RH), allergies, EPS/insurance, and GPS coordinates are processed only on your screen or when you explicitly press the SOS Tow / Club Alert button.'
                         : 'Tu grupo sanguíneo (Factor RH), alergias, EPS/ARL y coordenadas GPS solo se muestran cuando abres el módulo SOS para paramédicos o cuando pulsas voluntariamente el botón de auxilio/grúa.'}
                     </li>
                   </ul>
@@ -195,7 +195,7 @@ export default function LegalTermsModal({
                   <p className="text-xs text-neutral-300 mt-1">
                     {isEn
                       ? 'By accessing or using AutoDash AI, you agree to these Terms of Service designed to keep your motorcycle, your legal standing, and our automotive club community safe.'
-                      : 'Al acceder y utilizar AutoDash AI, aceptas las presentes condiciones de uso diseñadas para proteger tu seguridad vial, la integridad mecánica de tu autocicleta y la convivencia de nuestra comunidad automotriz.'}
+                      : 'Al acceder y utilizar AutoDash AI, aceptas las presentes condiciones de uso diseñadas para proteger tu seguridad vial, la integridad mecánica de tu automóvil y la convivencia de nuestra comunidad automotriz.'}
                   </p>
                 </div>
               </div>
@@ -219,7 +219,7 @@ export default function LegalTermsModal({
                   <p className="text-xs text-neutral-300">
                     {isEn
                       ? 'When you generate a Certified History Sheet to sell your motorcycle, you certify that the recorded odometer readings and maintenance logs are truthful. AutoDash AI acts as a technological logbook and does not intervene as a broker or guarantor in private vehicle sales.'
-                      : 'Al generar el Certificado de Hoja de Vida para poner en venta tu autocicleta, declaras que los kilometrajes y mantenimientos registrados corresponden a la realidad. AutoDash AI actúa como bitácora tecnológica certificada y no cobra comisiones ni actúa como intermediario financiero en la compraventa entre particulares.'}
+                      : 'Al generar el Certificado de Hoja de Vida para poner en venta tu automóvil, declaras que los kilometrajes y mantenimientos registrados corresponden a la realidad. AutoDash AI actúa como bitácora tecnológica certificada y no cobra comisiones ni actúa como intermediario financiero en la compraventa entre particulares.'}
                   </p>
                 </div>
 
@@ -260,13 +260,13 @@ export default function LegalTermsModal({
                   <h4 className="text-xs font-mono font-bold uppercase text-amber-400 mb-1.5 flex items-center gap-1.5">
                     <Users className="w-4 h-4" />
                     {isEn
-                      ? '3.1 Official Clan Governance & Mandatory Founder VIP Membership'
+                      ? '3.1 Official Club Governance & Mandatory Founder VIP Membership'
                       : '3.1 Gobernanza de Clubes Automotrices VIP e Inclusión Obligatoria del Fundador VIP'}
                   </h4>
                   <p className="text-xs text-neutral-200">
                     {isEn
                       ? 'Motoclubs and independent groups may create Private Clans with their own custom logos and invite codes. By mandatory platform policy, the Platform Founder ("👑 Anderson • Fundador VIP") is automatically and permanently registered as an honorary founder and supervisor in every clan created on AutoDash AI to guarantee security, support, and compliance with community standards.'
-                      : 'Todo grupo o motoclub puede crear su Clan Privado con su propio escudo/logo y código de invitación. Por política oficial e irrevocable de AutoDash AI, el usuario Fundador de la plataforma («👑 Anderson • Fundador VIP») queda incluido de manera automática y permanente en todos los clanes creados, garantizando la supervisión de seguridad, soporte técnico y respeto de las normas de la comunidad.'}
+                      : 'Todo grupo o motoclub puede crear su Club Privado con su propio escudo/logo y código de invitación. Por política oficial e irrevocable de AutoDash AI, el usuario Fundador de la plataforma («👑 Anderson • Fundador VIP») queda incluido de manera automática y permanente en todos los clubes VIP creados, garantizando la supervisión de seguridad, soporte técnico y respeto de las normas de la comunidad.'}
                   </p>
                 </div>
 
@@ -294,7 +294,7 @@ export default function LegalTermsModal({
                   <p className="text-xs text-neutral-300">
                     {isEn
                       ? 'Always keep your eyes on the road. Configure your TFT link, route, or cockpit theme before riding, and only interact with modals (Glovebox, AI Lawyer, Clans, or Maintenance) when your motorcycle is completely stopped in a safe place.'
-                      : 'La vida del piloto es la prioridad número uno. Configura tu enlace TFT, ruta o carátula antes de arrancar, y jamás escribas ni manipules los menús (Guantera, Abogado IA, Clanes o Mantenimiento) mientras la automóvil esté en movimiento.'}
+                      : 'La vida del piloto es la prioridad número uno. Configura tu enlace TFT, ruta o carátula antes de arrancar, y jamás escribas ni manipules los menús (Guantera, Abogado IA, Clubes VIP o Mantenimiento) mientras la automóvil esté en movimiento.'}
                   </p>
                 </div>
               </div>

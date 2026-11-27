@@ -253,7 +253,7 @@ export default function HardwareBridgeModal({
     }));
   };
 
-  const handleSelectFuelBars = (barsCount, sourceTitle = 'Tablero TFT (Barras de Gasolina)') => {
+  const handleSelectFuelBars = (barsCount, sourceTitle = 'Clúster Digital (Barras de Gasolina)') => {
     const clampedBars = Math.min(6, Math.max(0, Number(barsCount)));
     const pct = Math.round((clampedBars / 6) * 100);
     const nextParams = {
@@ -265,8 +265,8 @@ export default function HardwareBridgeModal({
     pushTelemetryToApp(nextParams, sourceTitle);
   };
 
-  // Guardar ubicación GPS de parqueo cuando el tablero TFT se conecta/desconecta
-  const handleSaveParkingSpot = (deviceLabel = 'Tablero TFT') => {
+  // Guardar ubicación GPS de parqueo cuando el clúster digital se conecta/desconecta
+  const handleSaveParkingSpot = (deviceLabel = 'Clúster Digital') => {
     if ('geolocation' in navigator) {
       navigator.geolocation.getCurrentPosition(
         (pos) => {
@@ -299,7 +299,7 @@ export default function HardwareBridgeModal({
     }
   };
 
-  // Escáner Óptico IA: Leer foto real del tablero TFT
+  // Escáner Óptico IA: Leer foto real del clúster digital
   const handleScanTftPhoto = async (event) => {
     const file = event.target.files?.[0];
     if (!file) return;
@@ -341,13 +341,13 @@ export default function HardwareBridgeModal({
 
         if (!scanned.aiReadSuccess) {
           setWarningMsg(
-            '📸 Foto del tacómetro cargada. Verifica o ajusta abajo el Odómetro, RPM o Barras de Gasolina si algún dígito tenía reflejo y pulsa "Guardar Datos de Pantalla TFT".'
+            '📸 Foto del tacómetro cargada. Verifica o ajusta abajo el Odómetro, RPM o Barras de Gasolina si algún dígito tenía reflejo y pulsa "Guardar Datos de Pantalla Digital".'
           );
         }
 
         pushTelemetryToApp(
           nextParams,
-          scanned.source || 'Escáner Óptico IA de Tablero TFT',
+          scanned.source || 'Escáner Óptico IA de Clúster Digital',
           `📸 ¡Foto del tacómetro sincronizada en el Dashboard! Odómetro: ${nextParams.odometerKm} KM • RPM: ${nextParams.rpmIdle} • Gasolina: ${nextParams.fuelBars}/6 barras (${nextParams.fuelLevelPercent}%) • Top Speed: ${nextParams.topSpeedRecorded} km/h • Avg Speed: ${nextParams.avgSpeed} km/h • Modo ${nextParams.rideMode}.`
         );
       }
@@ -377,7 +377,7 @@ export default function HardwareBridgeModal({
 
     if (res.success && res.telemetry) {
       setBleStatus(res);
-      handleSaveParkingSpot(res.deviceName || 'Tablero TFT');
+      handleSaveParkingSpot(res.deviceName || 'Clúster Digital');
       const nextParams = {
         ...liveParams,
         odometerKm: res.telemetry.odometerKm ?? liveParams.odometerKm,
@@ -391,13 +391,13 @@ export default function HardwareBridgeModal({
 
       pushTelemetryToApp(
         nextParams,
-        res.telemetry.deviceName || 'Tablero TFT Bluetooth',
-        `✅ ¡Presencia Bluetooth de ${res.telemetry.deviceName || 'tu Tablero TFT'} detectada! Modo Auto-Rodada GPS y Radar de Parqueo activados. Como la pantalla TFT no exporta sensores internos de la ECU por Bluetooth, tus datos de pantalla se sincronizan por GPS en ruta o con el botón "📸 Leer Foto Tablero IA".`
+        res.telemetry.deviceName || 'Clúster Digital Bluetooth',
+        `✅ ¡Presencia Bluetooth de ${res.telemetry.deviceName || 'tu Clúster Digital'} detectada! Modo Auto-Caravana GPS y Radar de Parqueo activados. Como la pantalla digital no exporta sensores internos de la ECU por Bluetooth, tus datos de pantalla se sincronizan por GPS en ruta o con el botón "📸 Leer Foto Tablero IA".`
       );
     }
   };
 
-  // 2. Conectar Escáner OBD-II ECU (Solo para Cable Euro 5 + ELM327 bajo el sillín)
+  // 2. Conectar Escáner OBD-II ECU (Solo para Cable Euro 5 + ELM327 bajo el maletero / guantera)
   const handleConnectObd = async () => {
     if (!hasProAccess) {
       if (onOpenPaywall) onOpenPaywall('pro_monthly');
@@ -472,7 +472,7 @@ export default function HardwareBridgeModal({
           </div>
           <div>
             <h2 className="text-base sm:text-lg font-black font-racing uppercase tracking-wider text-white">
-              Sincronización de Pantalla TFT vs. Escáner Cable OBD-II
+              Sincronización de Pantalla Digital vs. Escáner Cable OBD-II
             </h2>
             <p className="text-xs text-neutral-400 font-mono">
               {bikeName} • ODO: {liveParams.odometerKm} KM • Gasolina: {activeFuelBars}/6 barras ({liveParams.fuelLevelPercent}%)
@@ -494,7 +494,7 @@ export default function HardwareBridgeModal({
           </div>
         )}
 
-        {/* Selector de Pestañas con separación clara entre lo que hace el Tablero TFT vs lo que requiere Cable OBD-II */}
+        {/* Selector de Pestañas con separación clara entre lo que hace el Clúster Digital vs lo que requiere Cable OBD-II */}
         <div className="grid grid-cols-2 gap-2 p-1.5 bg-neutral-950 rounded-2xl border border-neutral-800 mb-4">
           <button
             type="button"
@@ -506,7 +506,7 @@ export default function HardwareBridgeModal({
             }`}
           >
             <Bluetooth className="w-4 h-4" />
-            <span>1. Pantalla TFT (Sin Cable)</span>
+            <span>1. Cabina Digital & Foto IA (Sin Cable)</span>
           </button>
 
           <button
@@ -519,7 +519,7 @@ export default function HardwareBridgeModal({
             }`}
           >
             <Cpu className="w-4 h-4" />
-            <span>2. Cable ECU OBD-II</span>
+            <span>2. Escáner Puerto OBD-II (16 Pines)</span>
             <span className="text-[9px] px-1.5 py-0.2 rounded-full bg-black/30 text-amber-300 border border-amber-500/40 font-mono font-bold flex items-center gap-0.5">
               <Crown className="w-2.5 h-2.5" /> PRO
             </span>
@@ -532,7 +532,7 @@ export default function HardwareBridgeModal({
         {/* ================================================================================= */}
         {activeTab === 'ble_tft' && (
           <div className="space-y-4 animate-fadeIn">
-            {/* Explicación honesta y funciones reales de conectarse al Bluetooth del Tablero TFT */}
+            {/* Explicación honesta y funciones reales de conectarse al Bluetooth del Clúster Digital */}
             <div className="p-3.5 bg-neutral-950/90 border border-amber-500/40 rounded-2xl space-y-3">
               <div className="flex flex-wrap items-center justify-between gap-2">
                 <div>
@@ -569,7 +569,7 @@ export default function HardwareBridgeModal({
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 text-[11px] font-mono">
                 <div className="p-2.5 rounded-xl bg-neutral-900 border border-neutral-800">
-                  <span className="text-emerald-400 font-bold block">⚡ 1. Auto-Inicio de Rodada</span>
+                  <span className="text-emerald-400 font-bold block">⚡ 1. Auto-Inicio de Caravana</span>
                   <span className="text-neutral-400 text-[10px]">
                     Al girar la llave del vehículo a ON, el celular detecta el Bluetooth del tablero y empieza a sumar tus KM por GPS y a descontar gasolina automáticamente.
                   </span>
@@ -594,19 +594,19 @@ export default function HardwareBridgeModal({
                   <MapPin className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                   <div>
                     <span className="text-white font-bold block text-[11px]">
-                      📍 Último Punto de Parqueo Detectado por Tablero TFT:
+                      📍 Último Punto de Parqueo Detectado por Clúster Digital:
                     </span>
                     <span className="text-neutral-400 text-[10px]">
                       {parkedLocation
                         ? `Guardado a las ${parkedLocation.savedAt} (${parkedLocation.lat}, ${parkedLocation.lng}) • ODO: ${parkedLocation.odometerKm} KM`
-                        : 'Pulsa "Marcar Parqueo Ahora" o vincula el Bluetooth del tablero al apagar la moto.'}
+                        : 'Pulsa "Marcar Parqueo Ahora" o vincula el Bluetooth del tablero al apagar el auto.'}
                     </span>
                   </div>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <button
                     type="button"
-                    onClick={() => handleSaveParkingSpot('Tablero TFT')}
+                    onClick={() => handleSaveParkingSpot('Clúster Digital')}
                     className="px-2.5 py-1 rounded-lg bg-cyan-500/20 border border-cyan-500/40 text-cyan-300 text-[10px] font-bold hover:bg-cyan-500/30"
                   >
                     📍 Marcar Parqueo
@@ -699,7 +699,7 @@ export default function HardwareBridgeModal({
                   <span className="text-xs font-mono font-bold text-amber-400">KM</span>
                   <button
                     type="button"
-                    onClick={() => handleApplyAllParameters('Pantalla TFT')}
+                    onClick={() => handleApplyAllParameters('Pantalla Digital')}
                     className="px-3 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-black font-racing font-black text-xs uppercase shadow-md transition"
                   >
                     Aplicar
@@ -729,7 +729,7 @@ export default function HardwareBridgeModal({
                     <button
                       key={barIdx}
                       type="button"
-                      onClick={() => handleSelectFuelBars(barIdx, 'Pantalla TFT')}
+                      onClick={() => handleSelectFuelBars(barIdx, 'Pantalla Digital')}
                       className={`h-6 flex-1 rounded-md transition flex items-center justify-center text-[10px] font-mono font-bold ${
                         barIdx <= activeFuelBars
                           ? 'bg-cyan-400 text-black shadow-[0_0_10px_rgba(34,211,238,0.7)]'
@@ -746,7 +746,7 @@ export default function HardwareBridgeModal({
               {/* 3. DATOS INFERIORES DE LA PANTALLA TFT: MODO (SPORT/URBAN/RAIN), RPM TACÓMETRO, TOP SPEED Y AVG SPEED */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5 font-mono">
                 <div className="p-3 rounded-xl bg-neutral-900 border border-neutral-800">
-                  <span className="text-[10px] text-neutral-400 block mb-1">3. Modo en Pantalla TFT</span>
+                  <span className="text-[10px] text-neutral-400 block mb-1">3. Modo en Pantalla Digital</span>
                   <div className="flex gap-1">
                     {['SPORT', 'URBAN', 'RAIN'].map((m) => (
                       <button
@@ -755,7 +755,7 @@ export default function HardwareBridgeModal({
                         onClick={() => {
                           const next = { ...liveParams, rideMode: m };
                           setLiveParams(next);
-                          pushTelemetryToApp(next, 'Pantalla TFT');
+                          pushTelemetryToApp(next, 'Pantalla Digital');
                         }}
                         className={`flex-1 py-1.5 rounded-lg text-[11px] font-bold transition ${
                           liveParams.rideMode === m
@@ -812,12 +812,12 @@ export default function HardwareBridgeModal({
 
               <button
                 type="button"
-                onClick={() => handleApplyAllParameters('Pantalla TFT')}
+                onClick={() => handleApplyAllParameters('Pantalla Digital')}
                 className="w-full py-3.5 px-4 bg-gradient-to-r from-amber-500 via-yellow-400 to-emerald-400 hover:opacity-95 text-black font-racing font-black text-xs sm:text-sm uppercase tracking-wider rounded-2xl shadow-lg transition flex items-center justify-center gap-2"
               >
                 <Zap className="w-4 h-4 fill-black" />
                 <span>
-                  ⚡ Guardar Datos de Pantalla TFT en la App (ODO: {liveParams.odometerKm} KM • Gasolina: {activeFuelBars}/6 barras {liveParams.fuelLevelPercent}%)
+                  ⚡ Guardar Datos de Pantalla Digital en la App (ODO: {liveParams.odometerKm} KM • Gasolina: {activeFuelBars}/6 barras {liveParams.fuelLevelPercent}%)
                 </span>
               </button>
             </div>
@@ -839,7 +839,7 @@ export default function HardwareBridgeModal({
                   Diagnóstico de Computadora ECU por Cable OBD-II (Función PRO)
                 </h3>
                 <p className="text-xs text-neutral-300 max-w-md mx-auto">
-                  Conéctate con el cable adaptador OBD-II Estándar de 16 Pines (Bajo el Volante) y escáner ELM327 bajo el sillín para leer directamente de la computadora del motor: Voltaje de Batería/Regulador, Temperatura exacta en °C, RPM reales y códigos de falla Check Engine (DTC).
+                  Conéctate con el cable adaptador OBD-II Estándar de 16 Pines (Bajo el Volante) y escáner ELM327 bajo el maletero / guantera para leer directamente de la computadora del motor: Voltaje de Batería/Regulador, Temperatura exacta en °C, RPM reales y códigos de falla Check Engine (DTC).
                 </p>
                 <button
                   type="button"
@@ -887,8 +887,8 @@ export default function HardwareBridgeModal({
 
                   {showObdGuide && (
                     <div className="p-3.5 bg-neutral-900 border border-cyan-500/40 rounded-xl text-xs text-neutral-300 space-y-1.5 font-mono">
-                      <p className="text-cyan-300 font-bold">🔌 ¿Cómo sacar los datos reales del motor por el puerto bajo el sillín?</p>
-                      <p>1. Quita el sillín del pasajero y ubica el conector de diagnóstico de <strong>6 pines (Euro 5 / BS6)</strong>.</p>
+                      <p className="text-cyan-300 font-bold">🔌 ¿Cómo sacar los datos reales del motor por el puerto bajo el maletero / guantera?</p>
+                      <p>1. Quita el maletero / guantera del pasajero y ubica el conector de diagnóstico de <strong>6 pines (Euro 5 / BS6)</strong>.</p>
                       <p>2. Conecta un <strong>Cable Adaptador de OBD-II 16 Pines Directo (16 pines)</strong> + un mini escáner <strong>ELM327 Bluetooth 4.0 (BLE)</strong>.</p>
                       <p>3. Gira la llave del vehículo a ON y pulsa <strong>&ldquo;Conectar Escáner OBD-II&rdquo;</strong> para leer los sensores de la ECU en vivo.</p>
                     </div>
@@ -898,7 +898,7 @@ export default function HardwareBridgeModal({
                     <div className="p-3 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center gap-2.5 text-xs font-mono text-amber-200">
                       <AlertTriangle className="w-4 h-4 text-amber-400 flex-shrink-0" />
                       <span>
-                        Estos 6 sensores profundos del motor (Voltaje de regulador, Temperatura en °C, RPM de cigüeñal y Fallas Check Engine DTC) <strong>solo se leen en vivo cuando enchufas el cable/escáner OBD-II bajo el sillín</strong>.
+                        Estos 6 sensores profundos del motor (Voltaje de regulador, Temperatura en °C, RPM de cigüeñal y Fallas Check Engine DTC) <strong>solo se leen en vivo cuando enchufas el cable/escáner OBD-II bajo el maletero / guantera</strong>.
                       </span>
                     </div>
                   )}
