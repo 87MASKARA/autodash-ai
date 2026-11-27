@@ -1,0 +1,599 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R 14 0 R] /Count 5 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 3749 >>
+stream
+BT
+/F2 13 Tf
+42 795 Td
+(MOTODASH AI - PLAN MAESTRO DE LANZAMIENTO BETA, LEGAL Y CREADORES \(PAG. 1/5\)) Tj
+/F1 8.5 Tf
+0 -13 Td
+(Preparado para: Anderson - Fundador VIP | Hoja de Ruta Ejecutiva, Legal en Colombia y Guiones de Negociacion) Tj
+0 -9 Td
+(________________________________________________________________________________________________________) Tj
+/F2 11.5 Tf
+0 -20 Td
+(1. CHECKLIST OPERATIVO PARA TU LANZAMIENTO BETA \(PASO A PASO\)) Tj
+/F1 9.5 Tf
+0 -16 Td
+(Antes de abrir el trafico masivo, sigue este orden exacto para tener tu infraestructura comercial lista:) Tj
+/F1 9.5 Tf
+0 -13 Td
+( ) Tj
+/F2 10 Tf
+0 -13 Td
+(PASO A: COMPRA DEL DOMINIO OFICIAL \(Costo aprox: $10 a $14 USD/ano\)) Tj
+/F1 9.5 Tf
+0 -13 Td
+(  1. Opciones recomendadas: motodashai.com, motodash.co o motodash.app.) Tj
+/F1 9.5 Tf
+0 -13 Td
+(  2. Donde comprarlo: Cloudflare Registrar o Namecheap \(incluyen privacidad WHOIS gratis y DNS rapido\).) Tj
+/F1 9.5 Tf
+0 -13 Td
+(  3. Conectar con Vercel: En Vercel -> Settings -> Domains -> Add Domain. Apunta el registro A a) Tj
+/F1 9.5 Tf
+0 -13 Td
+(     76.76.21.21 y el CNAME www a cname.vercel-dns.com \(SSL HTTPS se activa solo en 2 minutos\).) Tj
+/F1 9.5 Tf
+0 -13 Td
+(  4. Actualizar Supabase Auth: En Supabase -> Authentication -> URL Configuration, cambia el Site URL) Tj
+/F1 9.5 Tf
+0 -13 Td
+(     por tu dominio https://motodashai.com para que los correos de clave lleven tu marca oficial.) Tj
+/F1 9.5 Tf
+0 -13 Td
+( ) Tj
+/F2 10 Tf
+0 -13 Td
+(PASO B: CORREO CORPORATIVO \(@tudominio.com\) Y ENVIO DE EMAILS) Tj
+/F1 9.5 Tf
+0 -13 Td
+(  - Opcion 1 \(Gratis $0\): Zoho Mail Free \(hasta 5 buzones gratis: contacto@, soporte@, anderson@\) o) Tj
+/F1 9.5 Tf
+0 -13 Td
+(    Cloudflare Email Routing \(reenvia todo a tu Gmail personal sin costo\).) Tj
+/F1 9.5 Tf
+0 -13 Td
+(  - Opcion 2 \(Google Workspace ~$6 USD/mes\): Gmail empresarial completo con Drive y Meet.) Tj
+/F1 9.5 Tf
+0 -13 Td
+(  - Consejo Pro para Supabase: Crea cuenta gratis en Resend.com \(3.000 emails/mes gratis\), verifica tu) Tj
+/F1 9.5 Tf
+0 -13 Td
+(    dominio y pon sus datos SMTP en Supabase -> Auth -> SMTP Settings. Asi los correos de bienvenida) Tj
+/F1 9.5 Tf
+0 -13 Td
+(    y recuperacion de contrasena saldran desde soporte@motodashai.com sin limite de 3 por hora.) Tj
+/F1 9.5 Tf
+0 -13 Td
+( ) Tj
+/F2 10 Tf
+0 -13 Td
+(PASO C: PASARELAS DE PAGO \(COLOMBIA + INTERNACIONAL\)) Tj
+/F2 9.5 Tf
+0 -13 Td
+(  1. Colombia \(Pesos COP - Nequi, PSE, Bancolombia, Tarjetas\):) Tj
+/F1 9.5 Tf
+0 -13 Td
+(     - Usa WOMPI \(de Bancolombia\) o BOLD.co. Ambas te permiten abrir cuenta como Persona Natural) Tj
+/F1 9.5 Tf
+0 -13 Td
+(       solo con tu Cedula, RUT y certificacion bancaria \(Nequi/Bancolombia/Daviplata\).) Tj
+/F1 9.5 Tf
+0 -13 Td
+(     - Creas los Links de Pago para Plan PRO \($19.900 COP\) y Planes MotoMall B2B \($49.900 / $119.900) Tj
+/F1 9.5 Tf
+0 -13 Td
+(       / $249.900 COP\) y pegas la URL en VITE_WOMPI_CHECKOUT_URL en Vercel.) Tj
+/F2 9.5 Tf
+0 -13 Td
+(  2. Internacional \(USD / EUR / MXN / BRL - 135+ Paises\):) Tj
+/F1 9.5 Tf
+0 -13 Td
+(     - Usa LEMON SQUEEZY \(lemonsqueezy.com\). Actua como Merchant of Record: ellos cobran en dolares,) Tj
+/F1 9.5 Tf
+0 -13 Td
+(       euros, pesos mexicanos o reales, pagan los impuestos de cada pais y te giran a tu banco en) Tj
+/F1 9.5 Tf
+0 -13 Td
+(       Colombia. Pegas los 3 links en VITE_LEMONSQUEEZY_SOLO_URL, PRO_URL y GARAGE_URL.) Tj
+/F1 9.5 Tf
+0 -13 Td
+( ) Tj
+/F2 10 Tf
+0 -13 Td
+(PASO D: REDES SOCIALES OFICIALES \(Con el correo corporativo\)) Tj
+/F1 9.5 Tf
+0 -13 Td
+(  - Reserva el mismo usuario \(@motodash.ai o @motodashoficial\) en: Instagram, TikTok, YouTube Shorts,) Tj
+/F1 9.5 Tf
+0 -13 Td
+(    Facebook Page y configura un numero exclusivo en WhatsApp Business con catalogo y autorespuesta.) Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 3736 >>
+stream
+BT
+/F2 13 Tf
+42 795 Td
+(MOTODASH AI - PLAN MAESTRO DE LANZAMIENTO BETA, LEGAL Y CREADORES \(PAG. 2/5\)) Tj
+/F1 8.5 Tf
+0 -13 Td
+(Preparado para: Anderson - Fundador VIP | Hoja de Ruta Ejecutiva, Legal en Colombia y Guiones de Negociacion) Tj
+0 -9 Td
+(________________________________________________________________________________________________________) Tj
+/F2 11.5 Tf
+0 -20 Td
+(2. RUTA LEGAL EN COLOMBIA: QUE DEBES HACER ANTES DE LANZAR LA BETA) Tj
+/F1 9.5 Tf
+0 -16 Td
+(Opinion sincera: NO gastes millones creando una S.A.S. antes de validar tus primeras 100 suscripciones.) Tj
+/F1 9.5 Tf
+0 -13 Td
+(En Colombia es 100% legal lanzar tu Beta y cobrar cumpliendo estos 4 puntos economicos y rapidos:) Tj
+/F1 9.5 Tf
+0 -13 Td
+( ) Tj
+/F2 10 Tf
+0 -13 Td
+(1\) ACTUALIZAR TU RUT EN LA DIAN \(Obligatorio para Pasarela - Costo: $0 GRATIS\)) Tj
+/F1 9.5 Tf
+0 -13 Td
+(   - Entra a muisca.dian.gov.co y actualiza tu RUT como Persona Natural agregando las actividades:) Tj
+/F1 9.5 Tf
+0 -13 Td
+(     * Codigo CIIU 6201: Actividades de desarrollo de sistemas informaticos \(planificacion, diseno\).) Tj
+/F1 9.5 Tf
+0 -13 Td
+(     * Codigo CIIU 6312: Portales web \(para el marketplace y MotoMall\).) Tj
+/F1 9.5 Tf
+0 -13 Td
+(   - Responsabilidad 49 \(No responsable de IVA\) mientras tus ingresos sean menores a 3.500 UVT/ano.) Tj
+/F1 9.5 Tf
+0 -13 Td
+(   - Con este RUT actualizado en PDF, Wompi y Bold te aprueban la pasarela en 24 a 48 horas.) Tj
+/F1 9.5 Tf
+0 -13 Td
+( ) Tj
+/F2 10 Tf
+0 -13 Td
+(2\) REGISTRO DE DERECHOS DE AUTOR DEL SOFTWARE \(DNDA - Costo: $0 GRATIS\)) Tj
+/F1 9.5 Tf
+0 -13 Td
+(   - Entra a derechodeautor.gov.co \(Direccion Nacional de Derecho de Autor del Ministerio del Interior\).) Tj
+/F1 9.5 Tf
+0 -13 Td
+(   - Realiza el "Registro de Soporte Logico \(Software\)" en linea adjuntando un ZIP del codigo fuente y) Tj
+/F1 9.5 Tf
+0 -13 Td
+(     manual de MotoDash AI. Es 100% gratuito y en 15 dias habiles tienes el certificado oficial del) Tj
+/F1 9.5 Tf
+0 -13 Td
+(     Estado colombiano que blindara que tu \(Anderson\) eres el dueno absoluto del software.) Tj
+/F1 9.5 Tf
+0 -13 Td
+( ) Tj
+/F2 10 Tf
+0 -13 Td
+(3\) CUMPLIMIENTO DE HABEAS DATA \(Ley 1581 de 2012\) Y TERMINOS LEGALES \(Ya listo en la App\)) Tj
+/F1 9.5 Tf
+0 -13 Td
+(   - En Colombia la Ley 1581 exige tener Politica de Tratamiento de Datos Personales y autorizacion) Tj
+/F1 9.5 Tf
+0 -13 Td
+(     previa al registrarse. Eso YA lo dejamos programado en LegalTermsModal.jsx dentro de la app.) Tj
+/F1 9.5 Tf
+0 -13 Td
+(   - Nota sobre el RNBD de la SIC: El Registro Nacional de Bases de Datos ante la Superintendencia) Tj
+/F1 9.5 Tf
+0 -13 Td
+(     solo es obligatorio para empresas con activos superiores a 100.000 UVT \(~$4.700 millones COP\).) Tj
+/F1 9.5 Tf
+0 -13 Td
+(     Por tanto, en tu lanzamiento Beta NO tienes que pagar ni inscribir nada ante la SIC por RNBD.) Tj
+/F1 9.5 Tf
+0 -13 Td
+(   - Descargo de Responsabilidad IA: En los Terminos de Uso ya dejamos blindado que el Abogado Vial IA) Tj
+/F1 9.5 Tf
+0 -13 Td
+(     es una herramienta informativa basada en leyes publicas y que Doctor Motor IA es orientativo.) Tj
+/F1 9.5 Tf
+0 -13 Td
+( ) Tj
+/F2 10 Tf
+0 -13 Td
+(4\) CUANDO CREAR LA S.A.S. Y REGISTRAR LA MARCA EN LA SIC \(Fase 2 - Con ingresos reales\)) Tj
+/F1 9.5 Tf
+0 -13 Td
+(   - Registro de Marca "MOTODASH AI" ante la SIC \(Clase 9 / Clase 42\): Cuesta aprox. $800.000 a) Tj
+/F1 9.5 Tf
+0 -13 Td
+(     $1.150.000 COP \(con descuento Mipyme\). Hazlo cuando tengas tus primeros 50-100 clientes pagos.) Tj
+/F1 9.5 Tf
+0 -13 Td
+(   - Constitucion de S.A.S. en Camara de Comercio: Hazla solo cuando factures mas de $8.000.000 COP/mes) Tj
+/F1 9.5 Tf
+0 -13 Td
+(     o cuando un gran concesionario \(ej. Auteco, Incolmotos Yamaha\) te pida factura electronica PJ.) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 3581 >>
+stream
+BT
+/F2 13 Tf
+42 795 Td
+(MOTODASH AI - PLAN MAESTRO DE LANZAMIENTO BETA, LEGAL Y CREADORES \(PAG. 3/5\)) Tj
+/F1 8.5 Tf
+0 -13 Td
+(Preparado para: Anderson - Fundador VIP | Hoja de Ruta Ejecutiva, Legal en Colombia y Guiones de Negociacion) Tj
+0 -9 Td
+(________________________________________________________________________________________________________) Tj
+/F2 11.5 Tf
+0 -20 Td
+(3. MAPA DE LOS MEJORES CREADORES DE CONTENIDO MOTERO POR PAIS) Tj
+/F1 9.5 Tf
+0 -16 Td
+(Contactar creadores moteros es LA MEJOR idea de adquisicion porque los moteros confian en otros) Tj
+/F1 9.5 Tf
+0 -13 Td
+(moteros. Consejo clave: combina creadores grandes con micro-creadores \(20k a 150k seguidores\) que) Tj
+/F1 9.5 Tf
+0 -13 Td
+(responden rapido y aceptan canje o comision sin pedir millones por adelantado.) Tj
+/F1 9.5 Tf
+0 -13 Td
+( ) Tj
+/F2 10 Tf
+0 -13 Td
+(A\) COLOMBIA \(Tu mercado #1 para explotar la Beta y el MotoMall\):) Tj
+/F1 9.5 Tf
+0 -13 Td
+(   1. Sebastian Herrera \(@sebastianherrera531\): El mas respetado en fichas tecnicas, viajes y mecanica.) Tj
+/F1 9.5 Tf
+0 -13 Td
+(      Angulo ideal: Mantenimiento Predictivo de 17 piezas, Doctor Motor IA y Telemetria TFT.) Tj
+/F1 9.5 Tf
+0 -13 Td
+(   2. El Mago / Full Gass \(@elmago.oficial / @fullgassoficial\): Masivo en entretenimiento y cultura.) Tj
+/F1 9.5 Tf
+0 -13 Td
+(      Angulo ideal: Abogado Vial IA contra retenes/gruas, Modo CarPlay HUD y Clanes Moteros.) Tj
+/F1 9.5 Tf
+0 -13 Td
+(   3. Medina Motors \(@medinamotors\) / Paisa Biker / Publimotos / Moteros Colombia:) Tj
+/F1 9.5 Tf
+0 -13 Td
+(      Angulo ideal: Guantera Modo Reten con PIN de 4 digitos, Radar SIMIT y Auxilio GPS si te varas.) Tj
+/F1 9.5 Tf
+0 -13 Td
+( ) Tj
+/F2 10 Tf
+0 -13 Td
+(B\) MEXICO \(El mercado hispano con mas motos de trabajo y deportivas\):) Tj
+/F1 9.5 Tf
+0 -13 Td
+(   - Viktor Motos / BikerZ / Sr.equilla / Rodando Rutas Magicas / MotoMundi Mexico.) Tj
+/F1 9.5 Tf
+0 -13 Td
+(   - Angulo ideal: Defensa ante policia de transito en CDMX/Edomex y control de gasto de gasolina.) Tj
+/F1 9.5 Tf
+0 -13 Td
+( ) Tj
+/F2 10 Tf
+0 -13 Td
+(C\) ESPANA \(Mercado europeo de alto ticket en euros\):) Tj
+/F1 9.5 Tf
+0 -13 Td
+(   - Majes en Moto \(@majesenmoto\) / Kirian Mirabet / SoyMotero / RideMeFive.) Tj
+/F1 9.5 Tf
+0 -13 Td
+(   - Angulo ideal: Avisos de ITV, Carnet DGT, Radar DGT 50% descuento y HUD para rutas.) Tj
+/F1 9.5 Tf
+0 -13 Td
+( ) Tj
+/F2 10 Tf
+0 -13 Td
+(D\) BRASIL \(Portugues - Mas de 32 millones de motociclistas\):) Tj
+/F1 9.5 Tf
+0 -13 Td
+(   - Motorede \(@motorede\) / Chico Sepulveda / Kle621Full / Acelerados Motos.) Tj
+/F1 9.5 Tf
+0 -13 Td
+(   - Angulo ideal: Defesa em Blitz DETRAN \(Lei do Guincho\), CNH Digital/CRLV-e e Radar SNE 40%.) Tj
+/F1 9.5 Tf
+0 -13 Td
+( ) Tj
+/F2 10 Tf
+0 -13 Td
+(E\) CHILE, PERU Y ESTADOS UNIDOS:) Tj
+/F1 9.5 Tf
+0 -13 Td
+(   - Chile: MotoMundi Chile / Rideshaper \(SOAP, Revision Tecnica PRT, Carabineros\).) Tj
+/F1 9.5 Tf
+0 -13 Td
+(   - Peru: Checho en Moto / Pasion por las Motos Peru \(SOAT, Brevete B-IIc, SUTRAN/SAT\).) Tj
+/F1 9.5 Tf
+0 -13 Td
+(   - EE. UU.: DanDanTheFireman \(Seguridad/SOS Paramedicos\) + Creadores Moteros Latinos en Miami/TX/CA.) Tj
+/F1 9.5 Tf
+0 -13 Td
+( ) Tj
+/F2 10 Tf
+0 -13 Td
+(F\) FRANCIA, ITALIA Y ALEMANIA:) Tj
+/F1 9.5 Tf
+0 -13 Td
+(   - Francia: 100% Motos / Walane / High Side \(Fin vignette verte FVA & Controle Technique 2RM\).) Tj
+/F1 9.5 Tf
+0 -13 Td
+(   - Italia: Moto.it / Alberto Naska / Sinnaggagghiri \(Codice della Strada, Scarico Omologato, Autovelox\).) Tj
+/F1 9.5 Tf
+0 -13 Td
+(   - Alemania: 1000PS \(@1000ps_official\) / Jens Kuck / Blackout \(StVO, Auspuff E-Nummer & TUV\).) Tj
+ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 3755 >>
+stream
+BT
+/F2 13 Tf
+42 795 Td
+(MOTODASH AI - PLAN MAESTRO DE LANZAMIENTO BETA, LEGAL Y CREADORES \(PAG. 4/5\)) Tj
+/F1 8.5 Tf
+0 -13 Td
+(Preparado para: Anderson - Fundador VIP | Hoja de Ruta Ejecutiva, Legal en Colombia y Guiones de Negociacion) Tj
+0 -9 Td
+(________________________________________________________________________________________________________) Tj
+/F2 11.5 Tf
+0 -20 Td
+(4. QUE NEGOCIAR CON ELLOS Y GUIONES EXACTOS DE CONTACTO) Tj
+/F1 9.5 Tf
+0 -16 Td
+(REGLA DE ORO: En etapa Beta NO les pagues tarifas fijas altas en efectivo. Ofreceles un paquete de) Tj
+/F1 9.5 Tf
+0 -13 Td
+(Socio Embajador donde ellos ganan dinero recurrente, prestigio y regalos para su comunidad:) Tj
+/F1 9.5 Tf
+0 -13 Td
+( ) Tj
+/F2 10 Tf
+0 -13 Td
+(LO QUE PUEDES OFRECERLES EN LA NEGOCIACION \(3 MONEDAS DE CAMBIO\):) Tj
+/F1 9.5 Tf
+0 -13 Td
+(  1. Comision Recurrente del 35% al 40%: Por cada seguidor que pague el Plan PRO o tienda que entre) Tj
+/F1 9.5 Tf
+0 -13 Td
+(     al MotoMall con su codigo \(ej. CODIGO: SEBASTIAN\), el creador recibe el 35%-40% cada mes.) Tj
+/F1 9.5 Tf
+0 -13 Td
+(  2. Su Propio "Clan Oficial Verificado" dentro de la App + Membresias para Sortear: Le creas su) Tj
+/F1 9.5 Tf
+0 -13 Td
+(     Clan Oficial con su logo dentro de MotoDash AI y le das 30 a 50 cuentas PRO anuales gratis) Tj
+/F1 9.5 Tf
+0 -13 Td
+(     para que las rife en un Reel/TikTok \(eso le dispara los comentarios y seguidores a el y a ti\).) Tj
+/F1 9.5 Tf
+0 -13 Td
+(  3. Vitrina VIP Gratis en el MotoMall: Si el creador vende gorras, cascos, intercomunicadores,) Tj
+/F1 9.5 Tf
+0 -13 Td
+(     calcomanias o tiene taller propio, le das una tienda destacada gratis por 1 ano en el MotoMall.) Tj
+/F1 9.5 Tf
+0 -13 Td
+( ) Tj
+/F2 10 Tf
+0 -13 Td
+(GUION #1: MENSAJE CORTO POR DM DE INSTAGRAM / TIKTOK \(Para romper el hielo\):) Tj
+/F1 9.5 Tf
+0 -13 Td
+(  "¡Que mas [Nombre], hermano! Sigo tu contenido desde hace rato. Soy Anderson, fundador de) Tj
+/F1 9.5 Tf
+0 -13 Td
+(  MotoDash AI. Creamos la primera app motera que tiene un Abogado Vial con IA para defenderse de) Tj
+/F1 9.5 Tf
+0 -13 Td
+(  inmovilizaciones/gruas ilegales en retenes, guantera con bloqueo PIN para no entregar el celular) Tj
+/F1 9.5 Tf
+0 -13 Td
+(  desbloqueado al agente, y conexion con el tablero de la moto. Quiero activarte tu cuenta Fundador) Tj
+/F1 9.5 Tf
+0 -13 Td
+(  Vitalicia gratis, crearte el Clan Oficial de [Nombre del Canal] dentro de la app y proponerte) Tj
+/F1 9.5 Tf
+0 -13 Td
+(  algo para que ganes el 40% recurrente con tu comunidad. ¿A que WhatsApp o correo te envio acceso?") Tj
+/F1 9.5 Tf
+0 -13 Td
+( ) Tj
+/F2 10 Tf
+0 -13 Td
+(GUION #2: PROPUESTA FORMAL POR WHATSAPP O CORREO CORPORATIVO:) Tj
+/F1 9.5 Tf
+0 -13 Td
+(  "Hola [Nombre], un gusto saludarte. Te escribo porque estamos lanzando la Beta Oficial de) Tj
+/F1 9.5 Tf
+0 -13 Td
+(  MotoDash AI \(https://motodashai.com\) y queremos que seas uno de los Embajadores Oficiales en) Tj
+/F1 9.5 Tf
+0 -13 Td
+(  [Pais]. La app resuelve los 4 dolores mas grandes del motero: 1\) Abogado Vial IA en retenes) Tj
+/F1 9.5 Tf
+0 -13 Td
+(  \(dice al instante si la grua es legal o si aplica la regla de los 60 min\), 2\) Modo Reten con) Tj
+/F1 9.5 Tf
+0 -13 Td
+(  bloqueo PIN de 4 digitos, 3\) Mantenimiento Predictivo de 17 piezas + Doctor Motor IA, y) Tj
+/F1 9.5 Tf
+0 -13 Td
+(  4\) Auxilio GPS con el taller aliado mas cercano si se varan. Queremos darte:) Tj
+/F1 9.5 Tf
+0 -13 Td
+(  - Cuenta VIP Vitalicia + Vitrina de tu marca en nuestro MotoMall.) Tj
+/F1 9.5 Tf
+0 -13 Td
+(  - 50 Pases PRO Anuales valorados en $2.000 USD para que los regales a tus seguidores.) Tj
+/F1 9.5 Tf
+0 -13 Td
+(  - 40% de comision sobre todas las suscripciones que entren con tu codigo [CODIGO].) Tj
+/F1 9.5 Tf
+0 -13 Td
+(  ¿Tienes 10 minutos esta semana para mostrarte la app en vivo?") Tj
+ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 3215 >>
+stream
+BT
+/F2 13 Tf
+42 795 Td
+(MOTODASH AI - PLAN MAESTRO DE LANZAMIENTO BETA, LEGAL Y CREADORES \(PAG. 5/5\)) Tj
+/F1 8.5 Tf
+0 -13 Td
+(Preparado para: Anderson - Fundador VIP | Hoja de Ruta Ejecutiva, Legal en Colombia y Guiones de Negociacion) Tj
+0 -9 Td
+(________________________________________________________________________________________________________) Tj
+/F2 11.5 Tf
+0 -20 Td
+(5. MIS IDEAS SINCERAS PARA UN LANZAMIENTO GANADOR \(ESTRATEGIA GUERRILLA\)) Tj
+/F1 9.5 Tf
+0 -16 Td
+(Siendo 100% estrategico, la mayoria de apps fallan al lanzarse porque intentan explicar 20 funciones) Tj
+/F1 9.5 Tf
+0 -13 Td
+(al mismo tiempo. Para que MotoDash AI explote en descargas en los primeros 30 dias, haz esto:) Tj
+/F1 9.5 Tf
+0 -13 Td
+( ) Tj
+/F2 10 Tf
+0 -13 Td
+(IDEA GANADORA #1: EL GANCHO VIRAL DE TIKTOK/REELS ES "EL RETEN Y LA GRUA") Tj
+/F1 9.5 Tf
+0 -13 Td
+(  - El mantenimiento preventivo retiene al usuario todo el ano, pero lo que hace VIRAL un video en) Tj
+/F1 9.5 Tf
+0 -13 Td
+(    24 horas es la indignacion y defensa en los retenes de transito.) Tj
+/F1 9.5 Tf
+0 -13 Td
+(  - Graba 10 Reels/TikToks de 25 segundos con situaciones reales:) Tj
+/F1 9.5 Tf
+0 -13 Td
+(    * Video 1: "¿Te quieren llevar la moto en grua por no traer el SOAT impreso? Mira el articulo) Tj
+/F1 9.5 Tf
+0 -13 Td
+(      exacto que les saca esta IA en 3 segundos".) Tj
+/F1 9.5 Tf
+0 -13 Td
+(    * Video 2: "Nunca le entregues tu celular desbloqueado a un agente de transito: activa el) Tj
+/F1 9.5 Tf
+0 -13 Td
+(      Bloqueo PIN de Modo Reten en MotoDash AI".) Tj
+/F1 9.5 Tf
+0 -13 Td
+(    * Video 3: "¿Tu taller te esta cobrando de mas? Preguntale al Doctor Motor IA antes de pagar".) Tj
+/F1 9.5 Tf
+0 -13 Td
+( ) Tj
+/F2 10 Tf
+0 -13 Td
+(IDEA GANADORA #2: ALIANZA DIRECTA CON PRESIDENTES DE CLUBES MOTEROS \(EFECTO MANADA\)) Tj
+/F1 9.5 Tf
+0 -13 Td
+(  - En Colombia y Mexico existen cientos de clubes por modelo \(Club Apache Medellin, Club Pulsar) Tj
+/F1 9.5 Tf
+0 -13 Td
+(    Bogota, Club MT Colombia, Club Dominar, Club KTM\). Cada presidente mueve de 50 a 500 moteros.) Tj
+/F1 9.5 Tf
+0 -13 Td
+(  - Contacta a 20 lideres de clubes por Instagram y diles: "Ya cree el Clan Oficial de su club) Tj
+/F1 9.5 Tf
+0 -13 Td
+(    en MotoDash AI con su escudo, chat privado, SOS medico para rodadas y codigo de invitacion.) Tj
+/F1 9.5 Tf
+0 -13 Td
+(    Es 100% gratis para su directiva". Si 15 clubes entran, tendras +1.500 moteros reales en 1 semana.) Tj
+/F1 9.5 Tf
+0 -13 Td
+( ) Tj
+/F2 10 Tf
+0 -13 Td
+(IDEA GANADORA #3: CODIGO QR EN MOSTRADORES DE REPUESTERAS Y TALLERES \(BAYADERA / 7 DE AGOSTO\)) Tj
+/F1 9.5 Tf
+0 -13 Td
+(  - Para llenar el MotoMall sin gastar en publicidad: ofrece a 20 talleres y almacenes de repuestos) Tj
+/F1 9.5 Tf
+0 -13 Td
+(    de tu ciudad 3 meses GRATIS en el Plan Almacen PRO + aparecer en el "Radar de Auxilio GPS para) Tj
+/F1 9.5 Tf
+0 -13 Td
+(    Moteros Varados".) Tj
+/F1 9.5 Tf
+0 -13 Td
+(  - A cambio, dales un hablador/sticker con Codigo QR para el mostrador donde pagan los moteros:) Tj
+/F1 9.5 Tf
+0 -13 Td
+(    "Taller Oficial Verificado en MotoDash AI - Escanea para sellar tu mantenimiento y tener) Tj
+/F1 9.5 Tf
+0 -13 Td
+(    Abogado Vial IA Gratis". Asi los mismos talleres te traen cientos de pilotos todos los dias.) Tj
+ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 13 0 R >>
+endobj
+xref
+0 15
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000142 00000 n 
+0000000239 00000 n 
+0000000341 00000 n 
+0000004141 00000 n 
+0000004277 00000 n 
+0000008064 00000 n 
+0000008200 00000 n 
+0000011832 00000 n 
+0000011969 00000 n 
+0000015776 00000 n 
+0000015914 00000 n 
+0000019181 00000 n 
+trailer
+<< /Size 15 /Root 1 0 R >>
+startxref
+19319
+%%EOF

@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-accent: #00D4FF;
+  --secondary-accent: #F59E0B;
+  --accent-glow: rgba(0, 212, 255, 0.35);
+  --luxury-gold: #F59E0B;
+  --luxury-cyan: #00D4FF;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #060911;
+  background-image:
+    radial-gradient(circle at 18% 0%, rgba(0, 212, 255, 0.11) 0%, transparent 45%),
+    radial-gradient(circle at 82% 8%, rgba(245, 158, 11, 0.08) 0%, transparent 42%),
+    linear-gradient(180deg, #060911 0%, #090e1a 50%, #05080f 100%);
+  color: #f1f5f9;
+  overflow-x: hidden;
+}
+
+.font-racing {
+  font-family: 'Chakra Petch', sans-serif;
+  letter-spacing: 0.03em;
+}
+
+.font-telemetry {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Luxury Ambient LED Glows */
+.glow-accent {
+  box-shadow: 0 0 28px var(--accent-glow), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+}
+
+.text-glow-accent {
+  text-shadow: 0 0 18px var(--accent-glow);
+}
+
+/* Luxury Grand Tourer / Brushed Titanium & Carbon Glassmorphism Card */
+.cockpit-card {
+  background: linear-gradient(155deg, rgba(15, 22, 36, 0.88) 0%, rgba(9, 13, 22, 0.94) 100%);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  box-shadow:
+    0 18px 40px -15px rgba(0, 0, 0, 0.85),
+    inset 0 1px 0 0 rgba(0, 212, 255, 0.18),
+    inset 0 -1px 0 0 rgba(245, 158, 11, 0.08);
+}
+
+.cockpit-card-active {
+  border-color: rgba(0, 212, 255, 0.35);
+  background: linear-gradient(155deg, rgba(18, 27, 45, 0.92) 0%, rgba(11, 17, 29, 0.96) 100%);
+  box-shadow:
+    0 20px 45px -12px rgba(0, 212, 255, 0.18),
+    inset 0 1px 0 0 rgba(0, 212, 255, 0.35);
+}
